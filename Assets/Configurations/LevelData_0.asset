@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff24e04cd4b6e848a2a57000f45e963, type: 3}
+  m_Name: LevelData_0
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelName: TutorialLevel_0
+  levelNumber: 1
+  difficulty: 0
+  timeLimit: 180
+  wrongClickPenalty: 5
+  availableHints: 3
+  originalSprite: {fileID: -1400496345, guid: d72a7fd2155c0f142b8380b2e68adc71, type: 3}
+  distortedSprite: {fileID: -1010479847, guid: 6dc4a7daf989c9341ab4d80a878d331d, type: 3}
+  differences:
+  - normalizedPosition: {x: 0.5, y: 0.36}
+    deflectinRadious: 50
+    width: 75
+    height: 75
+    startedSprite: {fileID: 38248276, guid: ff6220b94423ebf41870344e7ee823e9, type: 3}
+    distortedSprite: {fileID: 375390402, guid: d1e2445a4f38e2745b4edae32fc447cd, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.91, y: 0.29}
+    deflectinRadious: 0
+    width: 75
+    height: 75
+    startedSprite: {fileID: 38248276, guid: ff6220b94423ebf41870344e7ee823e9, type: 3}
+    distortedSprite: {fileID: 375390402, guid: d1e2445a4f38e2745b4edae32fc447cd, type: 3}
+    mustBeFound: 0
+  ambientSound: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  completionSound: {fileID: 0}
+  gameoverSound: {fileID: 0}
