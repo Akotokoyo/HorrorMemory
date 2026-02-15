@@ -14,7 +14,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Sprites
   m_GUID: 41f719eab431d154aa5af4c273ea2393
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 03095816f34a2384c86b3067ae5aab12
+    m_Address: Sprites/Level_000/Peluche
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dbdd334ca1a145498a2446782c8e13f
+    m_Address: Sprites/Level_000/Pot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40b07a5607f2a99408aa94c978eb6d59
+    m_Address: Sprites/Level_000/FlameDead
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41bd0f1d30341b843b8d189711cf654a
+    m_Address: Sprites/Level_000/PictureBroken
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6dc4a7daf989c9341ab4d80a878d331d
+    m_Address: Sprites/Level_000/Distorted000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c8dafee6ee236348833bf44bef81730
+    m_Address: Sprites/Level_000/Flame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97ef78bb5f4522048866ce199754f88e
+    m_Address: Sprites/Level_000/PotDeath
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a898399d3a8222a4099dfe8a2b51149f
+    m_Address: Sprites/Level_000/PelucheNoHead
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad8795c5d5d13ce49becb3e40389ebe5
+    m_Address: Sprites/Level_000/Picture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1e2445a4f38e2745b4edae32fc447cd
+    m_Address: Sprites/Level_000/CupBroken
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d72a7fd2155c0f142b8380b2e68adc71
+    m_Address: Sprites/Level_000/Orig000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8df47ec720134d45999a86fd5cab29c
+    m_Address: Sprites/Level_001/Original
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd628601343c1f942aa3f3cfba5bb8db
+    m_Address: Sprites/Level_001/Modified
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff6220b94423ebf41870344e7ee823e9
+    m_Address: Sprites/Level_000/Cup
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a7f58452fe9ab9748ac72f652aca6ed1, type: 2}
   m_SchemaSet:

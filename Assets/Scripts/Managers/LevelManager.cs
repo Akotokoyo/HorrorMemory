@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -79,8 +80,6 @@ public class LevelManager : MonoBehaviour
             newDiff.GetComponent<Difference>().diffIndex = i;
             newDiff.GetComponent<Difference>().isClickable = false;
             
-
-
             RectTransform diffRect = newDiff.GetComponent<RectTransform>();
             diffRect.sizeDelta = new Vector2
                 (currentLevel.differences[i].width, currentLevel.differences[i].height);
@@ -116,12 +115,12 @@ public class LevelManager : MonoBehaviour
             {
                 totalDifferenceCount++;
                 newDiff.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                totalDifferenceCount++;
             }
             differencesToFind.Add(newDiff);
         }
 
-        
+        UpdateUI();
+        StartCoroutine(UpdateTimer());
     }
 
     public void OnDifferenceClicked(int diffIndex)
@@ -133,21 +132,28 @@ public class LevelManager : MonoBehaviour
 
     private void ClearOldData() { }
     private void UpdateUI() {
-       // StartCoroutine(UpdateTimer());
+        differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";
+        //TODO: if currentDifferenceCount == totalDifference, win the game
+        
     }
 
-    /*private IEnumerator UpdateTimer()
+    private IEnumerator UpdateTimer()
     {
-        bool isTimerGoing = true;
-        while (isTimerGoing)
+        while (currentTimer > 0)
         {
-            currentTimer += Time.deltaTime;
+            currentTimer -= 1f;
 
-            timePlaying = TimeSpan.FromSeconds(sectionCurrentTime);
-            timePlaying_Str = timePlaying.ToString("mm':'ss'.'f");
-            timer_Txt.text = timePlaying_Str;
+            var timePlaying = TimeSpan.FromSeconds(currentTimer);
+            timerText.text = timePlaying.ToString(@"mm\:ss");
 
-            yield return null;
+            if (currentTimer <= 30f)
+            {
+                timerText.color = Color.red;
+            }
+
+            yield return new WaitForSeconds(1f);
         }
-    }*/
+
+        //TODO: if CurrentTimer == 0, lose the game
+    }
 }
