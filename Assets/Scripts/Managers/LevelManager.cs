@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,8 +11,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Image modifiedImage;
     [SerializeField] private RectTransform originalRect;
     [SerializeField] private RectTransform modifiedRect;
-
-
 
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI differenceFoundText;
@@ -78,6 +77,8 @@ public class LevelManager : MonoBehaviour
             newDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
             newDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
             newDiff.GetComponent<Difference>().diffIndex = i;
+            newDiff.GetComponent<Difference>().isClickable = false;
+            
 
 
             RectTransform diffRect = newDiff.GetComponent<RectTransform>();
@@ -113,11 +114,14 @@ public class LevelManager : MonoBehaviour
             diffRect.anchoredPosition = new Vector2(x, y);
             if (currentLevel.differences[i].mustBeFound)
             {
+                totalDifferenceCount++;
                 newDiff.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
                 totalDifferenceCount++;
             }
             differencesToFind.Add(newDiff);
         }
+
+        
     }
 
     public void OnDifferenceClicked(int diffIndex)
@@ -128,5 +132,22 @@ public class LevelManager : MonoBehaviour
     }
 
     private void ClearOldData() { }
-    private void UpdateUI() { }
+    private void UpdateUI() {
+       // StartCoroutine(UpdateTimer());
+    }
+
+    /*private IEnumerator UpdateTimer()
+    {
+        bool isTimerGoing = true;
+        while (isTimerGoing)
+        {
+            currentTimer += Time.deltaTime;
+
+            timePlaying = TimeSpan.FromSeconds(sectionCurrentTime);
+            timePlaying_Str = timePlaying.ToString("mm':'ss'.'f");
+            timer_Txt.text = timePlaying_Str;
+
+            yield return null;
+        }
+    }*/
 }
