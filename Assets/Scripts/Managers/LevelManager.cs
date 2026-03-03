@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private PopupManager popupManager;
+
     [SerializeField] private Image distortedImage;
     [SerializeField] private Image originalImage;
     [SerializeField] private Image modifiedImage;
@@ -43,8 +45,11 @@ public class LevelManager : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+    }
 
-        InitLevel();
+    public IEnumerator PrepareLevel()
+    {
+        yield return popupManager.ShowPreGamePopup(currentLevel);
     }
 
     public void InitLevel()

@@ -10,9 +10,11 @@ public class LevelData : ScriptableObject
     
     [Min(0f)]
     public float timeLimit = 180f;
+    public int waitingtime = 5;
 
     public float wrongClickPenalty = 5f;
-    public int availableHints = 3;
+    public string storyIntroText = string.Empty;
+    public string storyEndingText = string.Empty;
 
     public Sprite originalSprite;
     public Sprite distortedSprite;

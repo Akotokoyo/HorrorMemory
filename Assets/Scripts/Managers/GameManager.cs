@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
         get { return _instance; }
     }
 
-    [SerializeField] private GameState gameState = GameState.PLAYING;
+    [SerializeField] private GameState gameState = GameState.WAITING;
     [SerializeField] private LevelData currentLevel;
 
 
@@ -23,10 +23,12 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
-    }
 
-    void Update()
-    {
-        
+        if(gameState == GameState.WAITING)
+        {
+            StartCoroutine(LevelManager.Instance.PrepareLevel());
+            gameState = GameState.PLAYING;
+            LevelManager.Instance.InitLevel();
+        }
     }
 }

@@ -16,8 +16,10 @@ MonoBehaviour:
   levelNumber: 1
   difficulty: 0
   timeLimit: 180
+  waitingtime: 5
   wrongClickPenalty: 5
-  availableHints: 3
+  storyIntroText: It's all started with a PC....
+  storyEndingText: I found a video, of an house
   originalSprite: {fileID: -1400496345, guid: d72a7fd2155c0f142b8380b2e68adc71, type: 3}
   distortedSprite: {fileID: -1010479847, guid: 6dc4a7daf989c9341ab4d80a878d331d, type: 3}
   differences:
