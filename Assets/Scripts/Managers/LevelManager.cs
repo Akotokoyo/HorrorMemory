@@ -127,6 +127,8 @@ public class LevelManager : MonoBehaviour
     {
         originalDifferences[diffIndex].GetComponent<Image>().sprite = originalDifferences[diffIndex].GetComponent<Difference>().diffInfo.distortedSprite;
         currentDifferenceCount++;
+        float alpha = 1f - (currentDifferenceCount / (float)totalDifferenceCount);
+        originalImage.color = new Color(1f, 1f, 1f, alpha);
         UpdateUI();
     }
 

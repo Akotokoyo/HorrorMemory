@@ -289,7 +289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25500003, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.4299927, y: 0}
+  m_AnchoredPosition: {x: 1.4300537, y: 0}
   m_SizeDelta: {x: -2.8599854, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49970705
@@ -1467,8 +1467,8 @@ MonoBehaviour:
   modifiedImage: {fileID: 1754750987}
   originalRect: {fileID: 1838678416}
   modifiedRect: {fileID: 1754750986}
-  timerText: {fileID: 380330507}
-  differenceFoundText: {fileID: 330642142}
+  timerText: {fileID: 49970705}
+  differenceFoundText: {fileID: 20035408}
   currentLevel: {fileID: 11400000, guid: 05cebef0dfa83424ab97668ef4683d1e, type: 2}
   differencePrefab: {fileID: 1294991734725399135, guid: d677eff420172784b94b5ab926a97167, type: 3}
   originalDifferences: []
