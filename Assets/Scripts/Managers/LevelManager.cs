@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    public static event Action<bool> OnLevelEnded;
+
     [SerializeField] private PopupManager popupManager;
 
     [SerializeField] private Image distortedImage;
@@ -137,6 +139,7 @@ public class LevelManager : MonoBehaviour
         UpdateUI();
         if (currentDifferenceCount == totalDifferenceCount)
         {
+            OnLevelEnded?.Invoke(true);
             StartCoroutine(ShowEndPopup(true));
         }
     }
@@ -165,6 +168,7 @@ public class LevelManager : MonoBehaviour
 
         if (currentTimer == 0)
         {
+            OnLevelEnded?.Invoke(false);
             StartCoroutine(ShowEndPopup(false));
         }
     }

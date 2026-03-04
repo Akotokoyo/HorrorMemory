@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -26,9 +27,28 @@ public class GameManager : MonoBehaviour
 
         if(gameState == GameState.WAITING)
         {
-            StartCoroutine(LevelManager.Instance.PrepareLevel());
-            gameState = GameState.PLAYING;
-            LevelManager.Instance.InitLevel();
+            StartCoroutine(InitializeGame());
         }
+    }
+
+    private void OnEnable()
+    {
+        LevelManager.OnLevelEnded += HandleLevelEnded;
+    }
+    private void OnDisable()
+    {
+        LevelManager.OnLevelEnded -= HandleLevelEnded;
+    }
+
+    private void HandleLevelEnded(bool levelSuccess)
+    {
+        gameState = levelSuccess ? GameState.COMPLETED : GameState.GAME_OVER;
+    }
+
+    private IEnumerator InitializeGame()
+    {
+        yield return StartCoroutine(LevelManager.Instance.PrepareLevel());
+        gameState = GameState.PLAYING;
+        LevelManager.Instance.InitLevel();
     }
 }
