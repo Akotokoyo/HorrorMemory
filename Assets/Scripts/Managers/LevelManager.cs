@@ -135,6 +135,10 @@ public class LevelManager : MonoBehaviour
         float alpha = 1f - (currentDifferenceCount / (float)totalDifferenceCount);
         originalImage.color = new Color(1f, 1f, 1f, alpha);
         UpdateUI();
+        if (currentDifferenceCount == totalDifferenceCount)
+        {
+            popupManager.ShowEndPopup(true);
+        }
     }
 
     private void ClearOldData() { }
@@ -161,6 +165,10 @@ public class LevelManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        //TODO: if CurrentTimer == 0, lose the game
+        if (currentTimer == 0)
+        {
+            popupManager.ShowEndPopup(false);
+        }
+
     }
 }

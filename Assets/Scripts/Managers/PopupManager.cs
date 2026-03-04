@@ -14,6 +14,13 @@ public class PopupManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI levelWaitTimeText;
     [SerializeField] private TextMeshProUGUI levelStoryInfoText;
 
+    [Header("Ending Popup")]
+    [SerializeField] private GameObject endPopup;
+    [SerializeField] private TextMeshProUGUI endTitleText;
+    [SerializeField] private TextMeshProUGUI endLevelStoryInfoText;
+
+
+    private string endLevelStoryInfo;
     private int waitingtime;
 
     public IEnumerator ShowPreGamePopup(LevelData level)
@@ -23,6 +30,7 @@ public class PopupManager : MonoBehaviour
         levelTimerText.text = $"Time Limit: {level.timeLimit} seconds";
         levelDifficultyText.text = $"Difficulty: {level.difficulty}";
         levelStoryInfoText.text = level.storyIntroText;
+        endLevelStoryInfo = level.storyEndingText;
         waitingtime = level.waitingtime;
         while (waitingtime != 0)
         {
@@ -32,5 +40,12 @@ public class PopupManager : MonoBehaviour
         }
         
         preGamePopup.SetActive(false);
+    }
+
+    public void ShowEndPopup(bool levelSuccess)
+    {
+        endPopup.SetActive(true);
+        endTitleText.text = levelSuccess ? "Level Completed!" : "Level Failed!";
+        endLevelStoryInfoText.text = levelSuccess ? endLevelStoryInfo : "";
     }
 }
