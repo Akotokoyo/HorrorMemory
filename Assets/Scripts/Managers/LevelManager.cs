@@ -137,15 +137,13 @@ public class LevelManager : MonoBehaviour
         UpdateUI();
         if (currentDifferenceCount == totalDifferenceCount)
         {
-            popupManager.ShowEndPopup(true);
+            StartCoroutine(ShowEndPopup(true));
         }
     }
 
     private void ClearOldData() { }
     private void UpdateUI() {
-        differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";
-        //TODO: if currentDifferenceCount == totalDifference, win the game
-        
+        differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";        
     }
 
     private IEnumerator UpdateTimer()
@@ -167,8 +165,13 @@ public class LevelManager : MonoBehaviour
 
         if (currentTimer == 0)
         {
-            popupManager.ShowEndPopup(false);
+            StartCoroutine(ShowEndPopup(false));
         }
+    }
 
+    private IEnumerator ShowEndPopup(bool levelSuccess)
+    {
+        yield return new WaitForSeconds(1f);
+        popupManager.ShowEndPopup(true);
     }
 }

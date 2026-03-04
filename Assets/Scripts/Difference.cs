@@ -10,7 +10,6 @@ public class Difference : MonoBehaviour, IPointerClickHandler
     public bool isClickable = true;
 
     public delegate void DifferenceFoundEvent(Difference diff);
-    public event DifferenceFoundEvent OnDifferenceFound;
 
     public void OnPointerClick(PointerEventData ev)
     {
