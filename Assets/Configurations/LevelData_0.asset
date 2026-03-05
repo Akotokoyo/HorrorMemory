@@ -58,7 +58,6 @@ MonoBehaviour:
     startedSprite: {fileID: 21300000, guid: 8c8dafee6ee236348833bf44bef81730, type: 3}
     distortedSprite: {fileID: 21300000, guid: 40b07a5607f2a99408aa94c978eb6d59, type: 3}
     mustBeFound: 1
-  ambientSound: {fileID: 0}
-  backgroundMusic: {fileID: 0}
-  completionSound: {fileID: 0}
+  ambientSound: {fileID: 8300000, guid: 4094ab7d53e223e48ae36a1a3c80c505, type: 3}
+  completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}
   gameoverSound: {fileID: 0}

@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public static event Action<bool> OnLevelEnded;
 
     [SerializeField] private PopupManager popupManager;
+    [SerializeField] private AudioManager audioManager;
 
     [SerializeField] private Image distortedImage;
     [SerializeField] private Image originalImage;
@@ -127,6 +128,7 @@ public class LevelManager : MonoBehaviour
         }
 
         UpdateUI();
+        audioManager.StartMusicSound(currentLevel.ambientSound);
         StartCoroutine(UpdateTimer());
     }
 
@@ -137,6 +139,7 @@ public class LevelManager : MonoBehaviour
         float alpha = 1f - (currentDifferenceCount / (float)totalDifferenceCount);
         originalImage.color = new Color(1f, 1f, 1f, alpha);
         UpdateUI();
+        audioManager.StartEffectSound(currentLevel.completionSound);
         if (currentDifferenceCount == totalDifferenceCount)
         {
             OnLevelEnded?.Invoke(true);
@@ -170,6 +173,7 @@ public class LevelManager : MonoBehaviour
         {
             OnLevelEnded?.Invoke(false);
             StartCoroutine(ShowEndPopup(false));
+            audioManager.StopAllOsts();
         }
     }
 
@@ -177,5 +181,6 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         popupManager.ShowEndPopup(true);
+        audioManager.StopAllOsts();
     }
 }

@@ -24,7 +24,6 @@ public class LevelData : ScriptableObject
 
     [Header("Sounds")]
     public AudioClip ambientSound;
-    public AudioClip backgroundMusic;
     public AudioClip completionSound;
     public AudioClip gameoverSound;
 
