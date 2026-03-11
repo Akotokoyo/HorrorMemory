@@ -15,7 +15,8 @@ MonoBehaviour:
   levelName: TutorialLevel_0
   levelNumber: 1
   difficulty: 0
-  timeLimit: 180
+  timeLimit: 20
+  scoreAddTime: 5
   waitingtime: 5
   wrongClickPenalty: 5
   storyIntroText: It's all started with a PC....

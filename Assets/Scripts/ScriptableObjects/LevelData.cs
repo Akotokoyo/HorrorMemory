@@ -9,7 +9,8 @@ public class LevelData : ScriptableObject
     public DifficultyLevel difficulty = DifficultyLevel.Medium;
     
     [Min(0f)]
-    public float timeLimit = 180f;
+    public float timeLimit = 20f;
+    public float scoreAddTime = 5f;
     public int waitingtime = 5;
 
     public float wrongClickPenalty = 5f;

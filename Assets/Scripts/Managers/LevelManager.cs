@@ -31,6 +31,8 @@ public class LevelManager : MonoBehaviour
     private int currentDifferenceCount = 0;
 
     private float currentTimer;
+    private float breakTime;
+    private float currentAlpha;
     private static LevelManager _instance;
 
     public static LevelManager Instance
@@ -76,6 +78,7 @@ public class LevelManager : MonoBehaviour
         currentTimer = currentLevel.timeLimit;
         distortedImage.sprite = currentLevel.distortedSprite;
         originalImage.sprite = currentLevel.originalSprite;
+        currentAlpha = 1f;
 
         modifiedImage.sprite = currentLevel.originalSprite;
 
@@ -136,8 +139,8 @@ public class LevelManager : MonoBehaviour
     {
         originalDifferences[diffIndex].GetComponent<Image>().sprite = originalDifferences[diffIndex].GetComponent<Difference>().diffInfo.distortedSprite;
         currentDifferenceCount++;
-        float alpha = 1f - (currentDifferenceCount / (float)totalDifferenceCount);
-        originalImage.color = new Color(1f, 1f, 1f, alpha);
+        currentTimer += currentLevel.scoreAddTime;
+        breakTime = 3f;
         UpdateUI();
         audioManager.StartEffectSound(currentLevel.completionSound);
         if (currentDifferenceCount == totalDifferenceCount)
@@ -147,7 +150,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void ClearOldData() { }
+    private void ClearOldData() { 
+        //TODO:
+    }
     private void UpdateUI() {
         differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";        
     }
@@ -157,11 +162,21 @@ public class LevelManager : MonoBehaviour
         while (currentTimer > 0)
         {
             currentTimer -= 1f;
+            if(breakTime > 0)
+            {
+                breakTime -= 1f;
+            }
 
             var timePlaying = TimeSpan.FromSeconds(currentTimer);
             timerText.text = timePlaying.ToString(@"mm\:ss");
 
-            if (currentTimer <= 30f)
+            if(breakTime == 0)
+            {
+                currentAlpha = Mathf.Clamp01(currentTimer / currentLevel.timeLimit);
+            }
+            originalImage.color = new Color(1f, 1f, 1f, currentAlpha);
+
+            if (currentTimer <= 5f)
             {
                 timerText.color = Color.red;
             }
@@ -180,7 +195,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator ShowEndPopup(bool levelSuccess)
     {
         yield return new WaitForSeconds(1f);
-        popupManager.ShowEndPopup(true);
+        popupManager.ShowEndPopup(levelSuccess);
         audioManager.StopAllOsts();
     }
 }
