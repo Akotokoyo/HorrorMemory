@@ -97,37 +97,49 @@ public class LevelManager : MonoBehaviour
 
             float width = originalRect.rect.width;
             float height = originalRect.rect.height;
+            Debug.Log("originalRect.rect.width: " + width + "originalRect.rect.height" + originalRect.rect.height);
             Vector2 normalized = currentLevel.differences[i].normalizedPosition;
             float x = (normalized.x - 0.5f) * width;
             float y = (normalized.y - 0.5f) * height;
             diffRect.anchoredPosition = new Vector2(x, y);
+            if (!currentLevel.differences[i].mustBeFound)
+            {
+                newDiff.SetActive(false);
+            }
             originalDifferences.Add(newDiff);
         }
 
         for (int i = 0; i < currentLevel.differences.Count; i++)
         {
-            var newDiff = Instantiate(differencePrefab, modifiedRect);
-            newDiff.name = $"Difference_{i}";
-            newDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
-            newDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
-            newDiff.GetComponent<Difference>().diffIndex = i;
-
-            RectTransform diffRect = newDiff.GetComponent<RectTransform>();
-            diffRect.sizeDelta = new Vector2
-                (currentLevel.differences[i].width, currentLevel.differences[i].height);
-
-            float width = modifiedRect.rect.width;
-            float height = modifiedRect.rect.height;
-            Vector2 normalized = currentLevel.differences[i].normalizedPosition;
-            float x = (normalized.x - 0.5f) * width;
-            float y = (normalized.y - 0.5f) * height;
-            diffRect.anchoredPosition = new Vector2(x, y);
             if (currentLevel.differences[i].mustBeFound)
             {
-                totalDifferenceCount++;
-                newDiff.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                var newDiff = Instantiate(differencePrefab, modifiedRect);
+                newDiff.name = $"Difference_{i}";
+                newDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
+                newDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
+                newDiff.GetComponent<Difference>().diffIndex = i;
+
+                RectTransform diffRect = newDiff.GetComponent<RectTransform>();
+                diffRect.sizeDelta = new Vector2
+                    (currentLevel.differences[i].width, currentLevel.differences[i].height);
+
+                float width = modifiedRect.rect.width;
+                float height = modifiedRect.rect.height;
+                Vector2 normalized = currentLevel.differences[i].normalizedPosition;
+                float x = (normalized.x - 0.5f) * width;
+                float y = (normalized.y - 0.5f) * height;
+                diffRect.anchoredPosition = new Vector2(x, y);
+                if (currentLevel.differences[i].mustBeFound)
+                {
+                    totalDifferenceCount++;
+                    newDiff.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                }
+                else
+                {
+                    newDiff.SetActive(false);
+                }
+                differencesToFind.Add(newDiff);
             }
-            differencesToFind.Add(newDiff);
         }
 
         UpdateUI();

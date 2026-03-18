@@ -23,6 +23,7 @@ public class LevelData : ScriptableObject
     [Header("Differences")]
     public List<DifferenceInfo> differences = new List<DifferenceInfo>();
 
+
     [Header("Sounds")]
     public AudioClip ambientSound;
     public AudioClip completionSound;
