@@ -913,6 +913,7 @@ Transform:
   - {fileID: 1910077096}
   - {fileID: 740338624}
   - {fileID: 2019742964}
+  - {fileID: 1896991638}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380330505
@@ -2577,6 +2578,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858806290}
   m_CullTransparentMesh: 1
+--- !u!1 &1896991637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1896991638}
+  - component: {fileID: 1896991639}
+  m_Layer: 0
+  m_Name: CasualLevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1896991638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896991637}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 354037578}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896991639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896991637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8425ba05afc86014d987785dc55cde41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CasualLevelGenerator
+  configFileName: CasualLevel_Example.json
+  fixedSeed: -1
 --- !u!1 &1910077095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,7 +2677,6 @@ MonoBehaviour:
   modifiedRect: {fileID: 1754750986}
   timerText: {fileID: 49970705}
   differenceFoundText: {fileID: 20035408}
-  currentLevel: {fileID: 11400000, guid: ca32367863f131e4faaf164b21ebcfb9, type: 2}
   differencePrefab: {fileID: 1294991734725399135, guid: d677eff420172784b94b5ab926a97167, type: 3}
   originalDifferences: []
   differencesToFind: []
@@ -2794,6 +2840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameState: 2
+  useCasualMode: 1
   currentLevel: {fileID: 11400000, guid: ca32367863f131e4faaf164b21ebcfb9, type: 2}
 --- !u!1 &2019742963
 GameObject:

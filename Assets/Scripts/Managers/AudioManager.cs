@@ -7,12 +7,14 @@ public class AudioManager : MonoBehaviour
 
     public void StartMusicSound(AudioClip clip)
     {
+        if (clip == null) return;
         ambientalSound.clip = clip;
         ambientalSound.Play();
     }
 
     public void StartEffectSound(AudioClip clip)
     {
+        if (clip == null) return;
         effectSound.clip = clip;
         effectSound.Play();
     }

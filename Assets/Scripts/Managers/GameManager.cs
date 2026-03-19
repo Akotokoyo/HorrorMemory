@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     }
 
     [SerializeField] private GameState gameState = GameState.WAITING;
+    [SerializeField] private bool useCasualMode = true;
     [SerializeField] private LevelData currentLevel;
 
 
@@ -47,6 +48,34 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator InitializeGame()
     {
+        if (useCasualMode && CasualLevelGenerator.Instance != null)
+        {
+            LevelManager.Instance.currentLevel = null;
+            bool done = false;
+            yield return CasualLevelGenerator.Instance.GenerateLevelAsync(
+                levelData =>
+                {
+                    LevelManager.Instance.currentLevel = levelData;
+                    done = true;
+                },
+                error =>
+                {
+                    Debug.LogError(error);
+                    done = true;
+                });
+            if (!done || LevelManager.Instance.currentLevel == null)
+                yield break;
+        }
+        else if (!useCasualMode && currentLevel != null)
+        {
+            LevelManager.Instance.currentLevel = currentLevel;
+        }
+        else
+        {
+            Debug.LogError("No Level configured. Set CurrentLevel Or Active useCasualMode.");
+            yield break;
+        }
+
         yield return StartCoroutine(LevelManager.Instance.PrepareLevel());
         gameState = GameState.PLAYING;
         LevelManager.Instance.InitLevel();

@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI differenceFoundText;
 
-    public LevelData currentLevel;
+    public ILevelData currentLevel;
 
     [SerializeField] private GameObject differencePrefab;
     [SerializeField] private List<GameObject> originalDifferences;
@@ -82,7 +82,7 @@ public class LevelManager : MonoBehaviour
 
         modifiedImage.sprite = currentLevel.originalSprite;
 
-        for(int i = 0; i< currentLevel.differences.Count; i++)
+        for(int i = 0; i < currentLevel.differences.Count; i++)
         {
             var newDiff = Instantiate(differencePrefab, originalRect);
             newDiff.name = $"Difference_{i}";
@@ -97,7 +97,6 @@ public class LevelManager : MonoBehaviour
 
             float width = originalRect.rect.width;
             float height = originalRect.rect.height;
-            Debug.Log("originalRect.rect.width: " + width + "originalRect.rect.height" + originalRect.rect.height);
             Vector2 normalized = currentLevel.differences[i].normalizedPosition;
             float x = (normalized.x - 0.5f) * width;
             float y = (normalized.y - 0.5f) * height;

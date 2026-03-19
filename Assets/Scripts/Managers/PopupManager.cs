@@ -22,10 +22,10 @@ public class PopupManager : MonoBehaviour
     private string endLevelStoryInfo;
     private int waitingtime;
 
-    public IEnumerator ShowPreGamePopup(LevelData level)
+    public IEnumerator ShowPreGamePopup(ILevelData level)
     {
         preGamePopup.SetActive(true);
-        levelNameText.text = level.name;
+        levelNameText.text = level.LevelDisplayName;
         levelTimerText.text = $"Time Limit: {level.timeLimit} seconds";
         levelDifficultyText.text = $"Difficulty: {level.difficulty}";
         levelStoryInfoText.text = level.storyIntroText;

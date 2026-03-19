@@ -2,8 +2,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "LevelData_", menuName = "Scriptable Objects/LevelData", order = 1)]
-public class LevelData : ScriptableObject
+public class LevelData : ScriptableObject, ILevelData
 {
+    string ILevelData.LevelDisplayName => levelName;
+    float ILevelData.timeLimit => timeLimit;
+    float ILevelData.scoreAddTime => scoreAddTime;
+    int ILevelData.waitingtime => waitingtime;
+    DifficultyLevel ILevelData.difficulty => difficulty;
+    string ILevelData.storyIntroText => storyIntroText;
+    string ILevelData.storyEndingText => storyEndingText;
+    Sprite ILevelData.originalSprite => originalSprite;
+    Sprite ILevelData.distortedSprite => distortedSprite;
+    AudioClip ILevelData.ambientSound => ambientSound;
+    AudioClip ILevelData.completionSound => completionSound;
+    AudioClip ILevelData.gameoverSound => gameoverSound;
+    List<DifferenceInfo> ILevelData.differences => differences;
+
     public string levelName = "Untitled Level";
     public int levelNumber = 1;
     public DifficultyLevel difficulty = DifficultyLevel.Medium;
