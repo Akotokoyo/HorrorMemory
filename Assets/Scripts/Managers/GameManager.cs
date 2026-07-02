@@ -80,4 +80,20 @@ public class GameManager : MonoBehaviour
         gameState = GameState.PLAYING;
         LevelManager.Instance.InitLevel();
     }
+
+    public void OnClickPlayNextLevel(bool canGoToNextLevel)
+    {
+        gameState = GameState.WAITING;
+        if (gameState == GameState.WAITING)
+        {
+            StartCoroutine(InitializeGame());
+        }
+    }
+
+    public void OnClickReturnToIntro()
+    {
+        Debug.Log("Return to the intro");
+        //TODO: When merge the intro, send the player to the intro;
+    }
+
 }
