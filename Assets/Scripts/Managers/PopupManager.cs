@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +17,9 @@ public class PopupManager : MonoBehaviour
     [Header("Ending Popup")]
     [SerializeField] private GameObject endPopup;
     [SerializeField] private TextMeshProUGUI endTitleText;
+    [SerializeField] private TextMeshProUGUI endLevelTimeLeftInfoText;
     [SerializeField] private TextMeshProUGUI endLevelStoryInfoText;
+    [SerializeField] private List<GameObject> stars;
 
 
     private string endLevelStoryInfo;
@@ -41,10 +44,16 @@ public class PopupManager : MonoBehaviour
         preGamePopup.SetActive(false);
     }
 
-    public void ShowEndPopup(bool levelSuccess)
+    public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
     {
         endPopup.SetActive(true);
         endTitleText.text = levelSuccess ? "Level Completed!" : "Level Failed!";
+        endLevelTimeLeftInfoText.text = $"Remaining Time: {remainingTime}";
         endLevelStoryInfoText.text = levelSuccess ? endLevelStoryInfo : "";
+
+        for(int i = 0; i< stars.Count; i++)
+        {
+            stars[i].SetActive((i < starNumber) ? true : false);
+        }
     }
 }

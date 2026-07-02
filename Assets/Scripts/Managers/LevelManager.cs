@@ -157,6 +157,7 @@ public class LevelManager : MonoBehaviour
         if (currentDifferenceCount == totalDifferenceCount)
         {
             OnLevelEnded?.Invoke(true);
+            StopAllCoroutines();
             StartCoroutine(ShowEndPopup(true));
         }
     }
@@ -206,7 +207,15 @@ public class LevelManager : MonoBehaviour
     private IEnumerator ShowEndPopup(bool levelSuccess)
     {
         yield return new WaitForSeconds(1f);
-        popupManager.ShowEndPopup(levelSuccess);
+        int starNumber = CalculateStarRating();
+        popupManager.ShowEndPopup(levelSuccess, currentTimer, starNumber);
         audioManager.StopAllOsts();
+    }
+
+    private int CalculateStarRating() {
+        if ((currentTimer < currentLevel.timeLimit && currentTimer >= currentLevel.timeLimit * Constants.FIRST_STAR_RANGE_PERCENTAGE) || currentTimer >= currentLevel.timeLimit) return 3;
+        if (currentTimer < currentLevel.timeLimit * Constants.FIRST_STAR_RANGE_PERCENTAGE && currentTimer >= currentLevel.timeLimit * Constants.SECOND_STAR_RANGE_PERCENTAGE) return 2;
+        if (currentTimer < currentLevel.timeLimit * Constants.SECOND_STAR_RANGE_PERCENTAGE && currentTimer > 0) return 1;
+        return 0;
     }
 }
