@@ -1,9 +1,11 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
+    private GameData _gameData;
 
     public static GameManager Instance
     {
@@ -14,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool useCasualMode = true;
     [SerializeField] private LevelData currentLevel;
 
+
+    private bool isNewGame = true;
 
     void Awake()
     {
@@ -26,10 +30,18 @@ public class GameManager : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-        if(gameState == GameState.WAITING)
+        //TODO: Handle if save file exists
+        if (isNewGame)
+        {
+            StartCoroutine(SetupGameData());
+        }
+
+
+        //TODO: Move to dedicated Function
+        /*if(gameState == GameState.WAITING)
         {
             StartCoroutine(InitializeGame());
-        }
+        }*/
     }
 
     private void OnEnable()
@@ -39,6 +51,12 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         LevelManager.OnLevelEnded -= HandleLevelEnded;
+    }
+
+    private IEnumerator SetupGameData()
+    {
+        JsonConverter jsonConverter = new JsonConverter();
+        yield return jsonConverter.ConvertStartingLevelsAsync(startingGameData => _gameData = startingGameData);
     }
 
     private void HandleLevelEnded(bool levelSuccess)

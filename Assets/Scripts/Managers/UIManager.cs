@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class IntroMenu : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     public GameObject levelSelection;
     public GameObject contentMenu;
@@ -34,5 +34,10 @@ public class IntroMenu : MonoBehaviour
     {
         contentMenu.SetActive(true);
         levelSelection.SetActive(false);
+    }
+
+    public void OnClickPlayLevel(int idLevel)
+    {
+        //TODO: 
     }
 }
