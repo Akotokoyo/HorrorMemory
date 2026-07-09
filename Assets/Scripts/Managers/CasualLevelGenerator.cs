@@ -8,7 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class CasualLevelGenerator : MonoBehaviour
 {
-    [SerializeField] private string configFileName = "CasualLevel_Example.json";
+    private string configFileName = "Resources_moved/CasualLevelConfiguration/CasualLevel_Example.json";
     [SerializeField] private int fixedSeed = -1;
 
     private static CasualLevelGenerator _instance;
@@ -29,7 +29,7 @@ public class CasualLevelGenerator : MonoBehaviour
         if (fixedSeed >= 0)
             UnityEngine.Random.InitState(fixedSeed);
 
-        string path = Path.Combine(Application.streamingAssetsPath, configFileName);
+        string path = Path.Combine(Application.dataPath, configFileName);
         string json;
         try
         {

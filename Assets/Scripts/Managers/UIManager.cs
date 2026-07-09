@@ -17,6 +17,11 @@ public class UIManager : MonoBehaviour
                 levelSelection.SetActive(true);
                 break;
             case "Play":
+                GameManager.Instance.StartGame(-1, true);
+                levelSelection.SetActive(false);
+                introUI.SetActive(false);
+                gameUI.SetActive(true);
+
                 Debug.Log("Play Button is clicked");
                 break;
             case "Options":

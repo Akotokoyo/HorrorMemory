@@ -93,11 +93,14 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.InitLevel();
     }
 
-    public void StartGame(int levelId)
+    public void StartGame(int levelId, bool isCasualMode = false)
     {
         gameState = GameState.WAITING;
-        currentLevel = _gameLevelConfigurations[levelId];
-        useCasualMode = false;
+        useCasualMode = isCasualMode;
+        if (!useCasualMode)
+        {
+            currentLevel = _gameLevelConfigurations[levelId];
+        }
         if (gameState == GameState.WAITING)
         {
             StartCoroutine(InitializeGame());
