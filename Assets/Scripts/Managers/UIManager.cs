@@ -4,6 +4,9 @@ public class UIManager : MonoBehaviour
 {
     public GameObject levelSelection;
     public GameObject contentMenu;
+    public GameObject introUI;
+    public GameObject gameUI;
+    private int currentLevel;
 
     public void OnClickIntroButton(string action)
     {
@@ -12,7 +15,6 @@ public class UIManager : MonoBehaviour
         {
             case "Story":
                 levelSelection.SetActive(true);
-                Debug.Log("Story Button is clicked");
                 break;
             case "Play":
                 Debug.Log("Play Button is clicked");
@@ -38,6 +40,30 @@ public class UIManager : MonoBehaviour
 
     public void OnClickPlayLevel(int idLevel)
     {
-        //TODO: 
+        currentLevel = idLevel;
+        GameManager.Instance.StartGame(idLevel);
+        levelSelection.SetActive(false);
+        introUI.SetActive(false);
+        gameUI.SetActive(true);
+    }
+
+    public void OnclickReturnToTitle()
+    {
+        introUI.SetActive(true);
+        contentMenu.SetActive(true);
+        gameUI.SetActive(false);
+    }
+    public void OnclickRetryLevel()
+    {
+        GameManager.Instance.StartGame(currentLevel);
+        levelSelection.SetActive(false);
+        introUI.SetActive(false);
+        gameUI.SetActive(true);
+    }
+
+    public void OnClickPlayNextLevel()
+    {
+        currentLevel++;
+        OnClickPlayLevel(currentLevel);
     }
 }

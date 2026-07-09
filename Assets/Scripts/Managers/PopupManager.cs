@@ -58,4 +58,9 @@ public class PopupManager : MonoBehaviour
             stars[i].SetActive((i < starNumber) ? true : false);
         }
     }
+
+    public void HideEndPopup()
+    {
+        endPopup.SetActive(false);
+    }
 }

@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     private GameData _gameData;
-
+    
     public static GameManager Instance
     {
         get { return _instance; }
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameState gameState = GameState.WAITING;
     [SerializeField] private bool useCasualMode = true;
     [SerializeField] private LevelData currentLevel;
+    [SerializeField] private List<LevelData> _gameLevelConfigurations;
 
 
     private bool isNewGame = true;
@@ -35,13 +36,6 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(SetupGameData());
         }
-
-
-        //TODO: Move to dedicated Function
-        /*if(gameState == GameState.WAITING)
-        {
-            StartCoroutine(InitializeGame());
-        }*/
     }
 
     private void OnEnable()
@@ -99,19 +93,14 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.InitLevel();
     }
 
-    public void OnClickPlayNextLevel(bool canGoToNextLevel)
+    public void StartGame(int levelId)
     {
         gameState = GameState.WAITING;
+        currentLevel = _gameLevelConfigurations[levelId];
+        useCasualMode = false;
         if (gameState == GameState.WAITING)
         {
             StartCoroutine(InitializeGame());
         }
     }
-
-    public void OnClickReturnToIntro()
-    {
-        Debug.Log("Return to the intro");
-        //TODO: When merge the intro, send the player to the intro;
-    }
-
 }

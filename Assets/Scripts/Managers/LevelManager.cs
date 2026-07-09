@@ -50,10 +50,12 @@ public class LevelManager : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+        GenerateDiffsTemplate();
     }
 
     public IEnumerator PrepareLevel()
     {
+        popupManager.HideEndPopup();
         yield return popupManager.ShowPreGamePopup(currentLevel);
     }
 
@@ -64,34 +66,34 @@ public class LevelManager : MonoBehaviour
             Debug.LogError("There is not a currentLevel Loaded");
             return;
         }
-        if (originalDifferences == null)
-        {
-            originalDifferences = new List<GameObject>();
-        }
-        if (differencesToFind == null)
-        {
-            differencesToFind = new List<GameObject>();
-        }
-
-        ClearOldData();
 
         currentTimer = currentLevel.timeLimit;
         distortedImage.sprite = currentLevel.distortedSprite;
         originalImage.sprite = currentLevel.originalSprite;
         currentAlpha = 1f;
+        totalDifferenceCount = 0;
+        currentDifferenceCount = 0;
 
         modifiedImage.sprite = currentLevel.originalSprite;
 
         for(int i = 0; i < currentLevel.differences.Count; i++)
         {
-            var newDiff = Instantiate(differencePrefab, originalRect);
-            newDiff.name = $"Difference_{i}";
-            newDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
-            newDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
-            newDiff.GetComponent<Difference>().diffIndex = i;
-            newDiff.GetComponent<Difference>().isClickable = false;
+            GameObject originalDiff = originalDifferences[i];
+            if (!currentLevel.differences[i].mustBeFound)
+            {
+                originalDiff.SetActive(false);
+                continue;
+            }
+            else
+            {
+                originalDiff.SetActive(true);
+            }
+            originalDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
+            originalDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
+            originalDiff.GetComponent<Difference>().diffIndex = i;
+            originalDiff.GetComponent<Difference>().isClickable = false;
             
-            RectTransform diffRect = newDiff.GetComponent<RectTransform>();
+            RectTransform diffRect = originalDiff.GetComponent<RectTransform>();
             diffRect.sizeDelta = new Vector2
                 (currentLevel.differences[i].width, currentLevel.differences[i].height);
 
@@ -101,44 +103,39 @@ public class LevelManager : MonoBehaviour
             float x = (normalized.x - 0.5f) * width;
             float y = (normalized.y - 0.5f) * height;
             diffRect.anchoredPosition = new Vector2(x, y);
-            if (!currentLevel.differences[i].mustBeFound)
-            {
-                newDiff.SetActive(false);
-            }
-            originalDifferences.Add(newDiff);
         }
 
         for (int i = 0; i < currentLevel.differences.Count; i++)
         {
-            if (currentLevel.differences[i].mustBeFound)
+            GameObject modDiff = differencesToFind[i];
+            if (!currentLevel.differences[i].mustBeFound)
             {
-                var newDiff = Instantiate(differencePrefab, modifiedRect);
-                newDiff.name = $"Difference_{i}";
-                newDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
-                newDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
-                newDiff.GetComponent<Difference>().diffIndex = i;
-
-                RectTransform diffRect = newDiff.GetComponent<RectTransform>();
-                diffRect.sizeDelta = new Vector2
-                    (currentLevel.differences[i].width, currentLevel.differences[i].height);
-
-                float width = modifiedRect.rect.width;
-                float height = modifiedRect.rect.height;
-                Vector2 normalized = currentLevel.differences[i].normalizedPosition;
-                float x = (normalized.x - 0.5f) * width;
-                float y = (normalized.y - 0.5f) * height;
-                diffRect.anchoredPosition = new Vector2(x, y);
-                if (currentLevel.differences[i].mustBeFound)
-                {
-                    totalDifferenceCount++;
-                    newDiff.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                }
-                else
-                {
-                    newDiff.SetActive(false);
-                }
-                differencesToFind.Add(newDiff);
+                modDiff.SetActive(false);
+                continue;
             }
+            else
+            {
+                totalDifferenceCount++;
+                modDiff.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                modDiff.SetActive(true);
+            }
+
+            modDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
+            modDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
+            modDiff.GetComponent<Difference>().diffIndex = i;
+            modDiff.GetComponent<Difference>().isClickable = true;
+            modDiff.GetComponent<Difference>().isFound = false;
+
+            RectTransform diffRect = modDiff.GetComponent<RectTransform>();
+            diffRect.sizeDelta = new Vector2
+                (currentLevel.differences[i].width, currentLevel.differences[i].height);
+
+            float width = modifiedRect.rect.width;
+            float height = modifiedRect.rect.height;
+            Vector2 normalized = currentLevel.differences[i].normalizedPosition;
+            float x = (normalized.x - 0.5f) * width;
+            float y = (normalized.y - 0.5f) * height;
+            diffRect.anchoredPosition = new Vector2(x, y);
         }
 
         UpdateUI();
@@ -162,8 +159,28 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void ClearOldData() { 
-        //TODO:
+    private void GenerateDiffsTemplate()
+    {
+        if (originalDifferences == null)
+        {
+            originalDifferences = new List<GameObject>();
+        }
+        if (differencesToFind == null)
+        {
+            differencesToFind = new List<GameObject>();
+        }
+
+        for (int i = 0; i < Constants.MAX_DIFFERENCES; i++)
+        {
+            var origDiff = Instantiate(differencePrefab, originalRect);
+            origDiff.name = $"OrigDifference_{i}";
+            originalDifferences.Add(origDiff);
+
+            var modDiff = Instantiate(differencePrefab, modifiedRect);
+            modDiff.name = $"ModDifference_{i}";
+            differencesToFind.Add(modDiff);
+        }
+
     }
     private void UpdateUI() {
         differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";        
