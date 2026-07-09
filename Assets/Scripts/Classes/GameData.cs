@@ -17,5 +17,6 @@ public class Level
     public string LevelName;
     public string AddrImage;
     public int StarRating;
-    public string BestTime;
+    public int BestTimer;
+    public bool IsAvailable;
 }

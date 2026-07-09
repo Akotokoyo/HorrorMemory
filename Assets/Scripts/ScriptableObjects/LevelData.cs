@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "LevelData_", menuName = "Scriptable Objects/LevelData", order = 1)]
 public class LevelData : ScriptableObject, ILevelData
 {
+    int ILevelData.LevelId => levelId;
     string ILevelData.LevelDisplayName => levelName;
     float ILevelData.timeLimit => timeLimit;
     float ILevelData.scoreAddTime => scoreAddTime;
@@ -19,7 +20,7 @@ public class LevelData : ScriptableObject, ILevelData
     List<DifferenceInfo> ILevelData.differences => differences;
 
     public string levelName = "Untitled Level";
-    public int levelNumber = 1;
+    public int levelId = 1;
     public DifficultyLevel difficulty = DifficultyLevel.Medium;
     
     [Min(0f)]

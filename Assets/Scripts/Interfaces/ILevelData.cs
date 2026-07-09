@@ -3,6 +3,7 @@ using UnityEngine;
 
 public interface ILevelData
 {
+    int LevelId { get; }
     string LevelDisplayName { get; }
     float timeLimit { get; }
     float scoreAddTime { get; }

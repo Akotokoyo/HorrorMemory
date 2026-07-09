@@ -4,7 +4,7 @@ using UnityEngine;
 public class RuntimeLevelData : ILevelData
 {
     public string levelName = "Untitled Level";
-    public int levelNumber = 1;
+    public int levelId = 1;
     public DifficultyLevel difficulty = DifficultyLevel.Medium;
     public float timeLimit = 20f;
     public float scoreAddTime = 5f;
@@ -21,6 +21,7 @@ public class RuntimeLevelData : ILevelData
     public List<DifferenceInfo> differences = new List<DifferenceInfo>();
 
     public string LevelDisplayName => levelName;
+    int ILevelData.LevelId => levelId;
     float ILevelData.timeLimit => timeLimit;
     float ILevelData.scoreAddTime => scoreAddTime;
     int ILevelData.waitingtime => waitingtime;

@@ -4,7 +4,7 @@
       "Id": 0,
       "LevelName": "Level 0",
       "IsAvailable": true,
-      "AddrImage":"Sprites/Level_000/Pot",
+      "AddrImage":"Sprites/Level_000/Original_0",
       "StarRating": 0,
       "BestTime": "--:--:--"
     },
@@ -12,7 +12,7 @@
       "Id": 1,
       "LevelName": "Level 1",
       "IsAvailable": false,
-      "AddrImage":"Sprites/Level_000/Pot",
+      "AddrImage":"Sprites/Level_001/Original_1",
       "StarRating": 0,
       "BestTime": "--:--:--"
     }

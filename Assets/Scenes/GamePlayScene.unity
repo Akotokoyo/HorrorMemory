@@ -4181,6 +4181,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroMenu
   levelSelection: {fileID: 1060430122}
+  levelPrefabs:
+  - {fileID: 1647910544}
+  - {fileID: 1233038115}
   contentMenu: {fileID: 775444506}
   introUI: {fileID: 503338227}
   gameUI: {fileID: 1849990086}
@@ -4479,6 +4482,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208257937}
   m_CullTransparentMesh: 1
+--- !u!1 &1233038115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2379717108148530134, guid: c8bea8985d835394cb9f31b7db4db07a, type: 3}
+  m_PrefabInstance: {fileID: 854490597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1236171862
 GameObject:
   m_ObjectHideFlags: 0
@@ -5261,6 +5269,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600413349}
   m_CullTransparentMesh: 1
+--- !u!1 &1647910544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2379717108148530134, guid: c8bea8985d835394cb9f31b7db4db07a, type: 3}
+  m_PrefabInstance: {fileID: 3923854007984069132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1698916542
 GameObject:
   m_ObjectHideFlags: 0
@@ -6229,7 +6242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8425ba05afc86014d987785dc55cde41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CasualLevelGenerator
-  configFileName: CasualLevel_Example.json
   fixedSeed: -1
 --- !u!1 &1910077095
 GameObject:

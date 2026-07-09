@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelData_000
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelName: Level00
-  levelNumber: 1
+  levelId: 0
   difficulty: 1
   timeLimit: 20
   scoreAddTime: 5

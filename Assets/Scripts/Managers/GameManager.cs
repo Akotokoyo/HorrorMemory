@@ -17,8 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LevelData currentLevel;
     [SerializeField] private List<LevelData> _gameLevelConfigurations;
 
-
-    private bool isNewGame = true;
+    private SaveData _saveData;
 
     void Awake()
     {
@@ -31,10 +30,16 @@ public class GameManager : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-        //TODO: Handle if save file exists
-        if (isNewGame)
+        _saveData = new();
+        var savedData = _saveData.ReadSaveFile();
+        if (savedData == null)
         {
-            StartCoroutine(SetupGameData());
+            _gameData = SetupGameData();
+        }
+        else
+        {
+            Debug.Log("HERE");
+            _gameData = savedData;
         }
     }
 
@@ -47,10 +52,10 @@ public class GameManager : MonoBehaviour
         LevelManager.OnLevelEnded -= HandleLevelEnded;
     }
 
-    private IEnumerator SetupGameData()
+    private GameData SetupGameData()
     {
         JsonConverter jsonConverter = new JsonConverter();
-        yield return jsonConverter.ConvertStartingLevelsAsync(startingGameData => _gameData = startingGameData);
+        return jsonConverter.ConvertStartingGameDataAsync();
     }
 
     private void HandleLevelEnded(bool levelSuccess)
@@ -105,5 +110,30 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(InitializeGame());
         }
+    }
+
+    public void UpdateGameData(int levelId, int starRating, float currentTimer)
+    {
+        Level level = _gameData.Levels[levelId];
+        if (level.StarRating < starRating)
+        {
+            level.StarRating = starRating;
+        }
+        if(level.BestTimer < currentTimer)
+        {
+            level.BestTimer = (int)currentTimer;
+        }
+
+        if(levelId + 1 < _gameData.Levels.Count)
+        {
+            _gameData.Levels[levelId + 1].IsAvailable = true;
+        }
+        //TODO: use one JsonConverter
+        _saveData.WriteFile(new JsonConverter(), _gameData);
+    }
+
+    public Level GetLevelFromGameData(int index)
+    {
+        return _gameData.Levels[index];
     }
 }

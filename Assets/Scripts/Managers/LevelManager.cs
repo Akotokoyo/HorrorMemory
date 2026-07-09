@@ -225,6 +225,10 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         int starNumber = CalculateStarRating();
+        if (levelSuccess)
+        {
+            GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
+        }
         popupManager.ShowEndPopup(levelSuccess, currentTimer, starNumber);
         audioManager.StopAllOsts();
     }

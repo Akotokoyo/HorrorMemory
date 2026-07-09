@@ -1,8 +1,17 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject levelSelection;
+    public List<GameObject> levelPrefabs;
+
     public GameObject contentMenu;
     public GameObject introUI;
     public GameObject gameUI;
@@ -14,6 +23,7 @@ public class UIManager : MonoBehaviour
         switch (action)
         {
             case "Story":
+                StartCoroutine(PrepareLevelsFromGameData());
                 levelSelection.SetActive(true);
                 break;
             case "Play":
@@ -70,5 +80,42 @@ public class UIManager : MonoBehaviour
     {
         currentLevel++;
         OnClickPlayLevel(currentLevel);
+    }
+
+    private IEnumerator PrepareLevelsFromGameData()
+    {
+        for(int i = 0; i < levelPrefabs.Count; i++)
+        {
+            Level level = GameManager.Instance.GetLevelFromGameData(i);
+            if (!level.IsAvailable)
+            {
+                levelPrefabs[i].GetComponent<Button>().interactable = false;
+                levelPrefabs[i].transform.GetChild(0).gameObject.SetActive(true);
+                levelPrefabs[i].transform.GetChild(1).gameObject.SetActive(false);
+            }
+            else
+            {
+                levelPrefabs[i].GetComponent<Button>().interactable = true;
+                levelPrefabs[i].transform.GetChild(0).gameObject.SetActive(false);
+                levelPrefabs[i].transform.GetChild(1).gameObject.SetActive(true);
+                Transform tr = levelPrefabs[i].transform.GetChild(1);
+                tr.GetChild(0).GetComponent<TextMeshProUGUI>().text = level.LevelName;
+                
+                var op = Addressables.LoadAssetAsync<Sprite>(level.AddrImage);
+                yield return op;
+                if (op.Status == AsyncOperationStatus.Succeeded)
+                {
+                    tr.GetChild(1).GetComponent<Image>().sprite = op.Result;
+                }
+
+                var timePlaying = TimeSpan.FromSeconds(level.BestTimer);
+                tr.GetChild(2).GetComponent<TextMeshProUGUI>().text = timePlaying.ToString(@"mm\:ss");
+                for(int j = 0; j < 3; j++)
+                {
+                    tr.GetChild(3).GetChild(j).GetChild(0).gameObject.SetActive(j < level.StarRating);
+                }
+            }
+        }
+        
     }
 }
