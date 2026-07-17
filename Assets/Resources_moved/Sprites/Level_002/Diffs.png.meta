@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: imageedit_1_3526858336_0
+      name: 2.0
       rect:
         serializedVersion: 2
         x: 32
@@ -132,7 +132,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_1
+      name: 2.1
       rect:
         serializedVersion: 2
         x: 105
@@ -154,7 +154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_2
+      name: 2.2
       rect:
         serializedVersion: 2
         x: 198
@@ -176,7 +176,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_3
+      name: 2.3
       rect:
         serializedVersion: 2
         x: 278
@@ -198,7 +198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_4
+      name: 2.4
       rect:
         serializedVersion: 2
         x: 357
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_5
+      name: 2.5
       rect:
         serializedVersion: 2
         x: 439
@@ -242,7 +242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_6
+      name: 2.6
       rect:
         serializedVersion: 2
         x: 527
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_7
+      name: 2.7
       rect:
         serializedVersion: 2
         x: 652
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_8
+      name: 2.8
       rect:
         serializedVersion: 2
         x: 27
@@ -308,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_9
+      name: 2.9
       rect:
         serializedVersion: 2
         x: 104
@@ -330,7 +330,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_10
+      name: 2.10
       rect:
         serializedVersion: 2
         x: 196
@@ -352,7 +352,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_11
+      name: 2.11
       rect:
         serializedVersion: 2
         x: 273
@@ -374,7 +374,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_12
+      name: 2.12
       rect:
         serializedVersion: 2
         x: 377
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_13
+      name: 2.13
       rect:
         serializedVersion: 2
         x: 439
@@ -418,7 +418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_14
+      name: 2.14
       rect:
         serializedVersion: 2
         x: 654
@@ -440,10 +440,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_15
+      name: 2.15
       rect:
         serializedVersion: 2
-        x: 737
+        x: 738
         y: 250
         width: 51
         height: 67
@@ -462,7 +462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_16
+      name: 2.16
       rect:
         serializedVersion: 2
         x: 30
@@ -484,7 +484,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_17
+      name: 2.17
       rect:
         serializedVersion: 2
         x: 115
@@ -506,7 +506,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_18
+      name: 2.19
       rect:
         serializedVersion: 2
         x: 557
@@ -528,7 +528,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_19
+      name: 2.18
       rect:
         serializedVersion: 2
         x: 219
@@ -550,10 +550,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_20
+      name: 2.20
       rect:
         serializedVersion: 2
-        x: 414
+        x: 413
         y: 153
         width: 100
         height: 47
@@ -572,7 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_21
+      name: 2.21
       rect:
         serializedVersion: 2
         x: 519
@@ -594,7 +594,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_22
+      name: 2.22
       rect:
         serializedVersion: 2
         x: 644
@@ -616,7 +616,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_23
+      name: 2.23
       rect:
         serializedVersion: 2
         x: 729
@@ -726,7 +726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_28
+      name: 2.24
       rect:
         serializedVersion: 2
         x: 546
@@ -748,7 +748,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imageedit_1_3526858336_29
+      name: 2.25
       rect:
         serializedVersion: 2
         x: 687
@@ -785,36 +785,36 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      imageedit_1_3526858336_0: -1658067312
-      imageedit_1_3526858336_1: 1381335310
-      imageedit_1_3526858336_10: 2111426870
-      imageedit_1_3526858336_11: -866533189
-      imageedit_1_3526858336_12: -1632661294
-      imageedit_1_3526858336_13: -1655369250
-      imageedit_1_3526858336_14: -1724433632
-      imageedit_1_3526858336_15: -1285753519
-      imageedit_1_3526858336_16: 2080908996
-      imageedit_1_3526858336_17: -1427545530
-      imageedit_1_3526858336_18: 1312474736
-      imageedit_1_3526858336_19: -1104477268
-      imageedit_1_3526858336_2: 878911195
-      imageedit_1_3526858336_20: 1920401166
-      imageedit_1_3526858336_21: 1408532131
-      imageedit_1_3526858336_22: -873511579
-      imageedit_1_3526858336_23: -125179393
+      2.0: -1658067312
+      2.1: 1381335310
+      2.10: 2111426870
+      2.11: -866533189
+      2.12: -1632661294
+      2.13: -1655369250
+      2.14: -1724433632
+      2.15: -1285753519
+      2.16: 2080908996
+      2.17: -1427545530
+      2.18: -1104477268
+      2.19: 1312474736
+      2.2: 878911195
+      2.20: 1920401166
+      2.21: 1408532131
+      2.22: -873511579
+      2.23: -125179393
+      2.24: 1687183344
+      2.25: 1803305959
+      2.3: -1693204020
+      2.4: 1225791613
+      2.5: 1863827989
+      2.6: 1271524216
+      2.7: -1032636452
+      2.8: -40119595
+      2.9: 1230338731
       imageedit_1_3526858336_24: 1635550022
       imageedit_1_3526858336_25: -1499561034
       imageedit_1_3526858336_26: -26322185
       imageedit_1_3526858336_27: 551120903
-      imageedit_1_3526858336_28: 1687183344
-      imageedit_1_3526858336_29: 1803305959
-      imageedit_1_3526858336_3: -1693204020
-      imageedit_1_3526858336_4: 1225791613
-      imageedit_1_3526858336_5: 1863827989
-      imageedit_1_3526858336_6: 1271524216
-      imageedit_1_3526858336_7: -1032636452
-      imageedit_1_3526858336_8: -40119595
-      imageedit_1_3526858336_9: 1230338731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -50,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2731454fe520a5446a3ffd2628132df5
+    m_Address: Assets/Resources_moved/Sprites/Level_002/Diffs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2d1460c2ac36b2f428add2c30d7b4855
     m_Address: Sprites/Level_002/Distorted_2
     m_ReadOnly: 0
