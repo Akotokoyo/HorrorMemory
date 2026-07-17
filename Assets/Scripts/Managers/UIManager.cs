@@ -17,6 +17,38 @@ public class UIManager : MonoBehaviour
     public GameObject gameUI;
     private int currentLevel;
 
+    [SerializeField] private GameObject scrollViewContent;
+    [SerializeField] private GameObject levelPrefab;
+
+    private static UIManager _instance;
+
+    public static UIManager Instance
+    {
+        get { return _instance; }
+    }
+
+    void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        _instance = this;
+    }
+
+    public void GenerateLevelPrefabs(GameData gameData)
+    {
+        for(int i = 0; i < gameData.Levels.Count; i++)
+        {
+            int levelIndex = i;
+            GameObject go = Instantiate(levelPrefab, scrollViewContent.transform);
+            go.GetComponent<Button>().onClick.AddListener(() => OnClickPlayLevel(levelIndex));
+            levelPrefabs.Add(go);
+        }
+    }
+
     public void OnClickIntroButton(string action)
     {
         contentMenu.SetActive(false);
