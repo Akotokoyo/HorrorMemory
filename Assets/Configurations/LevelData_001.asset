@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelData_001
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelName: Level01
-  levelNumber: 2
+  levelId: 1
   difficulty: 1
   timeLimit: 20
   scoreAddTime: 5
@@ -42,8 +42,8 @@ MonoBehaviour:
     deflectinRadious: 0
     width: 100
     height: 150
-    startedSprite: {fileID: 21300000, guid: f2f28f752aa87994c872a07426d79223, type: 3}
-    distortedSprite: {fileID: 21300000, guid: b6b908acfdee2c24b947b17ef84a374e, type: 3}
+    startedSprite: {fileID: 807782604, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    distortedSprite: {fileID: 635577971, guid: 0eda541822c27c3438b8bdfafb5f475f, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.6989, y: 0.578}
     deflectinRadious: 0
@@ -63,8 +63,8 @@ MonoBehaviour:
     deflectinRadious: 0
     width: 20
     height: 20
-    startedSprite: {fileID: -897120059, guid: e0fe3faef13d782468a90fc80ce2ebe8, type: 3}
-    distortedSprite: {fileID: 310291483, guid: e0fe3faef13d782468a90fc80ce2ebe8, type: 3}
+    startedSprite: {fileID: -1960291783, guid: f235e9c89633fe24e98d3d688429c503, type: 3}
+    distortedSprite: {fileID: 1814734080, guid: f235e9c89633fe24e98d3d688429c503, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.214, y: 0.456}
     deflectinRadious: 0
@@ -82,24 +82,24 @@ MonoBehaviour:
     mustBeFound: 0
   - normalizedPosition: {x: 0.0729, y: 0.0706}
     deflectinRadious: 0
-    width: 100
-    height: 150
-    startedSprite: {fileID: -1351714325, guid: e0fe3faef13d782468a90fc80ce2ebe8, type: 3}
-    distortedSprite: {fileID: -581612070, guid: e0fe3faef13d782468a90fc80ce2ebe8, type: 3}
+    width: 150
+    height: 180
+    startedSprite: {fileID: -1788790349, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    distortedSprite: {fileID: -1594591804, guid: 0eda541822c27c3438b8bdfafb5f475f, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.8552, y: 0.237}
     deflectinRadious: 0
     width: 100
     height: 100
-    startedSprite: {fileID: 1198732806, guid: 6994469e439dbe24e865dd726bade936, type: 3}
-    distortedSprite: {fileID: 520097227, guid: 6994469e439dbe24e865dd726bade936, type: 3}
+    startedSprite: {fileID: -1495320030, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    distortedSprite: {fileID: -2052290732, guid: 0eda541822c27c3438b8bdfafb5f475f, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 0.353, y: 0.4557}
+  - normalizedPosition: {x: 0.353, y: 0.425}
     deflectinRadious: 0
     width: 50
     height: 50
-    startedSprite: {fileID: -1671875675, guid: e0fe3faef13d782468a90fc80ce2ebe8, type: 3}
-    distortedSprite: {fileID: -1991435307, guid: e0fe3faef13d782468a90fc80ce2ebe8, type: 3}
+    startedSprite: {fileID: -1179529701, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    distortedSprite: {fileID: -1878695241, guid: 0eda541822c27c3438b8bdfafb5f475f, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.652, y: 0.438}
     deflectinRadious: 0
@@ -112,8 +112,8 @@ MonoBehaviour:
     deflectinRadious: 0
     width: 70
     height: 50
-    startedSprite: {fileID: 21300000, guid: ba35ea195e1711041880c048691592b4, type: 3}
-    distortedSprite: {fileID: 21300000, guid: 96deceafe631a7440980bf06f1796667, type: 3}
+    startedSprite: {fileID: -1690910136, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    distortedSprite: {fileID: 1975017513, guid: 0eda541822c27c3438b8bdfafb5f475f, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.309, y: 0.202}
     deflectinRadious: 0
