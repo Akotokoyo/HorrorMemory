@@ -61,10 +61,10 @@ MonoBehaviour:
     mustBeFound: 0
   - normalizedPosition: {x: 0.844, y: 0.049}
     deflectinRadious: 0
-    width: 250
-    height: 125
-    startedSprite: {fileID: 1920401166, guid: 2731454fe520a5446a3ffd2628132df5, type: 3}
-    distortedSprite: {fileID: 1408532131, guid: 2731454fe520a5446a3ffd2628132df5, type: 3}
+    width: 200
+    height: 100
+    startedSprite: {fileID: -398240985, guid: c18396c8cf7037d479e0346917d1d8f5, type: 3}
+    distortedSprite: {fileID: 1203107504, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.179, y: 0.941}
     deflectinRadious: 0
@@ -82,24 +82,24 @@ MonoBehaviour:
     mustBeFound: 0
   - normalizedPosition: {x: 0.678, y: 0.674}
     deflectinRadious: 0
-    width: 65
-    height: 72
-    startedSprite: {fileID: -650988777, guid: 17008ba688eb1264ea39266ac4ab486b, type: 3}
-    distortedSprite: {fileID: -491315748, guid: 17008ba688eb1264ea39266ac4ab486b, type: 3}
+    width: 80
+    height: 80
+    startedSprite: {fileID: 1776411018, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
+    distortedSprite: {fileID: 10027381, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.103, y: 0.496}
     deflectinRadious: 0
-    width: 93
-    height: 279
-    startedSprite: {fileID: 878911195, guid: 2731454fe520a5446a3ffd2628132df5, type: 3}
-    distortedSprite: {fileID: -1693204020, guid: 2731454fe520a5446a3ffd2628132df5, type: 3}
+    width: 100
+    height: 270
+    startedSprite: {fileID: -2010574827, guid: c18396c8cf7037d479e0346917d1d8f5, type: 3}
+    distortedSprite: {fileID: -879162881, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 0.996, y: 0.105}
+  - normalizedPosition: {x: 0.996, y: 0.25}
     deflectinRadious: 0
-    width: 140
-    height: 185
-    startedSprite: {fileID: -657197889, guid: 79a2ca87f62590149ad998579a75e18b, type: 3}
-    distortedSprite: {fileID: 976922147, guid: 79a2ca87f62590149ad998579a75e18b, type: 3}
+    width: 200
+    height: 500
+    startedSprite: {fileID: -37866414, guid: c18396c8cf7037d479e0346917d1d8f5, type: 3}
+    distortedSprite: {fileID: -816346307, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 1.008, y: 0.774}
     deflectinRadious: 0
@@ -112,8 +112,8 @@ MonoBehaviour:
     deflectinRadious: 0
     width: 105
     height: 85
-    startedSprite: {fileID: -1104477268, guid: 2731454fe520a5446a3ffd2628132df5, type: 3}
-    distortedSprite: {fileID: 1312474736, guid: 2731454fe520a5446a3ffd2628132df5, type: 3}
+    startedSprite: {fileID: -427694949, guid: c18396c8cf7037d479e0346917d1d8f5, type: 3}
+    distortedSprite: {fileID: 2049687698, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.503, y: 0.925}
     deflectinRadious: 0

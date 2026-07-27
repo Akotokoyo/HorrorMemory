@@ -94,7 +94,7 @@ MonoBehaviour:
     startedSprite: {fileID: -1495320030, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
     distortedSprite: {fileID: -2052290732, guid: 0eda541822c27c3438b8bdfafb5f475f, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 0.353, y: 0.425}
+  - normalizedPosition: {x: 0.353, y: 0.45}
     deflectinRadious: 0
     width: 50
     height: 50
