@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System.IO;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class SaveData
@@ -32,7 +33,7 @@ public class SaveData
             PlayerPrefs.SetString($"key", key);
 
             // Create a FileStream for creating files.
-            dataStream = new FileStream(gameSlotFilePath, FileMode.Create);
+            dataStream = new FileStream(gamePath, FileMode.Create);
 
             // Save the new generated IV.
             byte[] inputIV = iAes.IV;
@@ -49,7 +50,7 @@ public class SaveData
             // Create StreamWriter, wrapping CryptoStream.
             StreamWriter sWriter = new StreamWriter(iStream);
 
-            string jsonString = jsonConverter.WriteToJsonFromObject(GameData.Instance);
+            string jsonString = jsonConverter.WriteToJsonFromObject(gameData);
 
             // Write to the innermost stream (which will encrypt).
             sWriter.Write(jsonString);
@@ -68,15 +69,15 @@ public class SaveData
 #if UNITY_EDITOR
         gamePath = $"Assets/Data/GameData.sav";
 #else
-            gameSlotFilePath = $"{Application.persistentDataPath}/GameData.sav";
+        gamePath = $"{Application.persistentDataPath}/GameData.sav";
 #endif
 
 #if !UNITY_EDITOR
             // Does the file exist?
-            if (File.Exists(gameSlotFilePath))
+            if (File.Exists(gamePath))
             {
                 // Create FileStream for opening files.
-                dataStream = new FileStream(gameSlotFilePath, FileMode.Open);
+                dataStream = new FileStream(gamePath, FileMode.Open);
 
                 // Create new AES instance.
                 Aes oAes = Aes.Create();
@@ -125,7 +126,7 @@ public class SaveData
     public void DeleteFile()
     {
 #if USE_RESOURCES_DATA
-            gameSlotFilePath = $"Assets/Data/SaveFiles/GameData.sav";
+        gamePath = $"Assets/Data/SaveFiles/GameData.sav";
 #else
         gamePath = $"{Application.persistentDataPath}.sav";
 #endif

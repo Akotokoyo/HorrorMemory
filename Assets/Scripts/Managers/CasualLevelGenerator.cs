@@ -26,7 +26,8 @@ public class CasualLevelGenerator : MonoBehaviour
 
     public IEnumerator GenerateLevelAsync(Action<RuntimeLevelData> onComplete, Action<string> onError)
     {
-        if (fixedSeed >= 0)
+        return null;
+       /* if (fixedSeed >= 0)
             UnityEngine.Random.InitState(fixedSeed);
 
         string path = Path.Combine(Application.dataPath, configFileName);
@@ -169,6 +170,7 @@ public class CasualLevelGenerator : MonoBehaviour
         }
 
         onComplete?.Invoke(levelData);
+*/
     }
 
     private static void Shuffle<T>(T[] array)
