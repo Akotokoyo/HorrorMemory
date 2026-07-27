@@ -7,7 +7,7 @@ Questo file contiene prompt pronti per generare:
 Convenzioni:
 - Stile coerente con `LevelsDesign.md`
 - Composizione FLAT, no profondita
-- Livello 2 in questo primo batch (one-by-one)
+- Batch one-by-one: L2 completato, L3 in corso
 
 ---
 
@@ -97,4 +97,90 @@ Note produzione:
 - **Facile (6):** 01, 02, 03, 05, 06, 12
 - **Medio (10):** Facile + 04, 08, 11, 13
 - **Difficile (14):** Medio + 07, 09, 14, 15
+
+---
+
+## Livello 3 — Il Negozio (esterno) (Facile: 6 attive)
+
+**Trama:** Segui la fattura trovata nel PC. Il negozio è chiuso di notte. Dietro la tapparella qualcosa si muove — ti sembra un mostro.
+
+### Come funziona nel gioco (importante)
+
+Nel codice:
+- Sotto: `Distorted` background
+- Sopra: `Original` background (svanisce col timer)
+- Overlay: le differenze (`startedSprite` → al click diventa `distortedSprite`)
+
+Quindi:
+
+| Cosa | Regola |
+|------|--------|
+| **Background** | Scena base. Original e Distorted devono avere **gli stessi oggetti nelle stesse posizioni**. Distorted cambia SOLO atmosfera (luce teal, texture, mood). |
+| **Diff sprite** | Solo gli oggetti che il giocatore deve trovare. **Non duplicare** lampione/tapparella/insegna già disegnati nel BG. |
+| **Mai** | Generare un secondo lampione se il lampione è già nel BG. Mai inventare citofoni, muretti, telecamere, saracinesche blu neon. |
+
+### Verdetto asset attuali
+
+| Asset | Verdetto | Perché |
+|-------|----------|--------|
+| `Original_3.png` | **Tenere** (base buona, flat) | Vetrina frontale ok |
+| `Disturbed_3.png` | **Rifare in parte** | Ha già cotto differenze (crepe, AIUTO, sagoma, lettere rotte). Con il fade del timer quelle roba appare da sola senza click. Distorted deve restare **stessa scena** di Original, solo tinta teal/fredda. |
+| `Diff_03.png` | **Rifare tutto** | Saracinesche blu, stile neon, oggetti inventati (muretto, citofono, telecamera) — non centrano |
+
+### Pipeline corretta da ora in poi
+
+1. **Original BG** = scena normale completa  
+2. **Distorted BG** = **stessa composizione pixel-per-pixel**, solo mood horror (teal, più scuro). **Niente** crepe/AIUTO/sagoma/lettere rotte cotte dentro  
+3. **15 Diff** = overlay che **non esistono** (o coprono una zona “neutra”) nel BG. Ogni slot = oggetto piccolo da trovare, started + distorted
+
+Esempi sensati di Diff per QUESTA scena (oggetti aggiunti / sostituiti, non doppioni del BG):
+
+| # | Diff (overlay) | Started | Distorted | Attiva |
+|---|----------------|---------|-----------|--------|
+| 1 | Cartello appeso vetrina sx | `CHIUSO` rosso | `AIUTO` | ✓ |
+| 2 | Foglie/carta in vetrina | Nessuna / vuota | Scritta a mano sul vetro | ✓ |
+| 3 | Sagoma dietro vetro sx | Vuoto / solo elettrodomestico sfocato | Figura alta (mostro) | ✓ |
+| 4 | Lucchetto sulla tapparella | Lucchetto chiuso | Lucchetto aperto | |
+| 5 | Biglietto su ciottoli | Assente | Biglietto bianco a terra | ✓ |
+| 6 | Cartello orario (overlay sul vetro dx) | `Aperto domani ore 9:00` | `Non aprire mai` | |
+| 7 | Crepa sul vetro sx | Vetro integro (patch trasparente) | Crepa a ragno | |
+| 8 | Crepa sul vetro dx | Vetro integro | Crepa a ragno | |
+| 9 | Lettera dell'insegna (patch) | Lettera integra | Lettera incrinata | ✓ |
+| 10 | Stella in più nel cielo | Assente | Stella / bagliore | |
+| 11 | Cavo che pende in vetrina | Cavo normale | Cavo a forma di mano | |
+| 12 | Macchia sui ciottoli | Assente | Macchia scura | |
+| 13 | Occhi nella sagoma / riflesso | Assente | Due occhi nella vetrina | ✓ |
+| 14 | Sottotitolo patch | `RIPARAZIONI` | `RICORDI` | |
+| 15 | Ragnatela angolo insegna | Assente | Ragnatela | |
+
+> Nota: cartelli `CHIUSO` / `Aperto...` se sono **già dipinti** nel BG Original, o li togli dal BG e li metti solo come Diff, oppure il Diff è un patch che **copre esattamente** quella zona. Non disegnare un secondo cartello diverso altrove.
+
+### Prompt Distorted BG (rifare)
+
+```
+Use Original_3.png as strict reference. Keep EXACT same composition, objects, positions, signs, shutters, lantern, moon, cobblestones.
+ONLY change: cold teal/blue-green color grade, darker mood, slight grime.
+Do NOT add: cracked glass, AIUTO sign, silhouette figure, broken letters, new objects.
+Same flat frontal shop facade. Painted illustration style. 16:9.
+```
+
+### Prompt Diff sheet (rifare)
+
+```
+Generate 15 difference pairs as OVERLAY sprites for a spot-the-difference game.
+Reference: Original_3.png (attached).
+
+RULES:
+- Sprites go ON TOP of the background. Do not redraw the whole lantern, whole shutters, or whole shop.
+- Each pair = small prop/cutout that can be placed on the scene (sign, padlock, crack patch, silhouette, note on ground, etc.)
+- Started = normal version. Distorted = horror version.
+- Match the painted style and warm palette of Original_3 for Started; teal/cold for Distorted.
+- Transparent background.
+- FORBIDDEN: blue neon shutters, modern glass buildings, intercoms, security cameras, clawed brick walls, anything not fitting this Italian stone shop facade.
+```
+
+### C) Attivazione (Facile — 6)
+
+- **Attive:** 01, 02, 03, 05, 09, 13
+- **Riserva:** 04, 06, 07, 08, 10, 11, 12, 14, 15
 

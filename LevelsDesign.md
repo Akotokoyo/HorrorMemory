@@ -273,25 +273,25 @@ Per i livelli 0–1 (già implementati): **6 attive**, stesse regole Facile.
 
 **Prompt Distorted:** `Same flat facade. Broken sign letter, shutter dented, "Chiuso" sign turned to "Aiuto", shadow figure behind shutter slats, flickering lamp, cracked window. Cold blue tint.`
 
-**15 Differenze**
+**15 Differenze** *(basate SOLO su oggetti presenti in Original_3 / Disturbed_3)*
 
 | # | Zona | Normale | Distorta | Attiva |
 |---|------|---------|----------|--------|
-| 1 | Insegna | Testo integro | Lettera "E" rotta | ✓ |
-| 2 | Vetrina sx | Tapparella giù | Tapparella semi-alta | ✓ |
-| 3 | Vetrina dx | Scatole HP/Sony | Scatola con il tuo nome | ✓ |
-| 4 | Porta | Lucchetto chiuso | Lucchetto aperto | |
-| 5 | Cartello | "Chiuso" | "Chiuso" scritto a mano | ✓ |
-| 6 | Cartello | "Aperto domani 9:00" | "Non aprire mai" | |
-| 7 | Lampione | Luce gialla | Luce che lampeggia | |
-| 8 | Muro | Intonaco pulito | Graffio/graffio | |
-| 9 | Finestra alto | Buio | Sagoma dietro vetro | ✓ |
-| 10 | Citofono | Spento | Luce rossa accesa | |
-| 11 | Marciapiede | Pulito | Impronta fangosa | |
-| 12 | Angolo | Nessuno | Telecamera | |
-| 13 | Vetrina | Riflesso vuoto | Riflesso: la Figura | ✓ |
-| 14 | Insegna bassa | "& TECNOLOGIA" | "& MEMORIA" | |
-| 15 | Porta basso | Soglia pulita | Biglietto bianco | |
+| 1 | Insegna | Lettere `ELETTRODOMESTICI` integre | Lettere R/O incrinate | ✓ |
+| 2 | Vetrina sx | Tapparella come Original | Tapparella storta/piegata | ✓ |
+| 3 | Dentro vetrina sx | Silhouette elettrodomestico | Sagoma umana alta (mostro) | ✓ |
+| 4 | Vetrina dx | Tapparella come Original | Tapparella più bassa/ammaccata | |
+| 5 | Cartello sx | `CHIUSO` | `AIUTO` | ✓ |
+| 6 | Cartello dx | `Aperto domani ore 9:00` | `Non aprire mai` | |
+| 7 | Lanterna | Glow giallo caldo | Glow teal freddo | |
+| 8 | Sottotitolo | `RIPARAZIONI - ASSISTENZA` integro | Lettere danneggiate | |
+| 9 | Vetro sx | Vetro integro | Crepe a ragno | ✓ |
+| 10 | Cielo | Luna crescente | Luna più luminosa/fredda | |
+| 11 | Pavimento | Ciottoli caldi | Ciottoli teal umidi | |
+| 12 | Sinistra | Pluviale nero | Pluviale con tinta teal | |
+| 13 | Vetro dx | Vetro integro | Crepe a ragno | ✓ |
+| 14 | Insegna | `& TECNOLOGIA` | `& MEMORIA` | |
+| 15 | Dentro vetrina | Cavi sottili | Cavi più aggrovigliati | |
 
 ---
 

@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Sprites
   m_GUID: 41f719eab431d154aa5af4c273ea2393
   m_SerializeEntries:
+  - m_GUID: 00200f6812232784a8cbc0adca23c8ad
+    m_Address: Sprites/Level_003/Disturbed_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 03095816f34a2384c86b3067ae5aab12
     m_Address: Sprites/Level_000/Peluche
     m_ReadOnly: 0
@@ -52,6 +57,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2731454fe520a5446a3ffd2628132df5
     m_Address: Assets/Resources_moved/Sprites/Level_002/Diffs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c6e7d8f769ee534898e794cbb330972
+    m_Address: Sprites/Level_003/Original_3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -110,11 +120,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e8886106f169784696f1cf1149082e1
-    m_Address: Assets/Resources_moved/Sprites/Level_003/Distorted_003.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7173b6334fe54b84e914e18f04694151
     m_Address: Assets/Resources_moved/Sprites/Level_005/Distorted_005.png
     m_ReadOnly: 0
@@ -130,13 +135,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7eaf2a129c81e5542a60dbb15f6c7482
-    m_Address: Assets/Resources_moved/Sprites/Level_004/Original_004.png
+  - m_GUID: 7db7420b7419c5b4c893ffe9d77c359f
+    m_Address: Assets/Resources_moved/Sprites/Level_003/Diff_3.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 802103c6ff01bb54e86061da6ce03c91
-    m_Address: Assets/Resources_moved/Sprites/Level_003/Original_003.png
+  - m_GUID: 7eaf2a129c81e5542a60dbb15f6c7482
+    m_Address: Assets/Resources_moved/Sprites/Level_004/Original_004.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
