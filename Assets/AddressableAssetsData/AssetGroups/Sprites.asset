@@ -15,11 +15,6 @@ MonoBehaviour:
   m_GroupName: Sprites
   m_GUID: 41f719eab431d154aa5af4c273ea2393
   m_SerializeEntries:
-  - m_GUID: 00200f6812232784a8cbc0adca23c8ad
-    m_Address: Sprites/Level_003/Disturbed_3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 03095816f34a2384c86b3067ae5aab12
     m_Address: Sprites/Level_000/Peluche
     m_ReadOnly: 0
@@ -90,13 +85,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7db7420b7419c5b4c893ffe9d77c359f
-    m_Address: Assets/Resources_moved/Sprites/Level_003/Diff_3.png
+  - m_GUID: 7eaf2a129c81e5542a60dbb15f6c7482
+    m_Address: Assets/Resources_moved/Sprites/Level_004/Original_004.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7eaf2a129c81e5542a60dbb15f6c7482
-    m_Address: Assets/Resources_moved/Sprites/Level_004/Original_004.png
+  - m_GUID: 86c6ec7f32bca8d4caf41b3e7060fa5a
+    m_Address: Assets/Resources_moved/Sprites/Level_003/Diff_3_2.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -125,6 +120,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a06183fde7685e24180d716ccaf73fb7
+    m_Address: Assets/Resources_moved/Sprites/Level_003/Diff_3_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a898399d3a8222a4099dfe8a2b51149f
     m_Address: Sprites/Level_000/PelucheNoHead
     m_ReadOnly: 0
@@ -150,8 +150,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1c2676693487db4481a139af6d9a586
+    m_Address: Assets/Resources_moved/Sprites/Level_003/Diff_3_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1e2445a4f38e2745b4edae32fc447cd
     m_Address: Sprites/Level_000/CupBroken
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d58de8a72c33cb0408ac115b16d8753a
+    m_Address: Assets/Resources_moved/Sprites/Level_003/Distorted_3.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

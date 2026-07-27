@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -113,20 +126,20 @@ TextureImporter:
       name: Diff_3_0_0
       rect:
         serializedVersion: 2
-        x: 206
-        y: 38
-        width: 331
-        height: 652
+        x: 38
+        y: 340
+        width: 256
+        height: 206
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b6598187a325ca429e68985f8410666
-      internalID: -808291998
+      spriteID: eac7107d4b476c14b9a2960811356cb0
+      internalID: 977800060
       vertices: []
       indices: 
       edges: []
@@ -135,20 +148,20 @@ TextureImporter:
       name: Diff_3_0_1
       rect:
         serializedVersion: 2
-        x: 718
-        y: 34
-        width: 373
-        height: 656
+        x: 362
+        y: 384
+        width: 228
+        height: 143
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 900c60941c6f33640999e6c6786e1c1d
-      internalID: 636700707
+      spriteID: 938699666278d044bbfde9e63a3a906b
+      internalID: -644250609
       vertices: []
       indices: 
       edges: []
@@ -157,20 +170,20 @@ TextureImporter:
       name: Diff_3_0_2
       rect:
         serializedVersion: 2
-        x: 1095
-        y: 57
-        width: 11
-        height: 7
+        x: 622
+        y: 397
+        width: 175
+        height: 123
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3da709cb4ee9259408e8b513979c6f44
-      internalID: 1800240818
+      spriteID: 22d6c797d64ebcb4d85f4c216bcb1f6b
+      internalID: 1076192024
       vertices: []
       indices: 
       edges: []
@@ -179,20 +192,20 @@ TextureImporter:
       name: Diff_3_0_3
       rect:
         serializedVersion: 2
-        x: 840
-        y: 33
-        width: 30
-        height: 13
+        x: 836
+        y: 414
+        width: 138
+        height: 107
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85977fa856581e64f82e044074440101
-      internalID: -1367322439
+      spriteID: c94fa4850888584459aa0084e9b3a50f
+      internalID: -691564341
       vertices: []
       indices: 
       edges: []
@@ -201,20 +214,152 @@ TextureImporter:
       name: Diff_3_0_4
       rect:
         serializedVersion: 2
-        x: 974
-        y: 28
-        width: 17
-        height: 8
+        x: 850
+        y: 29
+        width: 125
+        height: 364
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8348d6847b705cb4a995a01c4ea8b4a8
-      internalID: 346861569
+      spriteID: ab73201452ac8f94eb356de00c6918b7
+      internalID: 347665681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diff_3_0_5
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 206
+        width: 215
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15028155ecfaf24db8773141f8f72a2
+      internalID: -1833002279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diff_3_0_6
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 24
+        width: 256
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72be9ca53353514491e3f9ef42141d1
+      internalID: -1760194612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diff_3_0_7
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 192
+        width: 184
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f2a340d3d927e4b8322e29b694fa87
+      internalID: -1636680911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diff_3_0_8
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 25
+        width: 101
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5060d7cfd65024fa886f8273160766
+      internalID: -242485739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diff_3_0_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 37
+        width: 176
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b15a202adbb1d40b2b466e4ed7f4c0
+      internalID: -1194841396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diff_3_0_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 207
+        width: 316
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca6ad3c6e78d5d4fa1a788c0853d4ce
+      internalID: 1184631940
       vertices: []
       indices: 
       edges: []
@@ -223,7 +368,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6bc3d589ecf0d61419ef482b389a5000
+    spriteID: 13e738a2808098a43b21197eb3c421a2
     internalID: 0
     vertices: []
     indices: 
@@ -231,15 +376,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Diff_3_0_0: -808291998
-      Diff_3_0_1: 636700707
-      Diff_3_0_2: 1800240818
-      Diff_3_0_3: -1367322439
-      Diff_3_0_4: 346861569
+      Diff_3_0_0: 977800060
+      Diff_3_0_1: -644250609
+      Diff_3_0_10: 1184631940
+      Diff_3_0_2: 1076192024
+      Diff_3_0_3: -691564341
+      Diff_3_0_4: 347665681
+      Diff_3_0_5: -1833002279
+      Diff_3_0_6: -1760194612
+      Diff_3_0_7: -1636680911
+      Diff_3_0_8: -242485739
+      Diff_3_0_9: -1194841396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

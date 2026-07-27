@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -113,20 +126,20 @@ TextureImporter:
       name: Diff_3_2_0
       rect:
         serializedVersion: 2
-        x: 120
-        y: 384
-        width: 495
-        height: 298
+        x: 30
+        y: 46
+        width: 515
+        height: 451
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 060221f915ae0ec43af7b269f1b79b5d
-      internalID: 256551001
+      spriteID: 3f200679ca2602244b94f68585818719
+      internalID: 614863959
       vertices: []
       indices: 
       edges: []
@@ -135,64 +148,20 @@ TextureImporter:
       name: Diff_3_2_1
       rect:
         serializedVersion: 2
-        x: 704
-        y: 383
-        width: 496
-        height: 300
+        x: 591
+        y: 57
+        width: 220
+        height: 446
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19f4df8346cd28f49918271827787b27
-      internalID: 931387198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Diff_3_2_2
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 40
-        width: 306
-        height: 303
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a644400b33e28c43b8c17e4df7a067f
-      internalID: -536535635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Diff_3_2_3
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 40
-        width: 318
-        height: 303
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56060041ccb6b0248bcce55a09aea6be
-      internalID: 1236934893
+      spriteID: edeb6ef9dadd07842817127fb93b9c43
+      internalID: 5962258
       vertices: []
       indices: 
       edges: []
@@ -201,7 +170,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4df545d78e387c444848b643d2ce19a9
+    spriteID: d9200e442d9f83243af629819c00037f
     internalID: 0
     vertices: []
     indices: 
@@ -209,14 +178,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Diff_3_2_0: 256551001
-      Diff_3_2_1: 931387198
-      Diff_3_2_2: -536535635
-      Diff_3_2_3: 1236934893
+      Diff_3_2_0: 614863959
+      Diff_3_2_1: 5962258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
