@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
                 Debug.Log("Options Button is clicked");
                 break;
             case "Close":
-                Debug.Log("Close Button is clicked");
+                Application.Quit();
                 break;
             default:
                 contentMenu.SetActive(true);
