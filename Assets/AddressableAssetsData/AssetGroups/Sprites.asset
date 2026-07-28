@@ -75,8 +75,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c12c6d12f95de64cb3c7a6e9090c66e
+    m_Address: Sprites/Level_006/Original_6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 57a0e6e038c23b7409a50c372a53aac5
     m_Address: Assets/Resources_moved/Sprites/Level_004/Diff_4_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63c42b559e34b354c8574158f966f040
+    m_Address: Sprites/Level_006/Distorted_6
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -112,11 +122,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8d94d93e88c1577478f524b2af44f259
     m_Address: Assets/Resources_moved/CasualLevelConfiguration/CasualLevel_Example.json
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8dad9c350e6ada84cb4d3ef881d72c05
-    m_Address: Assets/Resources_moved/Sprites/Level_006/Original_006.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -195,6 +200,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e40861e92d89b73439a047d219e2d686
+    m_Address: Assets/Resources_moved/Sprites/Level_006/Diff_6_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8bddc1d89ffad941a20b02f7564e23e
     m_Address: Assets/Resources_moved/Sprites/Level_005/Diff_5_0.png
     m_ReadOnly: 0
@@ -205,8 +215,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fa46d7e5b968ef046a19543e09c47601
-    m_Address: Assets/Resources_moved/Sprites/Level_006/Distorted_006.png
+  - m_GUID: fb2cfc7ff2c108649b393308193a7871
+    m_Address: Assets/Resources_moved/Sprites/Level_006/Diff_6_0.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
