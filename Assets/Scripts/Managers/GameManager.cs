@@ -34,12 +34,10 @@ public class GameManager : MonoBehaviour
         var savedData = _saveData.ReadSaveFile();
         if (savedData == null)
         {
-            Debug.Log("Create new GameData");
             _gameData = SetupGameData();
         }
         else
         {
-            Debug.Log("Load Save File");
             _gameData = savedData;
         }
 

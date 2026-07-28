@@ -68,6 +68,7 @@ public class LevelManager : MonoBehaviour
         }
 
         currentTimer = currentLevel.timeLimit;
+        timerText.color = Color.white;
         distortedImage.sprite = currentLevel.distortedSprite;
         originalImage.sprite = currentLevel.originalSprite;
         currentAlpha = 1f;
