@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class NormalizedPositionHelper : MonoBehaviour
@@ -32,7 +31,7 @@ public class NormalizedPositionHelper : MonoBehaviour
         float normalizedX = (myRect.anchoredPosition.x / width) + 0.5f;
         float normalizedY = (myRect.anchoredPosition.y / height) + 0.5f;
 
-        Debug.Log($"normalizedPosition: ({normalizedX:F3}, {normalizedY:F3})");
+        Debug.Log($"normalizedPosition {this.GetComponent<Transform>().gameObject.name}: ({normalizedX:F3}, {normalizedY:F3})");
         Debug.Log($"Copia questo: new Vector2({normalizedX}f, {normalizedY}f)");
     }
 

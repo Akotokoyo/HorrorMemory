@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff24e04cd4b6e848a2a57000f45e963, type: 3}
+  m_Name: LevelData_005
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelName: Level5
+  levelId: 5
+  difficulty: 0
+  timeLimit: 20
+  scoreAddTime: 0
+  waitingtime: 5
+  wrongClickPenalty: 5
+  storyIntroText: STORY_LEVEL_05_INTRO_TEXT_ID
+  storyEndingText: STORY_LEVEL_05_OUTRO_TEXT_ID
+  originalSprite: {fileID: 21300000, guid: 9efb94e8c273d2942a1e549f6f6a636c, type: 3}
+  distortedSprite: {fileID: 21300000, guid: 7173b6334fe54b84e914e18f04694151, type: 3}
+  differences:
+  - normalizedPosition: {x: 0.786, y: 0.933}
+    deflectinRadious: 0
+    width: 125
+    height: 100
+    startedSprite: {fileID: -1476284456, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: -495380895, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.995, y: 0.423}
+    deflectinRadious: 0
+    width: 150
+    height: 150
+    startedSprite: {fileID: 1898418284, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: 1540869465, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.529, y: 0.851}
+    deflectinRadious: 0
+    width: 65
+    height: 80
+    startedSprite: {fileID: 223232070, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: 1591001624, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.281, y: 0.049}
+    deflectinRadious: 0
+    width: 100
+    height: 70
+    startedSprite: {fileID: -1264124734, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: -1679163912, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.271, y: 0.443}
+    deflectinRadious: 0
+    width: 80
+    height: 80
+    startedSprite: {fileID: -1579958181, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: 1448254499, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.5, y: 0.192}
+    deflectinRadious: 10
+    width: 80
+    height: 80
+    startedSprite: {fileID: 501122912, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: -596877861, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.001, y: 0.827}
+    deflectinRadious: 10
+    width: 80
+    height: 80
+    startedSprite: {fileID: -639383583, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: -1436432033, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.983, y: 0.049}
+    deflectinRadious: 10
+    width: 200
+    height: 200
+    startedSprite: {fileID: 943850340, guid: e8bddc1d89ffad941a20b02f7564e23e, type: 3}
+    distortedSprite: {fileID: 1745480223, guid: 9d3e74df50b11284bbf4c40ccc5fc787, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.49, y: 0.42}
+    deflectinRadious: 10
+    width: 0
+    height: 0
+    startedSprite: {fileID: 0}
+    distortedSprite: {fileID: 0}
+    mustBeFound: 0
+  - normalizedPosition: {x: 0.49, y: 0.42}
+    deflectinRadious: 10
+    width: 0
+    height: 0
+    startedSprite: {fileID: 0}
+    distortedSprite: {fileID: 0}
+    mustBeFound: 0
+  - normalizedPosition: {x: 0.49, y: 0.42}
+    deflectinRadious: 10
+    width: 0
+    height: 0
+    startedSprite: {fileID: 0}
+    distortedSprite: {fileID: 0}
+    mustBeFound: 0
+  - normalizedPosition: {x: 0.49, y: 0.42}
+    deflectinRadious: 10
+    width: 0
+    height: 0
+    startedSprite: {fileID: 0}
+    distortedSprite: {fileID: 0}
+    mustBeFound: 0
+  - normalizedPosition: {x: 0.49, y: 0.42}
+    deflectinRadious: 10
+    width: 0
+    height: 0
+    startedSprite: {fileID: 0}
+    distortedSprite: {fileID: 0}
+    mustBeFound: 0
+  - normalizedPosition: {x: 0.49, y: 0.42}
+    deflectinRadious: 10
+    width: 0
+    height: 0
+    startedSprite: {fileID: 0}
+    distortedSprite: {fileID: 0}
+    mustBeFound: 0
+  - normalizedPosition: {x: 0.49, y: 0.42}
+    deflectinRadious: 10
+    width: 0
+    height: 0
+    startedSprite: {fileID: 0}
+    distortedSprite: {fileID: 0}
+    mustBeFound: 0
+  ambientSound: {fileID: 8300000, guid: 4094ab7d53e223e48ae36a1a3c80c505, type: 3}
+  completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}
+  gameoverSound: {fileID: 0}
