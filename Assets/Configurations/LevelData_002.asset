@@ -16,7 +16,7 @@ MonoBehaviour:
   levelId: 2
   difficulty: 0
   timeLimit: 20
-  scoreAddTime: 5
+  scoreAddTime: 0
   waitingtime: 5
   wrongClickPenalty: 5
   storyIntroText: STORY_LEVEL_02_INTRO_TEXT_ID
