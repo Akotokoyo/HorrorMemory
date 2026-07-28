@@ -114,6 +114,11 @@ public class UIManager : MonoBehaviour
         OnClickPlayLevel(currentLevel);
     }
 
+    public void OnClickPauseGameButton(bool isPaused)
+    {
+        LevelManager.Instance.PauseGame(isPaused);
+    }
+
     private IEnumerator PrepareLevelsFromGameData()
     {
         for(int i = 0; i < levelPrefabs.Count; i++)

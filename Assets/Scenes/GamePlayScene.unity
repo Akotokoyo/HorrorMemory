@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac25060704539234bb04998f7f8afe71, type: 3}
+  m_Sprite: {fileID: -1633019412, guid: ac3fdc9cfa65882459e4117db2923fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 59.15
+  m_fontSize: 51.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac25060704539234bb04998f7f8afe71, type: 3}
+  m_Sprite: {fileID: -1633019412, guid: ac3fdc9cfa65882459e4117db2923fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2135,7 +2135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac25060704539234bb04998f7f8afe71, type: 3}
+  m_Sprite: {fileID: -1633019412, guid: ac3fdc9cfa65882459e4117db2923fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2268,7 +2268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac25060704539234bb04998f7f8afe71, type: 3}
+  m_Sprite: {fileID: -1633019412, guid: ac3fdc9cfa65882459e4117db2923fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3423,6 +3423,38 @@ PrefabInstance:
     - target: {fileID: 931823093060914638, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.025390625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1155283392}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickPauseGameButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920090523423017825, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4175993879198879775, guid: 1ce4b84f08282a544a0a159333426287, type: 3}
       propertyPath: m_Pivot.x

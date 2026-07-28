@@ -30,6 +30,8 @@ public class LevelManager : MonoBehaviour
     private int totalDifferenceCount = 0;
     private int currentDifferenceCount = 0;
 
+    Coroutine updateTimerCoroutine = null;
+
     private float currentTimer;
     private float breakTime;
     private float currentAlpha;
@@ -57,6 +59,18 @@ public class LevelManager : MonoBehaviour
     {
         popupManager.HideEndPopup();
         yield return popupManager.ShowPreGamePopup(currentLevel);
+    }
+
+    public void PauseGame(bool isPaused)
+    {
+        if (isPaused)
+        {
+            StopCoroutine(updateTimerCoroutine);
+        }
+        else
+        {
+            updateTimerCoroutine = StartCoroutine(UpdateTimer());
+        }
     }
 
     public void InitLevel()
@@ -141,7 +155,7 @@ public class LevelManager : MonoBehaviour
 
         UpdateUI();
         audioManager.StartMusicSound(currentLevel.ambientSound);
-        StartCoroutine(UpdateTimer());
+        updateTimerCoroutine = StartCoroutine(UpdateTimer());
     }
 
     public void OnDifferenceClicked(int diffIndex)
