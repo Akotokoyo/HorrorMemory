@@ -56,8 +56,8 @@ MonoBehaviour:
     deflectinRadious: 0
     width: 130
     height: 130
-    startedSprite: {fileID: -1833002279, guid: d1c2676693487db4481a139af6d9a586, type: 3}
-    distortedSprite: {fileID: -1257537958, guid: a06183fde7685e24180d716ccaf73fb7, type: 3}
+    startedSprite: {fileID: -968252251, guid: c18396c8cf7037d479e0346917d1d8f5, type: 3}
+    distortedSprite: {fileID: -1338586930, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.844, y: 0.049}
     deflectinRadious: 0

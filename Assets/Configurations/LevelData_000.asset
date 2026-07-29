@@ -59,7 +59,7 @@ MonoBehaviour:
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
     mustBeFound: 0
-  - normalizedPosition: {x: 0.724, y: 0.7317}
+  - normalizedPosition: {x: 0.841, y: 0.743}
     deflectinRadious: 0
     width: 50
     height: 50
@@ -101,7 +101,7 @@ MonoBehaviour:
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
     mustBeFound: 0
-  - normalizedPosition: {x: 0.876, y: 0.2374}
+  - normalizedPosition: {x: 0.924, y: 0.101}
     deflectinRadious: 10
     width: 50
     height: 70
