@@ -16,14 +16,7 @@ public class Difference : MonoBehaviour, IPointerClickHandler
         Debug.Log($"Indexed Object Clicked {diffIndex}");
         if (!isFound && isClickable)
         {
-            RevealDifference();
             LevelManager.Instance.OnDifferenceClicked(diffIndex);
         }
-    }
-
-    private void RevealDifference()
-    {
-        this.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
-        isFound = true;
     }
 }
