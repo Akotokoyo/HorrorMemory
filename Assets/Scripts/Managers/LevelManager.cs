@@ -106,7 +106,7 @@ public class LevelManager : MonoBehaviour
             originalDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
             originalDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
             originalDiff.GetComponent<Difference>().diffIndex = i;
-            originalDiff.GetComponent<Difference>().isClickable = false;
+            originalDiff.GetComponent<Difference>().isClickable = true;
             
             RectTransform diffRect = originalDiff.GetComponent<RectTransform>();
             diffRect.sizeDelta = new Vector2
@@ -161,6 +161,9 @@ public class LevelManager : MonoBehaviour
     public void OnDifferenceClicked(int diffIndex)
     {
         originalDifferences[diffIndex].GetComponent<Image>().sprite = originalDifferences[diffIndex].GetComponent<Difference>().diffInfo.distortedSprite;
+        originalDifferences[diffIndex].GetComponent<Difference>().isFound = true;
+        differencesToFind[diffIndex].GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+        differencesToFind[diffIndex].GetComponent<Difference>().isFound = true;
         currentDifferenceCount++;
         currentTimer += currentLevel.scoreAddTime;
         breakTime = 3f;
