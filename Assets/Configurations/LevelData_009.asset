@@ -31,7 +31,7 @@ MonoBehaviour:
     startedSprite: {fileID: 1300290551, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
     distortedSprite: {fileID: -1219091476, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 1.013, y: 0.021}
+  - normalizedPosition: {x: 0.909, y: 0.165}
     deflectinRadious: 0
     width: 120
     height: 120

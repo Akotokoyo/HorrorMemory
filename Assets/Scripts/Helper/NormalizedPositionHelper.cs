@@ -32,7 +32,7 @@ public class NormalizedPositionHelper : MonoBehaviour
         float normalizedY = (myRect.anchoredPosition.y / height) + 0.5f;
 
         Debug.Log($"normalizedPosition {this.GetComponent<Transform>().gameObject.name}: ({normalizedX:F3}, {normalizedY:F3})");
-        Debug.Log($"Copia questo: new Vector2({normalizedX}f, {normalizedY}f)");
+        //Debug.Log($"Copia questo: new Vector2({normalizedX}f, {normalizedY}f)");
     }
 
 }
