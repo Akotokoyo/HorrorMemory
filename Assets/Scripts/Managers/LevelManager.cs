@@ -102,12 +102,13 @@ public class LevelManager : MonoBehaviour
             else
             {
                 originalDiff.SetActive(true);
+                originalDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
+                originalDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
+                originalDiff.GetComponent<Difference>().diffIndex = i;
+                originalDiff.GetComponent<Difference>().isClickable = true;
+                originalDiff.GetComponent<Difference>().isFound = false;
             }
-            originalDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
-            originalDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
-            originalDiff.GetComponent<Difference>().diffIndex = i;
-            originalDiff.GetComponent<Difference>().isClickable = true;
-            
+
             RectTransform diffRect = originalDiff.GetComponent<RectTransform>();
             diffRect.sizeDelta = new Vector2
                 (currentLevel.differences[i].width, currentLevel.differences[i].height);
