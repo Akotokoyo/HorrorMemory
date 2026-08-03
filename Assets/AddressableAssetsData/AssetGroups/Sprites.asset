@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cb1e6331a8b23543849ea709bb21161
+    m_Address: Sprites/Level_019/Original_19
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 11c8540ff22a8e645b614f475ceae068
     m_Address: Sprites/Level_002/Original_2
     m_ReadOnly: 0
@@ -125,6 +130,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7cabadae5ef7fee4aa3d03d6b6ab4b7a
+    m_Address: Sprites/Level_019/Distorted_19
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7eaf2a129c81e5542a60dbb15f6c7482
     m_Address: Sprites/Level_004/Original_4
     m_ReadOnly: 0
@@ -142,6 +152,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8d94d93e88c1577478f524b2af44f259
     m_Address: Assets/Resources_moved/CasualLevelConfiguration/CasualLevel_Example.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94a6c4f098f44f9409faa5fc037f0455
+    m_Address: Assets/Resources_moved/Sprites/Level_019/DIff_19_0.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
