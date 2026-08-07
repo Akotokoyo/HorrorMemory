@@ -12,6 +12,11 @@ public class Difference : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData ev)
     {
+        if (ComparisonZoomPanController.Instance != null && ComparisonZoomPanController.Instance.IsGesturing)
+        {
+            return;
+        }
+
         Debug.Log($"Indexed Object Clicked {diffIndex}");
         if (!isFound && isClickable)
         {
