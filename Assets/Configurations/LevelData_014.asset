@@ -52,14 +52,14 @@ MonoBehaviour:
     startedSprite: {fileID: -319985240, guid: 618f4287b5747e140a6f747606daede2, type: 3}
     distortedSprite: {fileID: -319985240, guid: 618f4287b5747e140a6f747606daede2, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 0.726, y: 0.787}
+  - normalizedPosition: {x: 0.643, y: 0.796}
     deflectinRadious: 0
     width: 75
     height: 75
     startedSprite: {fileID: -985150960, guid: 618f4287b5747e140a6f747606daede2, type: 3}
     distortedSprite: {fileID: -985150960, guid: 618f4287b5747e140a6f747606daede2, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 0.726, y: 0.87}
+  - normalizedPosition: {x: 0.472, y: 0.204}
     deflectinRadious: 10
     width: 75
     height: 75
