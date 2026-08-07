@@ -173,7 +173,7 @@ public class LevelManager : MonoBehaviour
         }
 
         UpdateUI();
-        audioManager.StartMusicSound(currentLevel.ambientSound);
+        //audioManager.StartMusicSound(currentLevel.ambientSound);
         updateTimerCoroutine = StartCoroutine(UpdateTimer());
     }
 
