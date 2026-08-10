@@ -254,7 +254,7 @@ public class LevelManager : MonoBehaviour
         {
             OnLevelEnded?.Invoke(false);
             StartCoroutine(ShowEndPopup(false));
-            audioManager.StopAllOsts();
+            //audioManager.StopAllOsts();
         }
     }
 
@@ -267,7 +267,7 @@ public class LevelManager : MonoBehaviour
             GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
         }
         popupManager.ShowEndPopup(levelSuccess, currentTimer, starNumber);
-        audioManager.StopAllOsts();
+        //audioManager.StopAllOsts();
     }
 
     private int CalculateStarRating() {
