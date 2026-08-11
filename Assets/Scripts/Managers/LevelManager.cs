@@ -129,6 +129,7 @@ public class LevelManager : MonoBehaviour
             {
                 originalDiff.SetActive(true);
                 originalDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
+                originalDiff.transform.GetChild(0).gameObject.SetActive(false);
                 originalDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
                 originalDiff.GetComponent<Difference>().diffIndex = i;
                 originalDiff.GetComponent<Difference>().isClickable = true;
@@ -164,6 +165,7 @@ public class LevelManager : MonoBehaviour
 
             modDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
             modDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
+            modDiff.transform.GetChild(0).gameObject.SetActive(false);
             modDiff.GetComponent<Difference>().diffIndex = i;
             modDiff.GetComponent<Difference>().isClickable = true;
             modDiff.GetComponent<Difference>().isFound = false;
@@ -181,7 +183,6 @@ public class LevelManager : MonoBehaviour
         }
 
         UpdateUI();
-        //audioManager.StartMusicSound(currentLevel.ambientSound);
         updateTimerCoroutine = StartCoroutine(UpdateTimer());
     }
 
@@ -189,8 +190,10 @@ public class LevelManager : MonoBehaviour
     {
         originalDifferences[diffIndex].GetComponent<Image>().sprite = originalDifferences[diffIndex].GetComponent<Difference>().diffInfo.distortedSprite;
         originalDifferences[diffIndex].GetComponent<Difference>().isFound = true;
+        originalDifferences[diffIndex].transform.GetChild(0).gameObject.SetActive(true);
         differencesToFind[diffIndex].GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
         differencesToFind[diffIndex].GetComponent<Difference>().isFound = true;
+        differencesToFind[diffIndex].transform.GetChild(0).gameObject.SetActive(true);
         currentDifferenceCount++;
         currentTimer += currentLevel.scoreAddTime;
         breakTime = 3f;
@@ -262,7 +265,6 @@ public class LevelManager : MonoBehaviour
         {
             OnLevelEnded?.Invoke(false);
             StartCoroutine(ShowEndPopup(false));
-            //audioManager.StopAllOsts();
         }
     }
 
@@ -275,7 +277,6 @@ public class LevelManager : MonoBehaviour
             GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
         }
         popupManager.ShowEndPopup(levelSuccess, currentTimer, starNumber);
-        //audioManager.StopAllOsts();
     }
 
     private int CalculateStarRating() {
