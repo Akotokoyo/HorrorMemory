@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
     private float breakTime;
     private float currentAlpha;
     private static LevelManager _instance;
+    private Transform comparisonRoot;
 
     public static LevelManager Instance
     {
@@ -53,20 +54,34 @@ public class LevelManager : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
-        InitializeZoomPanController();
+        comparisonRoot = distortedImage != null ? distortedImage.transform.parent : null;
         GenerateDiffsTemplate();
     }
 
     private void InitializeZoomPanController()
     {
-        if (zoomPanController == null)
+        if (distortedImage == null || modifiedImage == null)
         {
-            zoomPanController = distortedImage.GetComponentInParent<ComparisonZoomPanController>();
+            return;
+        }
+
+        // The zoom controller reparents the images into its viewports. Keep using
+        // the original GameBackground instead of their current runtime parent.
+        if (comparisonRoot == null)
+        {
+            comparisonRoot = distortedImage.transform.parent;
+        }
+
+        GameObject gameBackground = comparisonRoot.gameObject;
+
+        if (zoomPanController == null || zoomPanController.gameObject != gameBackground)
+        {
+            zoomPanController = gameBackground.GetComponent<ComparisonZoomPanController>();
         }
 
         if (zoomPanController == null)
         {
-            zoomPanController = distortedImage.transform.parent.gameObject.AddComponent<ComparisonZoomPanController>();
+            zoomPanController = gameBackground.AddComponent<ComparisonZoomPanController>();
         }
 
         zoomPanController.Setup(distortedImage.rectTransform, modifiedImage.rectTransform);
@@ -107,6 +122,8 @@ public class LevelManager : MonoBehaviour
         currentDifferenceCount = 0;
 
         modifiedImage.sprite = currentLevel.originalSprite;
+
+        InitializeZoomPanController();
         zoomPanController?.ResetView();
 
         for(int i = 0; i < currentLevel.differences.Count; i++)
@@ -121,6 +138,7 @@ public class LevelManager : MonoBehaviour
             {
                 originalDiff.SetActive(true);
                 originalDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
+                originalDiff.transform.GetChild(0).gameObject.SetActive(false);
                 originalDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
                 originalDiff.GetComponent<Difference>().diffIndex = i;
                 originalDiff.GetComponent<Difference>().isClickable = true;
@@ -156,6 +174,7 @@ public class LevelManager : MonoBehaviour
 
             modDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
             modDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
+            modDiff.transform.GetChild(0).gameObject.SetActive(false);
             modDiff.GetComponent<Difference>().diffIndex = i;
             modDiff.GetComponent<Difference>().isClickable = true;
             modDiff.GetComponent<Difference>().isFound = false;
@@ -173,7 +192,6 @@ public class LevelManager : MonoBehaviour
         }
 
         UpdateUI();
-        //audioManager.StartMusicSound(currentLevel.ambientSound);
         updateTimerCoroutine = StartCoroutine(UpdateTimer());
     }
 
@@ -181,8 +199,10 @@ public class LevelManager : MonoBehaviour
     {
         originalDifferences[diffIndex].GetComponent<Image>().sprite = originalDifferences[diffIndex].GetComponent<Difference>().diffInfo.distortedSprite;
         originalDifferences[diffIndex].GetComponent<Difference>().isFound = true;
+        originalDifferences[diffIndex].transform.GetChild(0).gameObject.SetActive(true);
         differencesToFind[diffIndex].GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
         differencesToFind[diffIndex].GetComponent<Difference>().isFound = true;
+        differencesToFind[diffIndex].transform.GetChild(0).gameObject.SetActive(true);
         currentDifferenceCount++;
         currentTimer += currentLevel.scoreAddTime;
         breakTime = 3f;
@@ -254,7 +274,6 @@ public class LevelManager : MonoBehaviour
         {
             OnLevelEnded?.Invoke(false);
             StartCoroutine(ShowEndPopup(false));
-            //audioManager.StopAllOsts();
         }
     }
 
@@ -267,7 +286,6 @@ public class LevelManager : MonoBehaviour
             GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
         }
         popupManager.ShowEndPopup(levelSuccess, currentTimer, starNumber);
-        //audioManager.StopAllOsts();
     }
 
     private int CalculateStarRating() {
