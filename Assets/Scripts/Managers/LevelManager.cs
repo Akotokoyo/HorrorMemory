@@ -53,20 +53,26 @@ public class LevelManager : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
-        InitializeZoomPanController();
         GenerateDiffsTemplate();
     }
 
     private void InitializeZoomPanController()
     {
-        if (zoomPanController == null)
+        if (distortedImage == null || modifiedImage == null)
         {
-            zoomPanController = distortedImage.GetComponentInParent<ComparisonZoomPanController>();
+            return;
+        }
+
+        GameObject gameBackground = distortedImage.transform.parent.gameObject;
+
+        if (zoomPanController == null || zoomPanController.gameObject != gameBackground)
+        {
+            zoomPanController = gameBackground.GetComponent<ComparisonZoomPanController>();
         }
 
         if (zoomPanController == null)
         {
-            zoomPanController = distortedImage.transform.parent.gameObject.AddComponent<ComparisonZoomPanController>();
+            zoomPanController = gameBackground.AddComponent<ComparisonZoomPanController>();
         }
 
         zoomPanController.Setup(distortedImage.rectTransform, modifiedImage.rectTransform);
@@ -107,6 +113,8 @@ public class LevelManager : MonoBehaviour
         currentDifferenceCount = 0;
 
         modifiedImage.sprite = currentLevel.originalSprite;
+
+        InitializeZoomPanController();
         zoomPanController?.ResetView();
 
         for(int i = 0; i < currentLevel.differences.Count; i++)
