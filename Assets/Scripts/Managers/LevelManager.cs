@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
     private float breakTime;
     private float currentAlpha;
     private static LevelManager _instance;
+    private Transform comparisonRoot;
 
     public static LevelManager Instance
     {
@@ -53,6 +54,7 @@ public class LevelManager : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+        comparisonRoot = distortedImage != null ? distortedImage.transform.parent : null;
         GenerateDiffsTemplate();
     }
 
@@ -63,7 +65,14 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        GameObject gameBackground = distortedImage.transform.parent.gameObject;
+        // The zoom controller reparents the images into its viewports. Keep using
+        // the original GameBackground instead of their current runtime parent.
+        if (comparisonRoot == null)
+        {
+            comparisonRoot = distortedImage.transform.parent;
+        }
+
+        GameObject gameBackground = comparisonRoot.gameObject;
 
         if (zoomPanController == null || zoomPanController.gameObject != gameBackground)
         {
