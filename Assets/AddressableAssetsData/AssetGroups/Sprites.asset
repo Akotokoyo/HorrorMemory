@@ -30,6 +30,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f28b8a429cbbdb489a71f5f500cb2bd
+    m_Address: Sprites/Level_017/Distorted_17
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 11c8540ff22a8e645b614f475ceae068
     m_Address: Sprites/Level_002/Original_2
     m_ReadOnly: 0
@@ -100,6 +105,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f8e49fba1a6a6c488777e1a8c1d3185
+    m_Address: Sprites/Level_017/Original_17
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41bd426e597eb8048abeb53c7784dac2
     m_Address: Assets/Resources_moved/Sprites/Level_016/Diff_16_0.png
     m_ReadOnly: 0
@@ -152,6 +162,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 63c42b559e34b354c8574158f966f040
     m_Address: Sprites/Level_006/Distorted_6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d66cc10d7413024f91d3bf89a7896bd
+    m_Address: Assets/Resources_moved/Sprites/Level_017/Diff_17_0.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
