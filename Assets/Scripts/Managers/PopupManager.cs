@@ -36,8 +36,7 @@ public class PopupManager : MonoBehaviour
         preGamePopup.SetActive(true);
         levelNameText.GetComponent<TranslateTexts>().ChangeTextByScript(level.LevelDisplayName);
         levelTimerText.GetComponent<TranslateTexts>().ChangeTextAndReplaceVariables("PRE_GAME_TIMER_TEXT_ID", new List<string> { level.timeLimit.ToString() });
-        string difficultyTextId = GetTextIdFromDifficulty(level.difficulty);
-        levelDifficultyText.text = LanguageManager.Instance.TranslateText("PRE_GAME_DIFFICULTY_TEXT_ID") + LanguageManager.Instance.TranslateText(difficultyTextId);
+        levelDifficultyText.GetComponent<TranslateTexts>().ChangeTextByScript(GetTextIdFromDifficulty(level.difficulty));
         levelStoryInfoText.GetComponent<TranslateTexts>().ChangeTextByScript(level.storyIntroText);
         endLevelStoryInfo = level.storyEndingText;
         waitingtime = level.waitingtime;
