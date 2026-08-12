@@ -29,11 +29,11 @@ public class PopupManager : MonoBehaviour
     public IEnumerator ShowPreGamePopup(ILevelData level)
     {
         preGamePopup.SetActive(true);
-        levelNameText.text = level.LevelDisplayName;
+        levelNameText.GetComponent<TranslateTexts>().ChangeTextByScript(level.LevelDisplayName);
         levelTimerText.GetComponent<TranslateTexts>().ChangeTextAndReplaceVariables("PRE_GAME_TIMER_TEXT_ID", new List<string> { level.timeLimit.ToString() });
         string difficultyTextId = GetTextIdFromDifficulty(level.difficulty);
         levelDifficultyText.text = LanguageManager.Instance.TranslateText("PRE_GAME_DIFFICULTY_TEXT_ID") + LanguageManager.Instance.TranslateText(difficultyTextId);
-        levelStoryInfoText.text = level.storyIntroText;
+        levelStoryInfoText.GetComponent<TranslateTexts>().ChangeTextByScript(level.storyIntroText);
         endLevelStoryInfo = level.storyEndingText;
         waitingtime = level.waitingtime;
         while (waitingtime != 0)
@@ -49,9 +49,10 @@ public class PopupManager : MonoBehaviour
     public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
     {
         endPopup.SetActive(true);
-        //TODO: TRADURRE
-        endTitleText.text = levelSuccess ? "Level Completed!" : "Level Failed!";
-        endLevelTimeLeftInfoText.text = $"Remaining Time: {remainingTime}";
+        endTitleText.text = 
+            LanguageManager.Instance.TranslateText(levelSuccess ? "LEVEL_SUCCESS_TEXT_ID" : "LEVEL_FAILED_TEXT_ID");
+        endLevelTimeLeftInfoText.GetComponent<TranslateTexts>().
+            ChangeTextAndReplaceVariables("LEVEL_REMAINING_TIME_TEXT_ID", new List<string> { remainingTime.ToString() });
         endLevelStoryInfoText.text = levelSuccess ? endLevelStoryInfo : "";
         nextLevelButton.SetActive(levelSuccess);
 
@@ -71,13 +72,13 @@ public class PopupManager : MonoBehaviour
         switch (diff)
         {
             case DifficultyLevel.Easy:
-                return "DIFFICULTY_LEVEL_EASY";
+                return "DIFFICULTY_LEVEL_EASY_TEXT_ID";
             case DifficultyLevel.Medium:
-                return "DIFFICULTY_LEVEL_MEDIUM";
+                return "DIFFICULTY_LEVEL_MEDIUM_TEXT_ID";
             case DifficultyLevel.Hard:
-                return "DIFFICULTY_LEVEL_HARD";
+                return "DIFFICULTY_LEVEL_HARD_TEXT_ID";
             default:
-                return "DIFFICULTY_LEVEL_EASY";
+                return "DIFFICULTY_LEVEL_EASY_TEXT_ID";
         }
     }
 }
