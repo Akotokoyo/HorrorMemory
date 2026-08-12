@@ -154,7 +154,7 @@ public class UIManager : MonoBehaviour
                 levelPrefabs[i].transform.GetChild(0).gameObject.SetActive(false);
                 levelPrefabs[i].transform.GetChild(1).gameObject.SetActive(true);
                 Transform tr = levelPrefabs[i].transform.GetChild(1);
-                tr.GetChild(0).GetComponent<TextMeshProUGUI>().text = level.LevelName;
+                tr.GetChild(0).GetComponent<TranslateTexts>().ChangeTextByScript(level.LevelName);
                 
                 var op = Addressables.LoadAssetAsync<Sprite>(level.AddrImage);
                 yield return op;

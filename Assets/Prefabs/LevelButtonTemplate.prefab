@@ -923,6 +923,7 @@ GameObject:
   - component: {fileID: 7080694154790785613}
   - component: {fileID: 4464820575534370820}
   - component: {fileID: 1821376345583653501}
+  - component: {fileID: 576297419135048166}
   m_Layer: 5
   m_Name: LevelNameText
   m_TagString: Untagged
@@ -1048,6 +1049,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &576297419135048166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6133752424526771286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cd501bd39a79540bca256e4e98f39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TranslateTexts
 --- !u!1 &7854092710799191774
 GameObject:
   m_ObjectHideFlags: 0
