@@ -6,7 +6,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     private GameData _gameData;
-    
+    [SerializeField] private TextAsset[] translatedTXT;
+
+
     public static GameManager Instance
     {
         get { return _instance; }
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+        LanguageManager.Initialize(translatedTXT);
 
         _saveData = new();
         var savedData = _saveData.ReadSaveFile();

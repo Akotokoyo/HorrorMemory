@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff24e04cd4b6e848a2a57000f45e963, type: 3}
   m_Name: LevelData_007
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
-  levelName: Level7
+  levelName: STORY_LEVEL_007_TITLE_TEXT_ID
   levelId: 7
   difficulty: 0
   timeLimit: 20
   scoreAddTime: 0
   waitingtime: 5
   wrongClickPenalty: 5
-  storyIntroText: STORY_LEVEL_07_INTRO_TEXT_ID
-  storyEndingText: STORY_LEVEL_07_OUTRO_TEXT_ID
+  storyIntroText: STORY_LEVEL_007_INTRO_TEXT_ID
+  storyEndingText: STORY_LEVEL_007_OUTRO_TEXT_ID
   originalSprite: {fileID: 21300000, guid: 8a0761791e0d9a14ab3e37e6bd14d1ee, type: 3}
   distortedSprite: {fileID: 21300000, guid: b60e7087e457c3940b7f8bdf84a052a8, type: 3}
   differences:

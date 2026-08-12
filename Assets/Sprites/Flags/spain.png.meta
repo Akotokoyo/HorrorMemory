@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d257941a7553cab4ba80b6500ce842de
+guid: 6f438d3b16289c946b3b2124d1859ee1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spain_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 512
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5852bfdcfdb0d48a0621ebeca0e666
+      internalID: 869989906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -135,7 +157,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spain_0: 869989906
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

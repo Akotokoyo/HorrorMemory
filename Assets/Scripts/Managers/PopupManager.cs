@@ -30,14 +30,15 @@ public class PopupManager : MonoBehaviour
     {
         preGamePopup.SetActive(true);
         levelNameText.text = level.LevelDisplayName;
-        levelTimerText.text = $"Time Limit: {level.timeLimit} seconds";
-        levelDifficultyText.text = $"Difficulty: {level.difficulty}";
+        levelTimerText.GetComponent<TranslateTexts>().ChangeTextAndReplaceVariables("PRE_GAME_TIMER_TEXT_ID", new List<string> { level.timeLimit.ToString() });
+        string difficultyTextId = GetTextIdFromDifficulty(level.difficulty);
+        levelDifficultyText.text = LanguageManager.Instance.TranslateText("PRE_GAME_DIFFICULTY_TEXT_ID") + LanguageManager.Instance.TranslateText(difficultyTextId);
         levelStoryInfoText.text = level.storyIntroText;
         endLevelStoryInfo = level.storyEndingText;
         waitingtime = level.waitingtime;
         while (waitingtime != 0)
         {
-            levelWaitTimeText.text = $"The Game will start after: {waitingtime} seconds";
+            levelWaitTimeText.GetComponent<TranslateTexts>().ChangeTextAndReplaceVariables("PRE_GAME_TIME_TO_START_TEXT_ID", new List<string> { waitingtime.ToString() });
             yield return new WaitForSeconds(1f);
             waitingtime--;
         }
@@ -48,6 +49,7 @@ public class PopupManager : MonoBehaviour
     public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
     {
         endPopup.SetActive(true);
+        //TODO: TRADURRE
         endTitleText.text = levelSuccess ? "Level Completed!" : "Level Failed!";
         endLevelTimeLeftInfoText.text = $"Remaining Time: {remainingTime}";
         endLevelStoryInfoText.text = levelSuccess ? endLevelStoryInfo : "";
@@ -62,5 +64,20 @@ public class PopupManager : MonoBehaviour
     public void HideEndPopup()
     {
         endPopup.SetActive(false);
+    }
+
+    private string GetTextIdFromDifficulty(DifficultyLevel diff)
+    {
+        switch (diff)
+        {
+            case DifficultyLevel.Easy:
+                return "DIFFICULTY_LEVEL_EASY";
+            case DifficultyLevel.Medium:
+                return "DIFFICULTY_LEVEL_MEDIUM";
+            case DifficultyLevel.Hard:
+                return "DIFFICULTY_LEVEL_HARD";
+            default:
+                return "DIFFICULTY_LEVEL_EASY";
+        }
     }
 }

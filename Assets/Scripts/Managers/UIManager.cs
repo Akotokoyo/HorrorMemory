@@ -20,6 +20,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject scrollViewContent;
     [SerializeField] private GameObject levelPrefab;
 
+    [SerializeField] private Image flagButtonImage;
+    [SerializeField] private List<Sprite> flagSprites;
+
     private static UIManager _instance;
 
     public static UIManager Instance
@@ -36,6 +39,9 @@ public class UIManager : MonoBehaviour
         }
 
         _instance = this;
+
+        int languageIndex = PlayerPrefs.GetInt("LanguageId", 0);
+        flagButtonImage.sprite = flagSprites[languageIndex];
     }
 
     public void GenerateLevelPrefabs(GameData gameData)
@@ -117,6 +123,18 @@ public class UIManager : MonoBehaviour
     public void OnClickPauseGameButton(bool isPaused)
     {
         LevelManager.Instance.PauseGame(isPaused);
+    }
+
+    public void OnClickChangeLanguage()
+    {
+        int languageIndex = PlayerPrefs.GetInt("LanguageId", 0);
+        languageIndex++;
+        if(languageIndex == Constants.MAX_LANGUAGES)
+        {
+            languageIndex = 0;
+        }
+        flagButtonImage.sprite = flagSprites[languageIndex];
+        LanguageManager.Instance.ChangeLanguage(languageIndex);
     }
 
     private IEnumerator PrepareLevelsFromGameData()

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d257941a7553cab4ba80b6500ce842de
+guid: a2e0f429f69d108489108d983743f5ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: united-kingdom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 512
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f49a37ee736454a9c3fba1ef76297f
+      internalID: 616525639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -135,7 +157,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      united-kingdom_0: 616525639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
