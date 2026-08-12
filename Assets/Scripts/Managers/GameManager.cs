@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     private GameData _gameData;
     [SerializeField] private TextAsset[] translatedTXT;
 
-
     public static GameManager Instance
     {
         get { return _instance; }

@@ -4,6 +4,7 @@
     "DIFFICULTY_LEVEL_EASY_TEXT_ID":"Einfach",
     "DIFFICULTY_LEVEL_MEDIUM_TEXT_ID":"Mittel",
     "DIFFICULTY_LEVEL_HARD_TEXT_ID":"Schwer",
+    "FINAL_CHOICE_TEXT_ID":"Triff deine Wahl",
     "LEVEL_FAILED_TEXT_ID":"Level fehlgeschlagen",
     "LEVEL_REMAINING_TIME_TEXT_ID": "Verbleibende Sekunden: %%",
     "LEVEL_SUCCESS_TEXT_ID":"Level abgeschlossen",

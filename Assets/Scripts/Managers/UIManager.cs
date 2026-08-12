@@ -15,6 +15,9 @@ public class UIManager : MonoBehaviour
     public GameObject contentMenu;
     public GameObject introUI;
     public GameObject gameUI;
+    [SerializeField] private GameObject endGamePopup;
+    [SerializeField] private TextMeshProUGUI endGameText;
+
     private int currentLevel;
 
     [SerializeField] private GameObject scrollViewContent;
@@ -69,11 +72,7 @@ public class UIManager : MonoBehaviour
                 levelSelection.SetActive(false);
                 introUI.SetActive(false);
                 gameUI.SetActive(true);
-
                 Debug.Log("Play Button is clicked");
-                break;
-            case "Options":
-                Debug.Log("Options Button is clicked");
                 break;
             case "Close":
                 Application.Quit();
@@ -105,6 +104,7 @@ public class UIManager : MonoBehaviour
         introUI.SetActive(true);
         contentMenu.SetActive(true);
         gameUI.SetActive(false);
+        endGamePopup.SetActive(false);
     }
     public void OnclickRetryLevel()
     {
@@ -123,6 +123,14 @@ public class UIManager : MonoBehaviour
     public void OnClickPauseGameButton(bool isPaused)
     {
         LevelManager.Instance.PauseGame(isPaused);
+    }
+
+    public void OnClickEndingGameButton(bool isGoodEnding)
+    {
+        endGamePopup.SetActive(true);
+        endGameText.text = 
+            LanguageManager.Instance.TranslateText(
+                isGoodEnding ? "STORY_LEVEL_019_LIFE_OUTRO_TEXT_ID" : "STORY_LEVEL_019_DEATH_OUTRO_TEXT_ID");
     }
 
     public void OnClickChangeLanguage()

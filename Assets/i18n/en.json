@@ -4,6 +4,7 @@
     "DIFFICULTY_LEVEL_EASY_TEXT_ID":"Easy",
     "DIFFICULTY_LEVEL_MEDIUM_TEXT_ID":"Medium",
     "DIFFICULTY_LEVEL_HARD_TEXT_ID":"Hard",
+    "FINAL_CHOICE_TEXT_ID":"Make your choice",
     "LEVEL_FAILED_TEXT_ID":"Level Failed",
     "LEVEL_REMAINING_TIME_TEXT_ID": "Seconds remaining: %%",
     "LEVEL_SUCCESS_TEXT_ID":"Level Completed",
