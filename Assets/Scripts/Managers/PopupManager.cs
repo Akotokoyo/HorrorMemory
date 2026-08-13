@@ -31,23 +31,21 @@ public class PopupManager : MonoBehaviour
     private string endLevelStoryInfo;
     private int waitingtime;
 
-    public IEnumerator ShowPreGamePopup(ILevelData level)
+    public void ShowPreGamePopup(ILevelData level)
     {
         preGamePopup.SetActive(true);
         levelNameText.GetComponent<TranslateTexts>().ChangeTextByScript(level.LevelDisplayName);
         levelTimerText.GetComponent<TranslateTexts>().ChangeTextAndReplaceVariables("PRE_GAME_TIMER_TEXT_ID", new List<string> { level.timeLimit.ToString() });
         levelDifficultyText.GetComponent<TranslateTexts>().ChangeTextByScript(GetTextIdFromDifficulty(level.difficulty));
         levelStoryInfoText.GetComponent<TranslateTexts>().ChangeTextByScript(level.storyIntroText);
-        endLevelStoryInfo = level.storyEndingText;
-        waitingtime = level.waitingtime;
-        while (waitingtime != 0)
-        {
-            levelWaitTimeText.GetComponent<TranslateTexts>().ChangeTextAndReplaceVariables("PRE_GAME_TIME_TO_START_TEXT_ID", new List<string> { waitingtime.ToString() });
-            yield return new WaitForSeconds(1f);
-            waitingtime--;
-        }
-        
+        endLevelStoryInfo = level.storyEndingText;        
+    }
+
+    public void OnClickStartLevel()
+    {
         preGamePopup.SetActive(false);
+        GameManager.Instance.gameState = GameState.PLAYING;
+        LevelManager.Instance.InitLevel();
     }
 
     public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
@@ -69,7 +67,6 @@ public class PopupManager : MonoBehaviour
 
             endTitleText.GetComponent<TranslateTexts>().
                 ChangeTextByScript("FINAL_CHOICE_TEXT_ID");
-
         }
         else
         {
@@ -77,7 +74,9 @@ public class PopupManager : MonoBehaviour
                 LanguageManager.Instance.TranslateText(levelSuccess ? "LEVEL_SUCCESS_TEXT_ID" : "LEVEL_FAILED_TEXT_ID");
             endLevelTimeLeftInfoText.GetComponent<TranslateTexts>().
                 ChangeTextAndReplaceVariables("LEVEL_REMAINING_TIME_TEXT_ID", new List<string> { remainingTime.ToString() });
-            endLevelStoryInfoText.text = levelSuccess ? endLevelStoryInfo : "";
+
+            endLevelStoryInfoText.GetComponent<TranslateTexts>().
+                ChangeTextByScript(levelSuccess ? endLevelStoryInfo : "");
             retryButton.SetActive(true);
             homeButton.SetActive(true);
             endGameGoodButton.SetActive(false);

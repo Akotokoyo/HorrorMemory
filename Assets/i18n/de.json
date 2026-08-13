@@ -15,6 +15,7 @@
     "PAUSE_INSTRUCTIONS_GAME_TEXT":"Ziel: Finde die Unterschiede zwischen den beiden Bildern.\nLinks verändert sich das Bild mit der Zeit: Die Erinnerung verblasst und weicht der verzerrten Version.\nRechts bleibt die korrekte Szene unverändert — nutze sie als Referenz.\nZiehe mit zwei Fingern auseinander/zusammen zum Zoomen; ziehe zum Verschieben.",
     "PLAY_MODE_TEXT_ID":"Zufallsmodus",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Schwierigkeit: ",
+    "PRE_GAME_PRESS_TO_PLAY_TEXT_ID":"Tippe auf den Bildschirm, um zu starten",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Zeit zum Starten: %% Sekunden",
     "PRE_GAME_TIMER_TEXT_ID":"Zeit zum Finden von Unterschieden: %% Sekunden",
     "STORY_LEVEL_000_INTRO_TEXT_ID": "Das einsame Haus ruht im Licht der Abenddämmerung. Jeder Stein wirkt vertraut, und doch erklärt keine Erinnerung, warum. Auf der Schwelle warten einige Kartons, als wäre gerade jemand angekommen oder im Begriff fortzugehen. Dann verändert sich ein Detail, und die Stille beginnt inszeniert zu wirken.",

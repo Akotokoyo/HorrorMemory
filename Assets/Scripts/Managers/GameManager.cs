@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         get { return _instance; }
     }
 
-    [SerializeField] private GameState gameState = GameState.WAITING;
+    public GameState gameState = GameState.WAITING;
     [SerializeField] private bool useCasualMode = true;
     [SerializeField] private LevelData currentLevel;
     [SerializeField] private List<LevelData> _gameLevelConfigurations;
@@ -97,9 +97,7 @@ public class GameManager : MonoBehaviour
             yield break;
         }
 
-        yield return StartCoroutine(LevelManager.Instance.PrepareLevel());
-        gameState = GameState.PLAYING;
-        LevelManager.Instance.InitLevel();
+        LevelManager.Instance.PrepareLevel();
     }
 
     public void StartGame(int levelId, bool isCasualMode = false)

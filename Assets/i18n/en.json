@@ -15,6 +15,7 @@
     "PAUSE_INSTRUCTIONS_GAME_TEXT":"Goal: find the differences between the two images.\nOn the left, as time passes, the memory fades and the image shifts toward its distorted version.\nOn the right, the correct scene stays unchanged — use it as your reference.\nPinch with two fingers to zoom; drag to move around.",
     "PLAY_MODE_TEXT_ID":"Play Mode",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Difficulty: ",
+    "PRE_GAME_PRESS_TO_PLAY_TEXT_ID":"Tap the screen to start",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Time to Start: %% seconds",
     "PRE_GAME_TIMER_TEXT_ID":"Time to find differences: %% seconds",
     "STORY_LEVEL_000_INTRO_TEXT_ID": "The solitary house rests in the light of sunset. Every stone feels familiar, yet no memory can explain why. A few cardboard boxes wait on the doorstep, as though someone had just arrived—or were about to leave. Then one detail changes, and the stillness begins to feel staged.",

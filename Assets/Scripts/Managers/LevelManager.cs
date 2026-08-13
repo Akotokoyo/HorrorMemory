@@ -87,10 +87,10 @@ public class LevelManager : MonoBehaviour
         zoomPanController.Setup(distortedImage.rectTransform, modifiedImage.rectTransform);
     }
 
-    public IEnumerator PrepareLevel()
+    public void PrepareLevel()
     {
         popupManager.HideEndPopup();
-        yield return popupManager.ShowPreGamePopup(currentLevel);
+        popupManager.ShowPreGamePopup(currentLevel);
     }
 
     public void PauseGame(bool isPaused)

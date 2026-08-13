@@ -15,6 +15,7 @@
     "PAUSE_INSTRUCTIONS_GAME_TEXT":"Obiettivo: trova le differenze tra le due immagini.\nA sinistra, col passare del tempo, il ricordo si altera e l'immagine si trasforma verso la versione distorta.\nA destra resta la scena corretta: usala come riferimento.\nPinch con 2 dita per zoomare; trascina per spostarti.",
     "PLAY_MODE_TEXT_ID":"Modalita Casuale",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Difficolta: ",
+    "PRE_GAME_PRESS_TO_PLAY_TEXT_ID":"Premi sullo schermo per cominciare",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Tempo per Iniziare: %% secondi",
     "PRE_GAME_TIMER_TEXT_ID":"Tempo Per Trovare le Differenze: %% secondi",
     "STORY_LEVEL_000_INTRO_TEXT_ID": "La casa solitaria riposa nella luce del tramonto. Ogni pietra sembra familiare, eppure nessun ricordo spiega perché. Sulla soglia attendono alcuni scatoloni, come se qualcuno fosse appena arrivato o stesse per andarsene. Poi un dettaglio cambia, e quella quiete comincia a sembrare costruita.",

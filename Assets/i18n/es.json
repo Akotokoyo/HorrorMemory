@@ -16,6 +16,7 @@
     "PLAY_MODE_TEXT_ID":"Modo Aleatorio",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Tiempo para comenzar: %% segundos",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Dificultad: ",
+    "PRE_GAME_PRESS_TO_PLAY_TEXT_ID":"Pulsa la pantalla para empezar",
     "PRE_GAME_TIMER_TEXT_ID":"Tiempo para encontrar las diferencias: %% segundos",
     "STORY_LEVEL_000_INTRO_TEXT_ID": "La casa solitaria reposa bajo la luz del ocaso. Cada piedra parece familiar y, sin embargo, ningún recuerdo explica por qué. En el umbral aguardan unas cajas, como si alguien acabara de llegar o estuviera a punto de marcharse. Entonces cambia un detalle, y aquella quietud empieza a parecer artificial.",
     "STORY_LEVEL_000_OUTRO_TEXT_ID": "Las diferencias desaparecen, pero persiste la sensación de estar bajo vigilancia. El recuerdo de haber cogido la caja y haberla llevado a la habitación está fresco. Es un ordenador; ningún asombro ante este descubrimiento ya vivido.",

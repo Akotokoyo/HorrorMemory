@@ -15,6 +15,7 @@
     "PAUSE_INSTRUCTIONS_GAME_TEXT":"Objectif : trouve les différences entre les deux images.\nÀ gauche, avec le temps, le souvenir s'altère et l'image se transforme vers sa version déformée.\nÀ droite, la scène correcte reste inchangée : utilise-la comme référence.\nPince avec deux doigts pour zoomer ; fais glisser pour te déplacer.",
     "PLAY_MODE_TEXT_ID":"Mode Aléatoire",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Difficulté: ",
+    "PRE_GAME_PRESS_TO_PLAY_TEXT_ID":"Appuie sur l'écran pour commencer",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Temps pour commencer : %% secondes",
     "PRE_GAME_TIMER_TEXT_ID":"Temps pour trouver les différences : %% secondes",
     "STORY_LEVEL_000_INTRO_TEXT_ID": "La maison solitaire repose dans la lumière du crépuscule. Chaque pierre semble familière, pourtant aucun souvenir n'explique pourquoi. Sur le seuil attendent quelques cartons, comme si quelqu'un venait d'arriver ou s'apprêtait à partir. Puis un détail change, et cette quiétude commence à paraître artificielle.",

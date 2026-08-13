@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 1135545138709687971}
   - component: {fileID: 2272737440954374384}
   - component: {fileID: 2786940711228281551}
+  - component: {fileID: 941625175039908477}
   m_Layer: 5
   m_Name: PreGameContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1135545138709687971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33,8 +34,8 @@ RectTransform:
   - {fileID: 2329368226812504736}
   - {fileID: 1439968538729343799}
   - {fileID: 8144381327234127502}
-  - {fileID: 3049385998814511659}
   - {fileID: 5077528552555189749}
+  - {fileID: 3049385998814511659}
   m_Father: {fileID: 4175993879198879775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -80,6 +81,50 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &941625175039908477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271057486449327983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2786940711228281551}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &874980554350295030
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,10 +233,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1135545138709687971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.4611853}
-  m_AnchorMax: {x: 1, y: 0.5815556}
-  m_AnchoredPosition: {x: 0, y: -0.0024871826}
-  m_SizeDelta: {x: 0, y: -0.0050049}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.12136799}
+  m_AnchoredPosition: {x: 0, y: -0.53704834}
+  m_SizeDelta: {x: 0, y: -1.4046688}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4555741603355902011
 CanvasRenderer:
@@ -221,7 +266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: PRE_GAME_PRESS_TO_PLAY_TEXT_ID
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -248,7 +293,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1271,10 +1316,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1135545138709687971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.4611853}
-  m_AnchoredPosition: {x: 0, y: -0.040039062}
-  m_SizeDelta: {x: 0, y: 0.07998657}
+  m_AnchorMin: {x: 0, y: 0.12136799}
+  m_AnchorMax: {x: 1, y: 0.5815556}
+  m_AnchoredPosition: {x: 0, y: -0.6743855}
+  m_SizeDelta: {x: 0, y: 1.3442574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8758485320694663927
 CanvasRenderer:
