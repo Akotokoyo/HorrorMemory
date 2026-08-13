@@ -6,6 +6,7 @@ public class ComparisonZoomPanController : MonoBehaviour
 {
     public static ComparisonZoomPanController Instance { get; private set; }
 
+    //English Notion: Pan: Image Is Moving, Drag: Finger is Moving, Pinch: Two Fingers Are Moving
     [SerializeField] private float minZoom = 1f;
     [SerializeField] private float maxZoom = 5f;
     [SerializeField] private float pinchZoomSpeed = 0.005f;
@@ -85,7 +86,7 @@ public class ComparisonZoomPanController : MonoBehaviour
 
     private void Update()
     {
-        if (leftViewport == null)
+        if (leftViewport == null || rightViewport == null)
         {
             return;
         }
