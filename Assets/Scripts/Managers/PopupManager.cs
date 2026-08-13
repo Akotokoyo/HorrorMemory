@@ -67,6 +67,8 @@ public class PopupManager : MonoBehaviour
 
             endTitleText.GetComponent<TranslateTexts>().
                 ChangeTextByScript("FINAL_CHOICE_TEXT_ID");
+            endLevelTimeLeftInfoText.GetComponent<TranslateTexts>().
+                ChangeTextAndReplaceVariables("LEVEL_REMAINING_TIME_TEXT_ID", new List<string> { remainingTime.ToString() });
         }
         else
         {
