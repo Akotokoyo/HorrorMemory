@@ -11,6 +11,8 @@
     "LEVEL_REMAINING_TIME_TEXT_ID": "Verbleibende Sekunden: %%",
     "LEVEL_SUCCESS_TEXT_ID":"Level abgeschlossen",
     "OPTIONS_TEXT_ID":"Optionen",
+    "PAUSE_GAME_TEXT":"Pause",
+    "PAUSE_INSTRUCTIONS_GAME_TEXT":"Ziel: Finde die Unterschiede zwischen den beiden Bildern.\nLinks verändert sich das Bild mit der Zeit: Die Erinnerung verblasst und weicht der verzerrten Version.\nRechts bleibt die korrekte Szene unverändert — nutze sie als Referenz.\nZiehe mit zwei Fingern auseinander/zusammen zum Zoomen; ziehe zum Verschieben.",
     "PLAY_MODE_TEXT_ID":"Zufallsmodus",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Schwierigkeit: ",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Zeit zum Starten: %% Sekunden",

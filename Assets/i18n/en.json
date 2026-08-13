@@ -11,6 +11,8 @@
     "LEVEL_REMAINING_TIME_TEXT_ID": "Seconds remaining: %%",
     "LEVEL_SUCCESS_TEXT_ID":"Level Completed",
     "OPTIONS_TEXT_ID":"Options",
+    "PAUSE_GAME_TEXT":"Pause",
+    "PAUSE_INSTRUCTIONS_GAME_TEXT":"Goal: find the differences between the two images.\nOn the left, as time passes, the memory fades and the image shifts toward its distorted version.\nOn the right, the correct scene stays unchanged — use it as your reference.\nPinch with two fingers to zoom; drag to move around.",
     "PLAY_MODE_TEXT_ID":"Play Mode",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Difficulty: ",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Time to Start: %% seconds",

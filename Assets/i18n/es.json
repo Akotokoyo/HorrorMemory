@@ -11,6 +11,8 @@
     "LEVEL_REMAINING_TIME_TEXT_ID": "Segundos restantes: %%",
     "LEVEL_SUCCESS_TEXT_ID":"Nivel completado",
     "OPTIONS_TEXT_ID":"Opciones",
+    "PAUSE_GAME_TEXT":"Pausa",
+    "PAUSE_INSTRUCTIONS_GAME_TEXT":"Objetivo: encuentra las diferencias entre las dos imágenes.\nA la izquierda, con el paso del tiempo, el recuerdo se altera y la imagen se transforma hacia su versión distorsionada.\nA la derecha, la escena correcta permanece igual: úsala como referencia.\nPellizca con dos dedos para hacer zoom; arrastra para moverte.",
     "PLAY_MODE_TEXT_ID":"Modo Aleatorio",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Tiempo para comenzar: %% segundos",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Dificultad: ",

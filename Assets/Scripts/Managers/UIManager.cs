@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     public GameObject contentMenu;
     public GameObject introUI;
     public GameObject gameUI;
+    [SerializeField] private GameObject pausePopup;
+
     [SerializeField] private GameObject endGamePopup;
     [SerializeField] private TextMeshProUGUI endGameText;
 
@@ -96,6 +98,7 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.StartGame(idLevel);
         levelSelection.SetActive(false);
         introUI.SetActive(false);
+        pausePopup.SetActive(false);
         gameUI.SetActive(true);
     }
 
@@ -104,6 +107,7 @@ public class UIManager : MonoBehaviour
         introUI.SetActive(true);
         contentMenu.SetActive(true);
         gameUI.SetActive(false);
+        pausePopup.SetActive(false);
         endGamePopup.SetActive(false);
     }
     public void OnclickRetryLevel()
@@ -111,6 +115,7 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.StartGame(currentLevel);
         levelSelection.SetActive(false);
         introUI.SetActive(false);
+        pausePopup.SetActive(false);
         gameUI.SetActive(true);
     }
 
@@ -123,6 +128,7 @@ public class UIManager : MonoBehaviour
     public void OnClickPauseGameButton(bool isPaused)
     {
         LevelManager.Instance.PauseGame(isPaused);
+        pausePopup.SetActive(isPaused);
     }
 
     public void OnClickEndingGameButton(bool isGoodEnding)

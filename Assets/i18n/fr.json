@@ -11,6 +11,8 @@
     "LEVEL_REMAINING_TIME_TEXT_ID": "Secondes restantes : %%",
     "LEVEL_SUCCESS_TEXT_ID":"Niveau terminé",
     "OPTIONS_TEXT_ID":"Options",
+    "PAUSE_GAME_TEXT":"Pause",
+    "PAUSE_INSTRUCTIONS_GAME_TEXT":"Objectif : trouve les différences entre les deux images.\nÀ gauche, avec le temps, le souvenir s'altère et l'image se transforme vers sa version déformée.\nÀ droite, la scène correcte reste inchangée : utilise-la comme référence.\nPince avec deux doigts pour zoomer ; fais glisser pour te déplacer.",
     "PLAY_MODE_TEXT_ID":"Mode Aléatoire",
     "PRE_GAME_DIFFICULTY_TEXT_ID":"Difficulté: ",
     "PRE_GAME_TIME_TO_START_TEXT_ID":"Temps pour commencer : %% secondes",
