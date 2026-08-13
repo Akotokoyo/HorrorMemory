@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: STORY_LEVEL_010_TITLE_TEXT_ID
   levelId: 10
   difficulty: 1
-  timeLimit: 20
+  timeLimit: 35
   scoreAddTime: 0
   waitingtime: 5
   wrongClickPenalty: 5

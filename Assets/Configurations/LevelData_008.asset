@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelName: STORY_LEVEL_008_TITLE_TEXT_ID
   levelId: 8
-  difficulty: 0
-  timeLimit: 20
+  difficulty: 1
+  timeLimit: 35
   scoreAddTime: 0
   waitingtime: 5
   wrongClickPenalty: 5
