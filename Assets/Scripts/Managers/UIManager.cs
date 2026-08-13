@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tutorialDescriptionText;
     [SerializeField] private GameObject tutorialLeftImage;
     [SerializeField] private GameObject tutorialRightImage;
+    [SerializeField] private Image tutorialFlagButtonImage;
     [SerializeField] private List<Sprite> tutorialSprites;
     private int tutorialStepIndex = 0;
 
@@ -55,6 +56,7 @@ public class UIManager : MonoBehaviour
 
         int languageIndex = PlayerPrefs.GetInt("LanguageId", 0);
         flagButtonImage.sprite = flagSprites[languageIndex];
+        tutorialFlagButtonImage.sprite = flagSprites[languageIndex];
 
         if (PlayerPrefs.GetInt("TutorialSeen", 0) == 0)
         {
@@ -165,6 +167,7 @@ public class UIManager : MonoBehaviour
             languageIndex = 0;
         }
         flagButtonImage.sprite = flagSprites[languageIndex];
+        tutorialFlagButtonImage.sprite = flagSprites[languageIndex];
         LanguageManager.Instance.ChangeLanguage(languageIndex);
     }
 
