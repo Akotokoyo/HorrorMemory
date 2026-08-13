@@ -7,7 +7,7 @@ public class ComparisonZoomPanController : MonoBehaviour
     public static ComparisonZoomPanController Instance { get; private set; }
 
     [SerializeField] private float minZoom = 1f;
-    [SerializeField] private float maxZoom = 3f;
+    [SerializeField] private float maxZoom = 5f;
     [SerializeField] private float pinchZoomSpeed = 0.005f;
     [SerializeField] private float scrollZoomSpeed = 0.15f;
     [SerializeField] private float panDragThreshold = 10f;
@@ -350,7 +350,7 @@ public class ComparisonZoomPanController : MonoBehaviour
 
     private void Pan(Vector2 delta)
     {
-        panOffset += delta / currentZoom;
+        panOffset += delta;
         ClampPanOffset();
         ApplyTransform();
     }
