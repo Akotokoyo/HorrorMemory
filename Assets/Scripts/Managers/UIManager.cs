@@ -9,22 +9,30 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject levelSelection;
-    public List<GameObject> levelPrefabs;
-
+    [Header("Popups")]
     public GameObject contentMenu;
     public GameObject introUI;
     public GameObject gameUI;
     [SerializeField] private GameObject pausePopup;
-
     [SerializeField] private GameObject endGamePopup;
     [SerializeField] private TextMeshProUGUI endGameText;
 
-    private int currentLevel;
+    [Header("Tutorial")]
+    [SerializeField] private GameObject tutorialPopup;
+    [SerializeField] private GameObject tutorialNextButton;
+    [SerializeField] private TextMeshProUGUI tutorialTitleText;
+    [SerializeField] private TextMeshProUGUI tutorialDescriptionText;
+    [SerializeField] private GameObject tutorialLeftImage;
+    [SerializeField] private GameObject tutorialRightImage;
+    [SerializeField] private List<Sprite> tutorialSprites;
+    private int tutorialStepIndex = 0;
 
+    private int currentLevel;
+    [Header("Miscellaneous")]
+    public GameObject levelSelection;
+    public List<GameObject> levelPrefabs;
     [SerializeField] private GameObject scrollViewContent;
     [SerializeField] private GameObject levelPrefab;
-
     [SerializeField] private Image flagButtonImage;
     [SerializeField] private List<Sprite> flagSprites;
 
@@ -47,6 +55,11 @@ public class UIManager : MonoBehaviour
 
         int languageIndex = PlayerPrefs.GetInt("LanguageId", 0);
         flagButtonImage.sprite = flagSprites[languageIndex];
+
+        if (PlayerPrefs.GetInt("TutorialSeen", 0) == 0)
+        {
+            OnClickIntroButton("Tutorial");
+        }
     }
 
     public void GenerateLevelPrefabs(GameData gameData)
@@ -68,6 +81,10 @@ public class UIManager : MonoBehaviour
             case "Story":
                 StartCoroutine(PrepareLevelsFromGameData());
                 levelSelection.SetActive(true);
+                break;
+            case "Tutorial":
+                SetTutorialStep0(); 
+                tutorialPopup.SetActive(true);
                 break;
             case "Play":
                 GameManager.Instance.StartGame(-1, true);
@@ -184,7 +201,53 @@ public class UIManager : MonoBehaviour
                     tr.GetChild(3).GetChild(j).GetChild(0).gameObject.SetActive(j < level.StarRating);
                 }
             }
-        }
-        
+        } 
     }
+
+    #region Tutorial
+    private void SetTutorialStep0()
+    {
+        tutorialStepIndex = 0;
+        tutorialTitleText.GetComponent<TranslateTexts>().ChangeTextByScript($"TUTORIAL_STEP_{tutorialStepIndex}_TITLE_TEXT_ID");
+        tutorialDescriptionText.GetComponent<TranslateTexts>().ChangeTextByScript($"TUTORIAL_STEP_{tutorialStepIndex}_DESCRIPTION_TEXT_ID");
+        tutorialLeftImage.GetComponent<Image>().sprite = tutorialSprites[0];
+        tutorialRightImage.GetComponent<Image>().sprite = tutorialSprites[0];
+        tutorialLeftImage.transform.GetChild(0).gameObject.SetActive(true);
+        tutorialLeftImage.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+        tutorialNextButton.SetActive(false);
+    }
+    public void OnClickTutorialDifference()
+    {
+        tutorialLeftImage.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+        tutorialRightImage.transform.GetChild(0).gameObject.SetActive(true);
+        tutorialRightImage.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+        tutorialNextButton.SetActive(true);
+    }
+    public void OnClickTutorialNextButton()
+    {
+        tutorialStepIndex++;
+        tutorialTitleText.GetComponent<TranslateTexts>().ChangeTextByScript($"TUTORIAL_STEP_{tutorialStepIndex}_TITLE_TEXT_ID");
+        tutorialDescriptionText.GetComponent<TranslateTexts>().ChangeTextByScript($"TUTORIAL_STEP_{tutorialStepIndex}_DESCRIPTION_TEXT_ID");
+        switch (tutorialStepIndex)
+        {
+            case 1:
+                tutorialLeftImage.transform.GetChild(0).gameObject.SetActive(false);
+                tutorialRightImage.transform.GetChild(0).gameObject.SetActive(false);
+                tutorialLeftImage.GetComponent<Image>().sprite = tutorialSprites[1];
+                break;
+            case 2:
+                tutorialLeftImage.GetComponent<Image>().sprite = tutorialSprites[2];
+                tutorialRightImage.GetComponent<Image>().sprite = tutorialSprites[3];
+                break;
+            case 3:
+                contentMenu.SetActive(true);
+                tutorialPopup.SetActive(false);
+                PlayerPrefs.SetInt("TutorialSeen", 1);
+                break;
+            default:
+                break;
+        }
+    }
+
+    #endregion
 }

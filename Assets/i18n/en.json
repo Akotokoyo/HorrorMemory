@@ -80,5 +80,12 @@
     "STORY_LEVEL_019_DEATH_OUTRO_TEXT_ID": "The portal receives every memory without erasing its worth. If everything that happened is real, then so too may be the chance to begin again in a new life. Those left behind are given a farewell filled with love, not a plea to forget. Then the past fades away, and something new opens its eyes.",
     "STORY_LEVEL_019_TITLE_TEXT_ID": "The Choice",
     "STORY_LEVEL_SELECTION_TEXT_ID":"STORY_Level Selection",
-    "STORY_MODE_TEXT_ID":"Story Mode"
+    "STORY_MODE_TEXT_ID":"Story Mode",
+    "TUTORIAL_MODE_TEXT_ID":"How to Play",
+    "TUTORIAL_STEP_0_TITLE_TEXT_ID":"Game Objective",
+    "TUTORIAL_STEP_0_DESCRIPTION_TEXT_ID":"Compare the two images and tap the differences. Each difference you find brings you closer to victory. Tap the difference to continue.",
+    "TUTORIAL_STEP_1_TITLE_TEXT_ID":"The Memory Fades",
+    "TUTORIAL_STEP_1_DESCRIPTION_TEXT_ID":"On the left, as time passes, the memory fades and the image transforms. On the right, the correct scene stays unchanged — use it as your reference.",
+    "TUTORIAL_STEP_2_TITLE_TEXT_ID":"Zoom and Movement",
+    "TUTORIAL_STEP_2_DESCRIPTION_TEXT_ID":"Use two fingers to zoom in and out. Drag to move around when zoom is active."
 }

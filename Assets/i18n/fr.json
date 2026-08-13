@@ -80,5 +80,12 @@
     "STORY_LEVEL_019_DEATH_OUTRO_TEXT_ID": "Le portail accueille chaque souvenir sans en effacer la valeur. Si tout ce qui s'est produit est réel, alors la possibilité de recommencer dans une nouvelle vie peut l'être aussi. Aux êtres laissés derrière reste un adieu plein d'amour, et non une demande d'oublier. Puis le passé s'éteint, et quelque chose de nouveau ouvre les yeux.",
     "STORY_LEVEL_019_TITLE_TEXT_ID": "Le Choix",
     "STORY_LEVEL_SELECTION_TEXT_ID":"élection de Niveau",
-    "STORY_MODE_TEXT_ID":"Mode Histoire"
+    "STORY_MODE_TEXT_ID":"Mode Histoire",
+    "TUTORIAL_MODE_TEXT_ID":"Comment jouer",
+    "TUTORIAL_STEP_0_TITLE_TEXT_ID":"Objectif du Jeu",
+    "TUTORIAL_STEP_0_DESCRIPTION_TEXT_ID":"Compare les deux images et touche les différences. Chaque différence trouvée te rapproche de la victoire. Touche la différence pour continuer.",
+    "TUTORIAL_STEP_1_TITLE_TEXT_ID":"Le souvenir s'altère",
+    "TUTORIAL_STEP_1_DESCRIPTION_TEXT_ID":"À gauche, avec le temps, le souvenir s'estompe et l'image se transforme. À droite, la scène correcte reste inchangée : utilise-la comme référence.",
+    "TUTORIAL_STEP_2_TITLE_TEXT_ID":"Zoom et déplacement",
+    "TUTORIAL_STEP_2_DESCRIPTION_TEXT_ID":"Utilise deux doigts pour agrandir et réduire le zoom. Fais glisser pour te déplacer lorsque le zoom est actif."
 }
