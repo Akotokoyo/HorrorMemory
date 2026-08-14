@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         get { return _instance; }
     }
 
-    public GameState gameState = GameState.WAITING;
+    private GameState gameState = GameState.MAIN_MENU;
     [SerializeField] private bool useCasualMode = true;
     [SerializeField] private LevelData currentLevel;
     [SerializeField] private List<LevelData> _gameLevelConfigurations;
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleLevelEnded(bool levelSuccess)
     {
-        gameState = levelSuccess ? GameState.COMPLETED : GameState.GAME_OVER;
+        SetState(levelSuccess ? GameState.COMPLETED : GameState.GAME_OVER);
     }
 
     private IEnumerator InitializeGame()
@@ -100,18 +100,21 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.PrepareLevel();
     }
 
+    public void StartLevel()
+    {
+        SetState(GameState.PLAYING);
+        LevelManager.Instance.InitLevel();
+    }
+
     public void StartGame(int levelId, bool isCasualMode = false)
     {
-        gameState = GameState.WAITING;
+        SetState(GameState.WAITING);
         useCasualMode = isCasualMode;
         if (!useCasualMode)
         {
             currentLevel = _gameLevelConfigurations[levelId];
         }
-        if (gameState == GameState.WAITING)
-        {
-            StartCoroutine(InitializeGame());
-        }
+        StartCoroutine(InitializeGame());
     }
 
     public void UpdateGameData(int levelId, int starRating, float currentTimer)
@@ -137,5 +140,21 @@ public class GameManager : MonoBehaviour
     public Level GetLevelFromGameData(int index)
     {
         return _gameData.Levels[index];
+    }
+
+    public void SetPauseState(bool isPaused)
+    {
+        SetState(isPaused ? GameState.PAUSED: GameState.PLAYING);
+        LevelManager.Instance.PauseGame(isPaused);
+    }
+
+    public void SetMainMenuState()
+    {
+        SetState(GameState.MAIN_MENU);
+        LevelManager.Instance.StopLevel();
+    }
+
+    private void SetState(GameState state) {
+        gameState = state;
     }
 }

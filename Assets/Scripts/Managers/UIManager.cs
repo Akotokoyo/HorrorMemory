@@ -9,7 +9,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Popups")]
+    [SerializeField] private PopupManager popupManager;
+    [Header("Sections")]
     public GameObject contentMenu;
     public GameObject introUI;
     public GameObject gameUI;
@@ -62,6 +63,28 @@ public class UIManager : MonoBehaviour
         {
             OnClickIntroButton("Tutorial");
         }
+    }
+
+    #region Popup Manager
+    public void ShowPreGamePopup(ILevelData levelData)
+    {
+        popupManager.ShowPreGamePopup(levelData);
+    }
+    public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber, bool isFinalLevel)
+    {
+        popupManager.ShowEndPopup(levelSuccess, remainingTime, starNumber, isFinalLevel);
+    }
+
+    public void HideAllPopups()
+    {
+        popupManager.HideAllPopups();
+    }
+    #endregion
+
+
+    public void StartLevel()
+    {
+        GameManager.Instance.StartLevel();
     }
 
     public void GenerateLevelPrefabs(GameData gameData)
@@ -123,11 +146,13 @@ public class UIManager : MonoBehaviour
 
     public void OnclickReturnToTitle()
     {
+        GameManager.Instance.SetMainMenuState();
         introUI.SetActive(true);
         contentMenu.SetActive(true);
         gameUI.SetActive(false);
         pausePopup.SetActive(false);
         endGamePopup.SetActive(false);
+        HideAllPopups();
     }
     public void OnclickRetryLevel()
     {
@@ -146,15 +171,14 @@ public class UIManager : MonoBehaviour
 
     public void OnClickPauseGameButton(bool isPaused)
     {
-        LevelManager.Instance.PauseGame(isPaused);
+        GameManager.Instance.SetPauseState(isPaused);
         pausePopup.SetActive(isPaused);
     }
 
     public void OnClickEndingGameButton(bool isGoodEnding)
     {
         endGamePopup.SetActive(true);
-        endGameText.text = 
-            LanguageManager.Instance.TranslateText(
+        endGameText.GetComponent<TranslateTexts>().ChangeTextByScript(
                 isGoodEnding ? "STORY_LEVEL_019_LIFE_OUTRO_TEXT_ID" : "STORY_LEVEL_019_DEATH_OUTRO_TEXT_ID");
     }
 
