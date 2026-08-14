@@ -44,8 +44,7 @@ public class PopupManager : MonoBehaviour
     public void OnClickStartLevel()
     {
         preGamePopup.SetActive(false);
-        GameManager.Instance.gameState = GameState.PLAYING;
-        LevelManager.Instance.InitLevel();
+        UIManager.Instance.StartLevel();
     }
 
     public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
@@ -72,8 +71,8 @@ public class PopupManager : MonoBehaviour
         }
         else
         {
-            endTitleText.text =
-                LanguageManager.Instance.TranslateText(levelSuccess ? "LEVEL_SUCCESS_TEXT_ID" : "LEVEL_FAILED_TEXT_ID");
+            endTitleText.GetComponent<TranslateTexts>().ChangeTextByScript
+                (levelSuccess ? "LEVEL_SUCCESS_TEXT_ID" : "LEVEL_FAILED_TEXT_ID");
             endLevelTimeLeftInfoText.GetComponent<TranslateTexts>().
                 ChangeTextAndReplaceVariables("LEVEL_REMAINING_TIME_TEXT_ID", new List<string> { remainingTime.ToString() });
 
@@ -88,8 +87,9 @@ public class PopupManager : MonoBehaviour
         }
     }
 
-    public void HideEndPopup()
+    public void HideAllPopups()
     {
+        preGamePopup.SetActive(false);
         endPopup.SetActive(false);
     }
 

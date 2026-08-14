@@ -9,7 +9,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Popups")]
+    [SerializeField] private PopupManager popupManager;
+    [Header("Sections")]
     public GameObject contentMenu;
     public GameObject introUI;
     public GameObject gameUI;
@@ -62,6 +63,29 @@ public class UIManager : MonoBehaviour
         {
             OnClickIntroButton("Tutorial");
         }
+    }
+
+    #region Popup Manager
+    public void ShowPreGamePopup(ILevelData levelData)
+    {
+        popupManager.ShowPreGamePopup(levelData);
+    }
+    public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
+    {
+        popupManager.ShowEndPopup(levelSuccess, remainingTime, starNumber);
+    }
+
+    public void HideAllPopups()
+    {
+        popupManager.HideAllPopups();
+    }
+    #endregion
+
+
+    public void StartLevel()
+    {
+        GameManager.Instance.gameState = GameState.PLAYING;
+        LevelManager.Instance.InitLevel();
     }
 
     public void GenerateLevelPrefabs(GameData gameData)
@@ -128,6 +152,7 @@ public class UIManager : MonoBehaviour
         gameUI.SetActive(false);
         pausePopup.SetActive(false);
         endGamePopup.SetActive(false);
+        popupManager.HideAllPopups();
     }
     public void OnclickRetryLevel()
     {

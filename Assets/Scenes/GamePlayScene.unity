@@ -3045,7 +3045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69500005, y: 0.63270354}
   m_AnchorMax: {x: 1, y: 0.81900007}
-  m_AnchoredPosition: {x: 0.00012207, y: -0.11755}
+  m_AnchoredPosition: {x: 0.00012207031, y: -0.11755371}
   m_SizeDelta: {x: 0.000061035, y: 0.23514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899335907
@@ -3394,7 +3394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.066830605, y: 0.21775559}
   m_AnchorMax: {x: 0.92665946, y: 0.70400006}
-  m_AnchoredPosition: {x: -0.04940796, y: -0.008563995}
+  m_AnchoredPosition: {x: -0.04940796, y: -0.008560181}
   m_SizeDelta: {x: 0.1299, y: 0.017265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138287679
@@ -3642,6 +3642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb784cdac6aab054d873cfa5bcb95188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroMenu
+  popupManager: {fileID: 740338625}
   contentMenu: {fileID: 1878567130}
   introUI: {fileID: 503338227}
   gameUI: {fileID: 1849990086}
@@ -6520,7 +6521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97e1aede5ed91944b51a567402c74fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  popupManager: {fileID: 740338625}
   audioManager: {fileID: 2019742965}
   distortedImage: {fileID: 1961321523}
   originalImage: {fileID: 1838678417}

@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     public static event Action<bool> OnLevelEnded;
-
-    [SerializeField] private PopupManager popupManager;
     [SerializeField] private AudioManager audioManager;
 
     [SerializeField] private Image distortedImage;
@@ -89,8 +87,8 @@ public class LevelManager : MonoBehaviour
 
     public void PrepareLevel()
     {
-        popupManager.HideEndPopup();
-        popupManager.ShowPreGamePopup(currentLevel);
+        UIManager.Instance.HideAllPopups();
+        UIManager.Instance.ShowPreGamePopup(currentLevel);
     }
 
     public void PauseGame(bool isPaused)
@@ -285,7 +283,7 @@ public class LevelManager : MonoBehaviour
         {
             GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
         }
-        popupManager.ShowEndPopup(levelSuccess, currentTimer, starNumber);
+        UIManager.Instance.ShowEndPopup(levelSuccess, currentTimer, starNumber);
     }
 
     private int CalculateStarRating() {
