@@ -462,7 +462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.31037158, y: 0.34255558}
   m_AnchorMax: {x: 0.6786458, y: 0.5}
-  m_AnchoredPosition: {x: 0.029907227, y: -1.1000671}
+  m_AnchoredPosition: {x: 0.029907227, y: -1.1000977}
   m_SizeDelta: {x: 0.059937, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &120439519
@@ -1552,7 +1552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24000001, y: 0.164}
   m_AnchorMax: {x: 0.76000005, y: 0.34666666}
-  m_AnchoredPosition: {x: 0.8000488, y: 0.27697754}
+  m_AnchoredPosition: {x: 0.8000488, y: 0.27685547}
   m_SizeDelta: {x: -1.6000004, y: 0.97509766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &523581467
@@ -2096,7 +2096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.086, y: 0.21000001}
   m_AnchorMax: {x: 0.924518, y: 0.706651}
-  m_AnchoredPosition: {x: -0.10211182, y: 0.009521484}
+  m_AnchoredPosition: {x: -0.10217285, y: 0.009521484}
   m_SizeDelta: {x: 0.20428, y: -0.019012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610019413
@@ -3045,7 +3045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69500005, y: 0.63270354}
   m_AnchorMax: {x: 1, y: 0.81900007}
-  m_AnchoredPosition: {x: 0.00012207031, y: -0.11755371}
+  m_AnchoredPosition: {x: 0, y: -0.11755371}
   m_SizeDelta: {x: 0.000061035, y: 0.23514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899335907
@@ -3394,7 +3394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.066830605, y: 0.21775559}
   m_AnchorMax: {x: 0.92665946, y: 0.70400006}
-  m_AnchoredPosition: {x: -0.04940796, y: -0.008560181}
+  m_AnchoredPosition: {x: -0.049438477, y: -0.008560181}
   m_SizeDelta: {x: 0.1299, y: 0.017265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138287679
@@ -3661,6 +3661,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7264927d87ec97a4cb01e031634345b6, type: 3}
   - {fileID: 21300000, guid: 376e44090c860ca42876fececb04750f, type: 3}
   - {fileID: 21300000, guid: 4710579a753140943bc3f13ca9249156, type: 3}
+  timerText: {fileID: 49970705}
+  differenceFoundText: {fileID: 20035408}
   levelSelection: {fileID: 1060430122}
   levelPrefabs: []
   scrollViewContent: {fileID: 1984110952}
@@ -3930,7 +3932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.51900005}
   m_AnchorMax: {x: 1, y: 0.6968659}
-  m_AnchoredPosition: {x: 1.9450073, y: 0.5}
+  m_AnchoredPosition: {x: 1.9450684, y: 0.5}
   m_SizeDelta: {x: -0.10998535, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1199525475
@@ -4908,7 +4910,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24000001, y: 0.71500003}
   m_AnchorMax: {x: 0.76000005, y: 0.8398519}
-  m_AnchoredPosition: {x: 0.4000244, y: -0.070007324}
+  m_AnchoredPosition: {x: 0.39990234, y: -0.06994629}
   m_SizeDelta: {x: -0.79999, y: 0.1412}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442937952
@@ -5281,7 +5283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11931251, y: 0.34666666}
   m_AnchorMax: {x: 0.87860423, y: 0.71500003}
-  m_AnchoredPosition: {x: 0.50634766, y: 0.21218872}
+  m_AnchoredPosition: {x: 0.50634766, y: 0.2121582}
   m_SizeDelta: {x: -3.655304, y: -0.38320923}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1557995373
@@ -5942,7 +5944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.716}
   m_AnchorMax: {x: 1, y: 0.896}
-  m_AnchoredPosition: {x: 2.4450073, y: 0}
+  m_AnchoredPosition: {x: 2.4450684, y: 0}
   m_SizeDelta: {x: 0.89001465, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801714583
@@ -6528,8 +6530,6 @@ MonoBehaviour:
   originalRect: {fileID: 1838678416}
   modifiedRect: {fileID: 1754750986}
   zoomPanController: {fileID: 0}
-  timerText: {fileID: 49970705}
-  differenceFoundText: {fileID: 20035408}
   differencePrefab: {fileID: 1294991734725399135, guid: d677eff420172784b94b5ab926a97167, type: 3}
   originalDifferences: []
   differencesToFind: []
@@ -7360,7 +7360,6 @@ MonoBehaviour:
   - {fileID: 4900000, guid: b38d02ae170e0324c9c5096699b94fe8, type: 3}
   - {fileID: 4900000, guid: abc0d32e3ab463148b26f1c2be2dec02, type: 3}
   - {fileID: 4900000, guid: fcb1ab9c6e67f26498b3b4c862f7f6ae, type: 3}
-  gameState: 2
   useCasualMode: 0
   currentLevel: {fileID: 11400000, guid: ca32367863f131e4faaf164b21ebcfb9, type: 2}
   _gameLevelConfigurations:

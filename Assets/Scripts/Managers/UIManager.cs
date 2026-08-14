@@ -29,6 +29,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private List<Sprite> tutorialSprites;
     private int tutorialStepIndex = 0;
 
+    [Header("Game UI")]
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI differenceFoundText;
+
+
     private int currentLevel;
     [Header("Miscellaneous")]
     public GameObject levelSelection;
@@ -43,6 +48,17 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance
     {
         get { return _instance; }
+    }
+
+    private void OnEnable()
+    {
+        LevelManager.OnTimerUpdate += HandleTimer;
+        LevelManager.OnDifferenceProgress += HandleDifferenceUI;
+    }
+    private void OnDisable()
+    {
+        LevelManager.OnTimerUpdate -= HandleTimer;
+        LevelManager.OnDifferenceProgress -= HandleDifferenceUI;
     }
 
     void Awake()
@@ -231,7 +247,28 @@ public class UIManager : MonoBehaviour
         } 
     }
 
-    #region Tutorial
+#region Game UI
+    private void HandleTimer(TimeSpan timePlaying, bool showWarning)
+    {
+        timerText.text = timePlaying.ToString(@"mm\:ss");
+        if (showWarning)
+        {
+            timerText.color = Color.red;
+        }
+        else
+        {
+            timerText.color = Color.white;
+        }
+    }
+
+    private void HandleDifferenceUI(int currentDifferenceCount, int totalDifferenceCount)
+    {
+        differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";
+    }
+
+#endregion
+
+#region Tutorial
     private void SetTutorialStep0()
     {
         tutorialStepIndex = 0;

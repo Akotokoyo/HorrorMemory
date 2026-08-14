@@ -2,12 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     public static event Action<bool> OnLevelEnded;
+    public static event Action<TimeSpan, bool> OnTimerUpdate;
+    public static event Action<int, int> OnDifferenceProgress;
+
     [SerializeField] private AudioManager audioManager;
 
     [SerializeField] private Image distortedImage;
@@ -16,9 +20,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private RectTransform originalRect;
     [SerializeField] private RectTransform modifiedRect;
     [SerializeField] private ComparisonZoomPanController zoomPanController;
-
-    [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private TextMeshProUGUI differenceFoundText;
 
     public ILevelData currentLevel;
 
@@ -117,7 +118,6 @@ public class LevelManager : MonoBehaviour
         }
 
         currentTimer = currentLevel.timeLimit;
-        timerText.color = Color.white;
         distortedImage.sprite = currentLevel.distortedSprite;
         originalImage.sprite = currentLevel.originalSprite;
         currentAlpha = 1f;
@@ -243,7 +243,7 @@ public class LevelManager : MonoBehaviour
 
     }
     private void UpdateUI() {
-        differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";        
+        OnDifferenceProgress?.Invoke(currentDifferenceCount, totalDifferenceCount);
     }
 
     private IEnumerator UpdateTimer()
@@ -257,18 +257,13 @@ public class LevelManager : MonoBehaviour
             }
 
             var timePlaying = TimeSpan.FromSeconds(currentTimer);
-            timerText.text = timePlaying.ToString(@"mm\:ss");
+            OnTimerUpdate?.Invoke(timePlaying, currentTimer <= 5f);
 
             if(breakTime == 0)
             {
                 currentAlpha = Mathf.Clamp01(currentTimer / currentLevel.timeLimit);
             }
             originalImage.color = new Color(1f, 1f, 1f, currentAlpha);
-
-            if (currentTimer <= 5f)
-            {
-                timerText.color = Color.red;
-            }
 
             yield return new WaitForSeconds(1f);
         }
