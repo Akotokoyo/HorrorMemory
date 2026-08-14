@@ -105,11 +105,11 @@ public class UIManager : MonoBehaviour
 
     public void GenerateLevelPrefabs(GameData gameData)
     {
-        for(int i = 0; i < gameData.Levels.Count; i++)
+        for (int i = 0; i < gameData.Levels.Count; i++)
         {
-            int levelIndex = i;
+            int levelId = gameData.Levels[i].Id;
             GameObject go = Instantiate(levelPrefab, scrollViewContent.transform);
-            go.GetComponent<Button>().onClick.AddListener(() => OnClickPlayLevel(levelIndex));
+            go.GetComponent<Button>().onClick.AddListener(() => OnClickPlayLevel(levelId));
             levelPrefabs.Add(go);
         }
     }
@@ -213,41 +213,50 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator PrepareLevelsFromGameData()
     {
-        for(int i = 0; i < levelPrefabs.Count; i++)
+        for (int i = 0; i < levelPrefabs.Count; i++)
         {
-            Level level = GameManager.Instance.GetLevelFromGameData(i);
+            // Id del bottone i-esimo = Id nel save (GenerateLevelPrefabs sopra)
+            int levelId = GameManager.Instance.GetLevelFromGameData(i).Id;
+            Level level = GameManager.Instance.GetLevelById(levelId);
+            if (level == null)
+            {
+                Debug.LogWarning($"Level Id {levelId} not found for button {i}");
+                continue;
+            }
+            Button button = levelPrefabs[i].GetComponent<Button>();
+            Transform lockedRoot = levelPrefabs[i].transform.GetChild(0);
+            Transform unlockedRoot = levelPrefabs[i].transform.GetChild(1);
             if (!level.IsAvailable)
             {
-                levelPrefabs[i].GetComponent<Button>().interactable = false;
-                levelPrefabs[i].transform.GetChild(0).gameObject.SetActive(true);
-                levelPrefabs[i].transform.GetChild(1).gameObject.SetActive(false);
+                button.interactable = false;
+                lockedRoot.gameObject.SetActive(true);
+                unlockedRoot.gameObject.SetActive(false);
+                continue;
             }
-            else
+            button.interactable = true;
+            lockedRoot.gameObject.SetActive(false);
+            unlockedRoot.gameObject.SetActive(true);
+            unlockedRoot.GetChild(0).GetComponent<TranslateTexts>()
+                .ChangeTextByScript(level.LevelName);
+            var op = Addressables.LoadAssetAsync<Sprite>(level.AddrImage);
+            yield return op;
+            if (op.Status == AsyncOperationStatus.Succeeded)
             {
-                levelPrefabs[i].GetComponent<Button>().interactable = true;
-                levelPrefabs[i].transform.GetChild(0).gameObject.SetActive(false);
-                levelPrefabs[i].transform.GetChild(1).gameObject.SetActive(true);
-                Transform tr = levelPrefabs[i].transform.GetChild(1);
-                tr.GetChild(0).GetComponent<TranslateTexts>().ChangeTextByScript(level.LevelName);
-                
-                var op = Addressables.LoadAssetAsync<Sprite>(level.AddrImage);
-                yield return op;
-                if (op.Status == AsyncOperationStatus.Succeeded)
-                {
-                    tr.GetChild(1).GetComponent<Image>().sprite = op.Result;
-                }
-
-                var timePlaying = TimeSpan.FromSeconds(level.BestTimer);
-                tr.GetChild(2).GetComponent<TextMeshProUGUI>().text = timePlaying.ToString(@"mm\:ss");
-                for(int j = 0; j < 3; j++)
-                {
-                    tr.GetChild(3).GetChild(j).GetChild(0).gameObject.SetActive(j < level.StarRating);
-                }
+                unlockedRoot.GetChild(1).GetComponent<Image>().sprite = op.Result;
             }
-        } 
+            TextMeshProUGUI bestTimeText = unlockedRoot.GetChild(2).GetComponent<TextMeshProUGUI>();
+            bestTimeText.text = level.BestTimer > 0
+                ? TimeSpan.FromSeconds(level.BestTimer).ToString(@"mm\:ss")
+                : "--:--";
+            Transform starsRoot = unlockedRoot.GetChild(3);
+            for (int j = 0; j < 3; j++)
+            {
+                starsRoot.GetChild(j).GetChild(0).gameObject.SetActive(j < level.StarRating);
+            }
+        }
     }
 
-#region Game UI
+    #region Game UI
     private void HandleTimer(TimeSpan timePlaying, bool showWarning)
     {
         timerText.text = timePlaying.ToString(@"mm\:ss");

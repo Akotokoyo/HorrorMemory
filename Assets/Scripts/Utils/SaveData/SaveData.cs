@@ -113,23 +113,4 @@ public class SaveData
         return null;
 #endif
     }
-
-    public void DeleteFile()
-    {
-#if USE_RESOURCES_DATA
-        gamePath = $"Assets/Data/SaveFiles/GameData.sav";
-#else
-        gamePath = $"{Application.persistentDataPath}.sav";
-#endif
-
-        if (File.Exists(gamePath))
-        {
-            File.Delete(gamePath);
-            File.Delete($"{gamePath}.meta");
-
-#if UNITY_EDITOR
-            UnityEditor.AssetDatabase.Refresh();
-#endif
-        }
-    }
 }

@@ -119,21 +119,25 @@ public class GameManager : MonoBehaviour
 
     public void UpdateGameData(int levelId, int starRating, float currentTimer)
     {
-        Level level = _gameData.Levels[levelId];
+        Level level = GetLevelById(levelId);
+        if (level == null)
+        {
+            Debug.LogError($"Level with Id {levelId} not found in save data.");
+            return;
+        }
         if (level.StarRating < starRating)
         {
             level.StarRating = starRating;
         }
-        if(level.BestTimer < currentTimer)
+        if (level.BestTimer < currentTimer)
         {
             level.BestTimer = (int)currentTimer;
         }
-
-        if(levelId + 1 < _gameData.Levels.Count)
+        Level nextLevel = GetLevelById(levelId + 1);
+        if (nextLevel != null)
         {
-            _gameData.Levels[levelId + 1].IsAvailable = true;
+            nextLevel.IsAvailable = true;
         }
-        //TODO: use one JsonConverter
         _saveData.WriteFile(new JsonConverter(), _gameData);
     }
 
@@ -156,5 +160,21 @@ public class GameManager : MonoBehaviour
 
     private void SetState(GameState state) {
         gameState = state;
+    }
+
+    public Level GetLevelById(int levelId)
+    {
+        if (_gameData?.Levels == null)
+        {
+            return null;
+        }
+        for (int i = 0; i < _gameData.Levels.Count; i++)
+        {
+            if (_gameData.Levels[i].Id == levelId)
+            {
+                return _gameData.Levels[i];
+            }
+        }
+        return null;
     }
 }
