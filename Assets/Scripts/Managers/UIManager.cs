@@ -146,6 +146,7 @@ public class UIManager : MonoBehaviour
 
     public void OnclickReturnToTitle()
     {
+        GameManager.Instance.SetMainMenuState();
         introUI.SetActive(true);
         contentMenu.SetActive(true);
         gameUI.SetActive(false);
@@ -170,7 +171,7 @@ public class UIManager : MonoBehaviour
 
     public void OnClickPauseGameButton(bool isPaused)
     {
-        LevelManager.Instance.PauseGame(isPaused);
+        GameManager.Instance.SetPauseState(isPaused);
         pausePopup.SetActive(isPaused);
     }
 

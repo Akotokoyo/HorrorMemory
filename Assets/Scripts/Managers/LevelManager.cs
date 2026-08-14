@@ -91,6 +91,11 @@ public class LevelManager : MonoBehaviour
         UIManager.Instance.ShowPreGamePopup(currentLevel);
     }
 
+    public void StopLevel()
+    {
+        StopAllCoroutines();
+    }
+
     public void PauseGame(bool isPaused)
     {
         if (isPaused)
