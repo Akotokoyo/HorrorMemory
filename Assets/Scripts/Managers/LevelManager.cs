@@ -95,6 +95,7 @@ public class LevelManager : MonoBehaviour
     public void StopLevel()
     {
         StopAllCoroutines();
+        updateTimerCoroutine = null;
     }
 
     public void PauseGame(bool isPaused)
@@ -207,7 +208,6 @@ public class LevelManager : MonoBehaviour
         differencesToFind[diffIndex].GetComponent<Difference>().isFound = true;
         differencesToFind[diffIndex].transform.GetChild(0).gameObject.SetActive(true);
         currentDifferenceCount++;
-        currentTimer += currentLevel.scoreAddTime;
         breakTime = 3f;
         UpdateUI();
         audioManager.StartEffectSound(currentLevel.completionSound);
@@ -278,7 +278,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator ShowEndPopup(bool levelSuccess)
     {
         yield return new WaitForSeconds(1f);
-        int starNumber = CalculateStarRating();
+        int starNumber = GeneralFunctions.CalculateStarRating(currentLevel, currentTimer);
         if (levelSuccess)
         {
             GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
@@ -287,10 +287,5 @@ public class LevelManager : MonoBehaviour
         UIManager.Instance.ShowEndPopup(levelSuccess, currentTimer, starNumber, isFinalLevel);
     }
 
-    private int CalculateStarRating() {
-        if ((currentTimer < currentLevel.timeLimit && currentTimer >= currentLevel.timeLimit * Constants.FIRST_STAR_RANGE_PERCENTAGE) || currentTimer >= currentLevel.timeLimit) return 3;
-        if (currentTimer < currentLevel.timeLimit * Constants.FIRST_STAR_RANGE_PERCENTAGE && currentTimer >= currentLevel.timeLimit * Constants.SECOND_STAR_RANGE_PERCENTAGE) return 2;
-        if (currentTimer < currentLevel.timeLimit * Constants.SECOND_STAR_RANGE_PERCENTAGE && currentTimer > 0) return 1;
-        return 0;
-    }
+    
 }

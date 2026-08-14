@@ -23,15 +23,11 @@ public class RuntimeLevelData : ILevelData
     public string LevelDisplayName => levelName;
     int ILevelData.LevelId => levelId;
     float ILevelData.timeLimit => timeLimit;
-    float ILevelData.scoreAddTime => scoreAddTime;
-    int ILevelData.waitingtime => waitingtime;
     DifficultyLevel ILevelData.difficulty => difficulty;
     string ILevelData.storyIntroText => storyIntroText;
     string ILevelData.storyEndingText => storyEndingText;
     Sprite ILevelData.originalSprite => originalSprite;
     Sprite ILevelData.distortedSprite => distortedSprite;
-    AudioClip ILevelData.ambientSound => ambientSound;
     AudioClip ILevelData.completionSound => completionSound;
-    AudioClip ILevelData.gameoverSound => gameoverSound;
     List<DifferenceInfo> ILevelData.differences => differences;
 }

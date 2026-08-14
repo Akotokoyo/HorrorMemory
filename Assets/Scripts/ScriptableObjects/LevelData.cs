@@ -7,16 +7,12 @@ public class LevelData : ScriptableObject, ILevelData
     int ILevelData.LevelId => levelId;
     string ILevelData.LevelDisplayName => levelName;
     float ILevelData.timeLimit => timeLimit;
-    float ILevelData.scoreAddTime => scoreAddTime;
-    int ILevelData.waitingtime => waitingtime;
     DifficultyLevel ILevelData.difficulty => difficulty;
     string ILevelData.storyIntroText => storyIntroText;
     string ILevelData.storyEndingText => storyEndingText;
     Sprite ILevelData.originalSprite => originalSprite;
     Sprite ILevelData.distortedSprite => distortedSprite;
-    AudioClip ILevelData.ambientSound => ambientSound;
     AudioClip ILevelData.completionSound => completionSound;
-    AudioClip ILevelData.gameoverSound => gameoverSound;
     List<DifferenceInfo> ILevelData.differences => differences;
 
     public string levelName = "Untitled Level";
@@ -25,10 +21,6 @@ public class LevelData : ScriptableObject, ILevelData
     
     [Min(0f)]
     public float timeLimit = 20f;
-    public float scoreAddTime = 5f;
-    public int waitingtime = 5;
-
-    public float wrongClickPenalty = 5f;
     public string storyIntroText = string.Empty;
     public string storyEndingText = string.Empty;
 
@@ -40,9 +32,7 @@ public class LevelData : ScriptableObject, ILevelData
 
 
     [Header("Sounds")]
-    public AudioClip ambientSound;
     public AudioClip completionSound;
-    public AudioClip gameoverSound;
 
 
     public bool IsLevelValid()

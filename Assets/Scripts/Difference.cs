@@ -8,8 +8,6 @@ public class Difference : MonoBehaviour, IPointerClickHandler
     public bool isFound = false;
     public bool isClickable = true;
 
-    public delegate void DifferenceFoundEvent(Difference diff);
-
     public void OnPointerClick(PointerEventData ev)
     {
         if (ComparisonZoomPanController.Instance != null && ComparisonZoomPanController.Instance.IsGesturing)
@@ -17,7 +15,6 @@ public class Difference : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        Debug.Log($"Indexed Object Clicked {diffIndex}");
         if (!isFound && isClickable)
         {
             LevelManager.Instance.OnDifferenceClicked(diffIndex);
