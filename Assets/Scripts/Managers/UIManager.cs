@@ -70,9 +70,9 @@ public class UIManager : MonoBehaviour
     {
         popupManager.ShowPreGamePopup(levelData);
     }
-    public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
+    public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber, bool isFinalLevel)
     {
-        popupManager.ShowEndPopup(levelSuccess, remainingTime, starNumber);
+        popupManager.ShowEndPopup(levelSuccess, remainingTime, starNumber, isFinalLevel);
     }
 
     public void HideAllPopups()
@@ -84,8 +84,7 @@ public class UIManager : MonoBehaviour
 
     public void StartLevel()
     {
-        GameManager.Instance.gameState = GameState.PLAYING;
-        LevelManager.Instance.InitLevel();
+        GameManager.Instance.StartLevel();
     }
 
     public void GenerateLevelPrefabs(GameData gameData)
@@ -152,7 +151,7 @@ public class UIManager : MonoBehaviour
         gameUI.SetActive(false);
         pausePopup.SetActive(false);
         endGamePopup.SetActive(false);
-        popupManager.HideAllPopups();
+        HideAllPopups();
     }
     public void OnclickRetryLevel()
     {
@@ -178,8 +177,7 @@ public class UIManager : MonoBehaviour
     public void OnClickEndingGameButton(bool isGoodEnding)
     {
         endGamePopup.SetActive(true);
-        endGameText.text = 
-            LanguageManager.Instance.TranslateText(
+        endGameText.GetComponent<TranslateTexts>().ChangeTextByScript(
                 isGoodEnding ? "STORY_LEVEL_019_LIFE_OUTRO_TEXT_ID" : "STORY_LEVEL_019_DEATH_OUTRO_TEXT_ID");
     }
 

@@ -283,7 +283,8 @@ public class LevelManager : MonoBehaviour
         {
             GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
         }
-        UIManager.Instance.ShowEndPopup(levelSuccess, currentTimer, starNumber);
+        bool isFinalLevel = levelSuccess && currentLevel.LevelId == Constants.LAST_LEVEL_INDEX;
+        UIManager.Instance.ShowEndPopup(levelSuccess, currentTimer, starNumber, isFinalLevel);
     }
 
     private int CalculateStarRating() {

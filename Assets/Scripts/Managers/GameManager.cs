@@ -100,6 +100,12 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.PrepareLevel();
     }
 
+    public void StartLevel()
+    {
+        gameState = GameState.PLAYING;
+        LevelManager.Instance.InitLevel();
+    }
+
     public void StartGame(int levelId, bool isCasualMode = false)
     {
         gameState = GameState.WAITING;

@@ -47,7 +47,7 @@ public class PopupManager : MonoBehaviour
         UIManager.Instance.StartLevel();
     }
 
-    public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber)
+    public void ShowEndPopup(bool levelSuccess, float remainingTime, int starNumber, bool isFinalLevel)
     {
         endPopup.SetActive(true);
         for (int i = 0; i < stars.Count; i++)
@@ -55,8 +55,7 @@ public class PopupManager : MonoBehaviour
             stars[i].SetActive((i < starNumber) ? true : false);
         }
 
-        if (LevelManager.Instance.currentLevel.LevelId == Constants.LAST_LEVEL_INDEX
-            && levelSuccess)
+        if (isFinalLevel && levelSuccess)
         {
             retryButton.SetActive(false);
             homeButton.SetActive(false);
