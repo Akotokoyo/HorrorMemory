@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     private GameData _gameData;
     [SerializeField] private TextAsset[] translatedTXT;
 
+    [SerializeField] private AudioManager audioManager;
+
     public static GameManager Instance
     {
         get { return _instance; }
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         LanguageManager.Initialize(translatedTXT);
+        audioManager.Initialize();
 
         _saveData = new();
         var savedData = _saveData.ReadSaveFile();
@@ -50,10 +53,12 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         LevelManager.OnLevelEnded += HandleLevelEnded;
+        UIManager.OnAudioChange += SetupAudio;
     }
     private void OnDisable()
     {
         LevelManager.OnLevelEnded -= HandleLevelEnded;
+        UIManager.OnAudioChange -= SetupAudio;
     }
 
     private GameData SetupGameData()
@@ -65,6 +70,11 @@ public class GameManager : MonoBehaviour
     private void HandleLevelEnded(bool levelSuccess)
     {
         SetState(levelSuccess ? GameState.COMPLETED : GameState.GAME_OVER);
+    }
+
+    private void SetupAudio(bool audioOn)
+    {
+        audioManager.SetupAudio(audioOn);
     }
 
     private IEnumerator InitializeGame()

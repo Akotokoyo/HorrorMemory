@@ -40,8 +40,15 @@ public class UIManager : MonoBehaviour
     public List<GameObject> levelPrefabs;
     [SerializeField] private GameObject scrollViewContent;
     [SerializeField] private GameObject levelPrefab;
+
+    [Header("Language")]
     [SerializeField] private Image flagButtonImage;
     [SerializeField] private List<Sprite> flagSprites;
+
+    [Header("Audio")]
+    [SerializeField] private Image audioButtonImage;
+    [SerializeField] private List<Sprite> audioSprites;
+    public static event Action<bool> OnAudioChange;
 
     private static UIManager _instance;
 
@@ -74,6 +81,9 @@ public class UIManager : MonoBehaviour
         int languageIndex = PlayerPrefs.GetInt("LanguageId", 0);
         flagButtonImage.sprite = flagSprites[languageIndex];
         tutorialFlagButtonImage.sprite = flagSprites[languageIndex];
+
+        int audioOn = PlayerPrefs.GetInt("AudioOn", 1);
+        audioButtonImage.sprite = audioSprites[audioOn];
 
         if (PlayerPrefs.GetInt("TutorialSeen", 0) == 0)
         {
@@ -196,6 +206,22 @@ public class UIManager : MonoBehaviour
         endGamePopup.SetActive(true);
         endGameText.GetComponent<TranslateTexts>().ChangeTextByScript(
                 isGoodEnding ? "STORY_LEVEL_019_LIFE_OUTRO_TEXT_ID" : "STORY_LEVEL_019_DEATH_OUTRO_TEXT_ID");
+    }
+
+    public void OnClickChangeAudio()
+    {
+        if(PlayerPrefs.GetInt("AudioOn", 1) == 1)
+        {
+            PlayerPrefs.SetInt("AudioOn", 0);
+            audioButtonImage.sprite = audioSprites[0];
+            OnAudioChange?.Invoke(false);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("AudioOn", 1);
+            audioButtonImage.sprite = audioSprites[1];
+            OnAudioChange?.Invoke(true);
+        }
     }
 
     public void OnClickChangeLanguage()

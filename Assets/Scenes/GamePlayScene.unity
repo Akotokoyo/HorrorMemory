@@ -3749,6 +3749,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0373eb136bf247249afbe6a8aea3d328, type: 3}
   - {fileID: 21300000, guid: ec8272e4bff47fe4cb88a6134f5e63ee, type: 3}
   - {fileID: 21300000, guid: 87fdfed3c9ad2dd4a88d4dd1aba60b2b, type: 3}
+  audioButtonImage: {fileID: 2124947329}
+  audioSprites:
+  - {fileID: 21300000, guid: 37a3d9986e1180a4181e6805f564a94e, type: 3}
+  - {fileID: 21300000, guid: dc83d2a8cd06a474fabfb4d3f1c5db05, type: 3}
 --- !u!1 &1175547830
 GameObject:
   m_ObjectHideFlags: 0
@@ -5118,7 +5122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1451821528
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5134,10 +5138,10 @@ RectTransform:
   - {fileID: 2124947328}
   m_Father: {fileID: 1878567131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.78700006, y: 0.04725884}
-  m_AnchorMax: {x: 0.86452085, y: 0.18800001}
-  m_AnchoredPosition: {x: -0.5003662, y: -0.0063476562}
-  m_SizeDelta: {x: 0.99963, y: -2.0073}
+  m_AnchorMin: {x: 0.69500005, y: 0.04725884}
+  m_AnchorMax: {x: 0.77300006, y: 0.18800001}
+  m_AnchoredPosition: {x: 0.18011475, y: -0.5}
+  m_SizeDelta: {x: -0.3602, y: -1.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451821529
 MonoBehaviour:
@@ -5185,7 +5189,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1155283392}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnClickChangeLanguage
+        m_MethodName: OnClickChangeAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7513,6 +7517,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: b38d02ae170e0324c9c5096699b94fe8, type: 3}
   - {fileID: 4900000, guid: abc0d32e3ab463148b26f1c2be2dec02, type: 3}
   - {fileID: 4900000, guid: fcb1ab9c6e67f26498b3b4c862f7f6ae, type: 3}
+  audioManager: {fileID: 2019742965}
   useCasualMode: 0
   currentLevel: {fileID: 11400000, guid: ca32367863f131e4faaf164b21ebcfb9, type: 2}
   _gameLevelConfigurations:
@@ -8186,7 +8191,7 @@ GameObject:
   - component: {fileID: 2124947330}
   - component: {fileID: 2124947329}
   m_Layer: 5
-  m_Name: LanguageIcon
+  m_Name: AudioIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8231,7 +8236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a2e0f429f69d108489108d983743f5ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc83d2a8cd06a474fabfb4d3f1c5db05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
