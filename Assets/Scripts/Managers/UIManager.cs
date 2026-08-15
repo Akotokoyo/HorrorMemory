@@ -40,6 +40,8 @@ public class UIManager : MonoBehaviour
     public List<GameObject> levelPrefabs;
     [SerializeField] private GameObject scrollViewContent;
     [SerializeField] private GameObject levelPrefab;
+    [SerializeField] private TextMeshProUGUI versionText;
+
 
     [Header("Language")]
     [SerializeField] private Image flagButtonImage;
@@ -89,6 +91,9 @@ public class UIManager : MonoBehaviour
         {
             OnClickIntroButton("Tutorial");
         }
+
+        versionText.text = Application.version;
+        versionText.text += Debug.isDebugBuild ? " - DEBUG BUILD" : "";
     }
 
     #region Popup Manager
