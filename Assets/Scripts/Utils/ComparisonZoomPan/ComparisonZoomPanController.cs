@@ -8,9 +8,9 @@ public class ComparisonZoomPanController : MonoBehaviour
 
     //English Notion: Pan: Image Is Moving, Drag: Finger is Moving, Pinch: Two Fingers Are Moving
     [SerializeField] private float minZoom = 1f;
-    [SerializeField] private float maxZoom = 3f;
+    [SerializeField] private float maxZoom = 4f;
     [SerializeField] private float pinchZoomSpeed = 0.005f;
-    [SerializeField] private float scrollZoomSpeed = 0.15f;
+    [SerializeField] private float scrollZoomSpeed = 0.2f;
     [SerializeField] private float panDragThreshold = 10f;
 
     private RectTransform leftViewport;
