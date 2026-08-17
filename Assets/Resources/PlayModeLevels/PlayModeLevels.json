@@ -5,6 +5,27 @@
     { "level": "Hard",   "differencesToFind": 12, "timeLimit": 40, "pickWeight": 1 }
   ],
   "levels": [
+        {
+      "id": 18,
+      "enabled": true,
+      "differenceSlots": [
+        { "slotIndex": 0,  "sprites": ["Diff_18_0[Diff_18_0_0]", "Diff_18_1[Diff_18_1_0]", "Diff_16_0[Diff_16_0_1]", "Diff_9_0[Diff_9_0_7]"] },
+        { "slotIndex": 1,  "sprites": ["Diff_18_0[Diff_18_0_1]", "Diff_18_0[Diff_18_0_0]", "Diff_19_0[Diff_19_0_0]"] },
+        { "slotIndex": 2,  "sprites": ["Diff_18_0[Diff_18_0_8]"] },
+        { "slotIndex": 3,  "sprites": ["Diff_18_0[Diff_18_0_2]", "Diff_18_0[Diff_18_0_1]", "Diff_16_0[Diff_16_0_1]"] },
+        { "slotIndex": 4,  "sprites": ["Diff_18_0[Diff_18_0_3]", "Diff_0_0[Diff_0_0_14]", "Diff_0_1[Diff_0_1_0]"] },
+        { "slotIndex": 5,  "sprites": ["Diff_18_0[Diff_18_0_4]", "Diff_13_1[Diff_13_1_4]", "Diff_12_0[Diff_12_0_3]"] },
+        { "slotIndex": 6,  "sprites": ["Diff_18_0[Diff_18_0_5]", "Diff_17_0[Diff_17_0_9]", "Diff_13_0[Diff_13_0_4]"] },
+        { "slotIndex": 7,  "sprites": ["Diff_18_0[Diff_18_0_6]", "Diff_11_0[Diff_11_0_4]", "Diff_10_0[Diff_10_0_4]"] },
+        { "slotIndex": 8,  "sprites": ["Diff_18_0[Diff_18_0_7]", "Diff_18_0[Diff_18_0_6]", "Diff_13_0[Diff_13_0_8]"] },
+        { "slotIndex": 9,  "sprites": ["Diff_0_0[Diff_0_0_0]", "Diff_0_0[Diff_0_0_14]", "Diff_0_1[Diff_0_1_0]"] },
+        { "slotIndex": 10, "sprites": ["Diff_0_0[Diff_0_0_5]", "Diff_19_0[Diff_19_0_7]", "Diff_1_1[Diff_1_1_5]"] },
+        { "slotIndex": 11, "sprites": ["Diff_12_0[Diff_12_0_4]", "Diff_9_0[Diff_9_0_4]", "Diff_7_0[Diff_7_0_1]"] },
+        { "slotIndex": 12, "sprites": ["Diff_0_0[Diff_0_0_0]", "Diff_0_0[Diff_0_0_14]", "Diff_0_1[Diff_0_1_13]"] },
+        { "slotIndex": 13, "sprites": ["Diff_0_0[Diff_0_0_28]", "Diff_0_1[Diff_0_1_17]", "Diff_6_0[Diff_6_0_9]"] },
+        { "slotIndex": 14, "sprites": ["Diff_0_1[Diff_0_1_9]", "Diff_0_0[Diff_0_0_5]"] }
+      ]
+    },
     {
       "id": 19,
       "enabled": true,
