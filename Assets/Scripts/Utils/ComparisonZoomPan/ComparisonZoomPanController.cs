@@ -27,6 +27,10 @@ public class ComparisonZoomPanController : MonoBehaviour
     private bool suppressNextClick;
     private float accumulatedDragDistance;
     private Vector2 lastMousePosition;
+    private int zeroTouchFrames;
+    private bool hadTouchInput;
+
+    private const int touchReleaseGuardFrames = 2;
 
     public bool IsGesturing => isPinching || isPanning || suppressNextClick;
 
@@ -63,6 +67,8 @@ public class ComparisonZoomPanController : MonoBehaviour
         isPanning = false;
         suppressNextClick = false;
         accumulatedDragDistance = 0f;
+        zeroTouchFrames = 0;
+        hadTouchInput = false;
     }
 
     private void Awake()
@@ -209,6 +215,12 @@ public class ComparisonZoomPanController : MonoBehaviour
 
     private void HandleTouchInput()
     {
+        if (Input.touchCount > 0)
+        {
+            hadTouchInput = true;
+            zeroTouchFrames = 0;
+        }
+
         if (Input.touchCount == 2)
         {
             Touch touchA = Input.GetTouch(0);
@@ -243,39 +255,63 @@ public class ComparisonZoomPanController : MonoBehaviour
             lastPinchDistance = 0f;
         }
 
-        if (Input.touchCount == 1 && currentZoom > minZoom + 0.001f)
+        if (Input.touchCount == 0)
         {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
+            if (!hadTouchInput)
             {
-                isPanning = false;
-                accumulatedDragDistance = 0f;
+                return;
+            }
+
+            isPanning = false;
+            zeroTouchFrames++;
+
+            // Il click di fine gesto viene consegnato dall'EventSystem dopo il rilascio,
+            // quindi la soppressione resta attiva per qualche frame prima di essere azzerata.
+            if (zeroTouchFrames >= touchReleaseGuardFrames)
+            {
                 suppressNextClick = false;
+                accumulatedDragDistance = 0f;
+                hadTouchInput = false;
             }
-            else if (touch.phase == TouchPhase.Moved)
-            {
-                accumulatedDragDistance += touch.deltaPosition.magnitude;
 
-                if (accumulatedDragDistance >= panDragThreshold)
-                {
-                    isPanning = true;
-                    suppressNextClick = true;
-                }
-
-                if (isPanning)
-                {
-                    Pan(touch.deltaPosition);
-                }
-            }
-            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-            {
-                isPanning = false;
-            }
+            return;
         }
-        else if (Input.touchCount == 0 && !isPinching)
+
+        if (Input.touchCount != 1)
+        {
+            return;
+        }
+
+        Touch touch = Input.GetTouch(0);
+
+        if (touch.phase == TouchPhase.Began)
         {
             isPanning = false;
+            accumulatedDragDistance = 0f;
+            suppressNextClick = false;
+            return;
+        }
+
+        if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+        {
+            isPanning = false;
+            return;
+        }
+
+        if (touch.phase == TouchPhase.Moved && currentZoom > minZoom + 0.001f)
+        {
+            accumulatedDragDistance += touch.deltaPosition.magnitude;
+
+            if (accumulatedDragDistance >= panDragThreshold)
+            {
+                isPanning = true;
+                suppressNextClick = true;
+            }
+
+            if (isPanning)
+            {
+                Pan(touch.deltaPosition);
+            }
         }
     }
 
