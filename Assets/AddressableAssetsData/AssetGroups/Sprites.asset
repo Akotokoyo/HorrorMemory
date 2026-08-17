@@ -251,7 +251,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 94a6c4f098f44f9409faa5fc037f0455
-    m_Address: Assets/Resources_moved/Sprites/Level_019/DIff_19_0.png
+    m_Address: DIff_19_0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

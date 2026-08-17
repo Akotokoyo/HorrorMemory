@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DIff_19_0_0
+      name: Diff_19_0_0
       rect:
         serializedVersion: 2
         x: 39
@@ -118,7 +118,7 @@ TextureImporter:
         width: 68
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -132,7 +132,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_1
+      name: Diff_19_0_1
       rect:
         serializedVersion: 2
         x: 148
@@ -140,7 +140,7 @@ TextureImporter:
         width: 97
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -154,7 +154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_2
+      name: Diff_19_0_2
       rect:
         serializedVersion: 2
         x: 270
@@ -162,7 +162,7 @@ TextureImporter:
         width: 108
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -176,7 +176,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_3
+      name: Diff_19_0_3
       rect:
         serializedVersion: 2
         x: 388
@@ -184,7 +184,7 @@ TextureImporter:
         width: 98
         height: 115
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -198,7 +198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_4
+      name: Diff_19_0_4
       rect:
         serializedVersion: 2
         x: 189
@@ -206,7 +206,7 @@ TextureImporter:
         width: 317
         height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_5
+      name: Diff_19_0_5
       rect:
         serializedVersion: 2
         x: 100
@@ -228,7 +228,7 @@ TextureImporter:
         width: 73
         height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -242,15 +242,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_6
+      name: Diff_19_0_6
       rect:
         serializedVersion: 2
-        x: 29
+        x: 30
         y: 193
         width: 59
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_7
+      name: Diff_19_0_7
       rect:
         serializedVersion: 2
         x: 97
@@ -272,7 +272,7 @@ TextureImporter:
         width: 105
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_8
+      name: Diff_19_0_8
       rect:
         serializedVersion: 2
         x: 422
@@ -294,7 +294,7 @@ TextureImporter:
         width: 104
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -308,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIff_19_0_9
+      name: Diff_19_0_9
       rect:
         serializedVersion: 2
         x: 209
@@ -316,7 +316,7 @@ TextureImporter:
         width: 178
         height: 206
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,16 +343,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DIff_19_0_0: 1242373075
-      DIff_19_0_1: -969720429
-      DIff_19_0_2: 1234554213
-      DIff_19_0_3: 663091409
-      DIff_19_0_4: 1993480005
-      DIff_19_0_5: 160277864
-      DIff_19_0_6: 427898127
-      DIff_19_0_7: -1915219067
-      DIff_19_0_8: -1848101135
-      DIff_19_0_9: 1948225575
+      Diff_19_0_0: 1242373075
+      Diff_19_0_1: -969720429
+      Diff_19_0_2: 1234554213
+      Diff_19_0_3: 663091409
+      Diff_19_0_4: 1993480005
+      Diff_19_0_5: 160277864
+      Diff_19_0_6: 427898127
+      Diff_19_0_7: -1915219067
+      Diff_19_0_8: -1848101135
+      Diff_19_0_9: 1948225575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
