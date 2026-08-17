@@ -12,6 +12,7 @@
     "LEVEL_FAILED_TEXT_ID":"Level fehlgeschlagen",
     "LEVEL_REMAINING_TIME_TEXT_ID": "Verbleibende Sekunden: %%",
     "LEVEL_SUCCESS_TEXT_ID":"Level abgeschlossen",
+    "LOADING_IN_PROGRESS_TEXT_ID":"Level wird geladen, bitte warten",
     "OPTIONS_TEXT_ID":"Optionen",
     "PAUSE_GAME_TEXT":"Pause",
     "PAUSE_INSTRUCTIONS_GAME_TEXT":"Ziel: Finde die Unterschiede zwischen den beiden Bildern.\nLinks verändert sich das Bild mit der Zeit: Die Erinnerung verblasst und weicht der verzerrten Version.\nRechts bleibt die korrekte Szene unverändert — nutze sie als Referenz.\nZiehe mit zwei Fingern auseinander/zusammen zum Zoomen; ziehe zum Verschieben.",

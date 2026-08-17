@@ -12,6 +12,7 @@
     "LEVEL_FAILED_TEXT_ID":"Échec du niveau",
     "LEVEL_REMAINING_TIME_TEXT_ID": "Secondes restantes : %%",
     "LEVEL_SUCCESS_TEXT_ID":"Niveau terminé",
+    "LOADING_IN_PROGRESS_TEXT_ID":"Chargement du niveau, veuillez patienter",
     "OPTIONS_TEXT_ID":"Options",
     "PAUSE_GAME_TEXT":"Pause",
     "PAUSE_INSTRUCTIONS_GAME_TEXT":"Objectif : trouve les différences entre les deux images.\nÀ gauche, avec le temps, le souvenir s'altère et l'image se transforme vers sa version déformée.\nÀ droite, la scène correcte reste inchangée : utilise-la comme référence.\nPince avec deux doigts pour zoomer ; fais glisser pour te déplacer.",

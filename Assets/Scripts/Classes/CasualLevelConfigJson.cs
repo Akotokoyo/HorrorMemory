@@ -1,34 +1,34 @@
 using System;
+using System.Collections.Generic;
 
 [Serializable]
 public class CasualLevelConfigJson
 {
-    public string levelName = "Casual Level";
-    public int minDifferencesToFind = 5;
-    public int maxDifferencesToFind = 15;
-    public float timeLimit = 20f;
-    public float scoreAddTime = 5f;
-    public int waitingtime = 5;
-    public int difficulty = 1;
+    public List<CasualDifficultyJson> difficulties;
 
-    public string originalImageAddress;
-    public string distortedImageAddress;
-
-    public string ambientSoundAddress;
-    public string completionSoundAddress;
-
-    public CasualDifferenceSlotJson[] differenceSlots;
+    public List<LevelConfig> levels;
 }
 
 [Serializable]
-public class CasualDifferenceSlotJson
+public class CasualDifficultyJson
 {
-    public float posX;
-    public float posY;
-    public int width = 200;
-    public int height = 200;
-    public float deflectinRadious = 50f;
+    public DifficultyLevel level;
+    public int differencesToFind;
+    public float timeLimit;
+    public float pickWeight = 1f;
+}
 
-    public string[] startedSpriteAddresses;
-    public string[] distortedSpriteAddresses;
+[Serializable]
+public class LevelConfig
+{
+    public int id;
+    public bool enabled;
+    public List<CasualLevelDifferenceSlots> differenceSlots;
+}
+
+[Serializable]
+public class CasualLevelDifferenceSlots
+{
+    public int slotIndex;
+    public List<string> sprites;
 }

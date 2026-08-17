@@ -18,6 +18,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject endGamePopup;
     [SerializeField] private TextMeshProUGUI endGameText;
 
+    [Header("Loading")]
+    [SerializeField] private GameObject loadingPopup;
+
     [Header("Credits")]
     [SerializeField] private GameObject creditsPopup;
 
@@ -134,29 +137,26 @@ public class UIManager : MonoBehaviour
 
     public void OnClickIntroButton(string action)
     {
-        contentMenu.SetActive(false);
         switch (action)
         {
             case "Story":
+                contentMenu.SetActive(false);
                 StartCoroutine(PrepareLevelsFromGameData());
                 levelSelection.SetActive(true);
                 break;
             case "Tutorial":
+                contentMenu.SetActive(false);
                 SetTutorialStep0(); 
                 tutorialPopup.SetActive(true);
                 break;
             case "Play":
-                GameManager.Instance.StartGame(-1, true);
-                levelSelection.SetActive(false);
-                introUI.SetActive(false);
-                gameUI.SetActive(true);
-                Debug.Log("Play Button is clicked");
+                contentMenu.SetActive(false);
+                GameManager.Instance.StartGame(Constants.PLAY_MODE_LEVEL_ID, true);
                 break;
             case "Close":
                 Application.Quit();
                 break;
             default:
-                contentMenu.SetActive(true);
                 Debug.LogWarning("Action not binded");
                 break;
         }
@@ -172,14 +172,31 @@ public class UIManager : MonoBehaviour
     {
         currentLevel = idLevel;
         GameManager.Instance.StartGame(idLevel);
+    }
+
+    // Chiamata dal GameManager solo quando il livello e' pronto, cosi' la gameUI non compare mai su immagini non ancora assegnate.
+    public void EnterGameUI()
+    {
+        SetLoading(false);
         levelSelection.SetActive(false);
         introUI.SetActive(false);
+        contentMenu.SetActive(false);
         pausePopup.SetActive(false);
+        endGamePopup.SetActive(false);
         gameUI.SetActive(true);
+    }
+
+    public void SetLoading(bool isLoading)
+    {
+        if (loadingPopup != null)
+        {
+            loadingPopup.SetActive(isLoading);
+        }
     }
 
     public void OnclickReturnToTitle()
     {
+        SetLoading(false);
         GameManager.Instance.SetMainMenuState();
         introUI.SetActive(true);
         contentMenu.SetActive(true);
@@ -195,15 +212,23 @@ public class UIManager : MonoBehaviour
     }
     public void OnclickRetryLevel()
     {
+        if (GameManager.Instance.IsCasualMode)
+        {
+            GameManager.Instance.StartGame(Constants.PLAY_MODE_LEVEL_ID, true);
+            return;
+        }
+
         GameManager.Instance.StartGame(currentLevel);
-        levelSelection.SetActive(false);
-        introUI.SetActive(false);
-        pausePopup.SetActive(false);
-        gameUI.SetActive(true);
     }
 
     public void OnClickPlayNextLevel()
     {
+        if (GameManager.Instance.IsCasualMode)
+        {
+            GameManager.Instance.StartGame(Constants.PLAY_MODE_LEVEL_ID, true);
+            return;
+        }
+
         currentLevel++;
         OnClickPlayLevel(currentLevel);
     }
@@ -295,7 +320,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    #region Game UI
+#region Game UI
     private void HandleTimer(TimeSpan timePlaying, bool showWarning)
     {
         timerText.text = timePlaying.ToString(@"mm\:ss");

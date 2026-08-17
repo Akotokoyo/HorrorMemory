@@ -1,29 +1,29 @@
 {
   "difficulties": [
-    { "level": "Easy",   "differencesToFind": 5,  "timeLimit": 45, "pickWeight": 1 },
-    { "level": "Medium", "differencesToFind": 8,  "timeLimit": 60, "pickWeight": 1 },
-    { "level": "Hard",   "differencesToFind": 12, "timeLimit": 80, "pickWeight": 1 }
+    { "level": "Easy",   "differencesToFind": 6,  "timeLimit": 30, "pickWeight": 1 },
+    { "level": "Medium", "differencesToFind": 9,  "timeLimit": 35, "pickWeight": 1 },
+    { "level": "Hard",   "differencesToFind": 12, "timeLimit": 40, "pickWeight": 1 }
   ],
   "levels": [
     {
       "id": 19,
       "enabled": true,
       "differenceSlots": [
-        { "slotIndex": 0,  "sprites": ["Sprites/Level_019/Slot_00/A", "Sprites/Level_019/Slot_00/B"] },
-        { "slotIndex": 1,  "sprites": ["Sprites/Level_019/Slot_01/A", "Sprites/Level_019/Slot_01/B"] },
-        { "slotIndex": 2,  "sprites": ["Sprites/Level_019/Slot_02/A", "Sprites/Level_019/Slot_02/B"] },
-        { "slotIndex": 3,  "sprites": ["Sprites/Level_019/Slot_03/A", "Sprites/Level_019/Slot_03/B"] },
-        { "slotIndex": 4,  "sprites": ["Sprites/Level_019/Slot_04/A", "Sprites/Level_019/Slot_04/B"] },
-        { "slotIndex": 5,  "sprites": ["Sprites/Level_019/Slot_05/A", "Sprites/Level_019/Slot_05/B"] },
-        { "slotIndex": 6,  "sprites": ["Sprites/Level_019/Slot_06/A", "Sprites/Level_019/Slot_06/B"] },
-        { "slotIndex": 7,  "sprites": ["Sprites/Level_019/Slot_07/A", "Sprites/Level_019/Slot_07/B"] },
-        { "slotIndex": 8,  "sprites": ["Sprites/Level_019/Slot_08/A", "Sprites/Level_019/Slot_08/B"] },
-        { "slotIndex": 9,  "sprites": ["Sprites/Level_019/Slot_09/A", "Sprites/Level_019/Slot_09/B"] },
-        { "slotIndex": 10, "sprites": ["Sprites/Level_019/Slot_10/A", "Sprites/Level_019/Slot_10/B"] },
-        { "slotIndex": 11, "sprites": ["Sprites/Level_019/Slot_11/A", "Sprites/Level_019/Slot_11/B"] },
-        { "slotIndex": 12, "sprites": ["Sprites/Level_019/Slot_12/A", "Sprites/Level_019/Slot_12/B"] },
-        { "slotIndex": 13, "sprites": ["Sprites/Level_019/Slot_13/A", "Sprites/Level_019/Slot_13/B"] },
-        { "slotIndex": 14, "sprites": ["Sprites/Level_019/Slot_14/A", "Sprites/Level_019/Slot_14/B"] }
+        { "slotIndex": 0,  "sprites": ["Diff_19_0[Diff_19_0_0]", "Diff_18_1[Diff_18_1_0]", "Diff_17_0[Diff_17_0_4]"] },
+        { "slotIndex": 1,  "sprites": ["Diff_19_0[Diff_19_0_1]", "Diff_18_1[Diff_18_1_8]", "Diff_14_0[Diff_14_0_5]"] },
+        { "slotIndex": 2,  "sprites": ["Diff_19_0[Diff_19_0_2]", "Diff_19_0[Diff_19_0_0]", "Diff_15_0[Diff_15_0_1]"] },
+        { "slotIndex": 3,  "sprites": ["Diff_19_0[Diff_19_0_3]", "Diff_18_1[Diff_18_1_0]", "Diff_17_0[Diff_17_0_4]"] },
+        { "slotIndex": 4,  "sprites": ["Diff_19_0[Diff_19_0_4]"] },
+        { "slotIndex": 5,  "sprites": ["Diff_19_0[Diff_19_0_5]", "Diff_19_0[Diff_19_0_8]", "Diff_19_0[Diff_19_0_9]"] },
+        { "slotIndex": 6,  "sprites": ["Diff_19_0[Diff_19_0_6]", "Diff_16_0[Diff_16_0_8]", "Diff_16_0[Diff_16_0_2]"] },
+        { "slotIndex": 7,  "sprites": ["Diff_19_0[Diff_19_0_7]", "Diff_0_0[Diff_0_0_5]"] },
+        { "slotIndex": 8,  "sprites": ["Diff_19_0[Diff_19_0_9]", "Diff_19_0[Diff_19_0_8]"] },
+        { "slotIndex": 9,  "sprites": ["Diff_19_0[Diff_19_0_9]", "Diff_19_0[Diff_19_0_8]"] },
+        { "slotIndex": 10, "sprites": ["Diff_0_0[Diff_0_0_5]", "Diff_1_0[Diff_1_0_9]"] },
+        { "slotIndex": 11, "sprites": ["Diff_2_0[Diff_2_0_6]", "Diff_2_0[Diff_2_0_9]", "Diff_2_0[Diff_2_0_10]"] },
+        { "slotIndex": 12, "sprites": ["Diff_6_0[Diff_6_0_7]", "Diff_7_0[Diff_7_0_1]"] },
+        { "slotIndex": 13, "sprites": ["Diff_19_0[Diff_19_0_5]", "Diff_19_0[Diff_19_0_8]"] },
+        { "slotIndex": 14, "sprites": ["Diff_2_0[Diff_2_0_2]", "Diff_2_1[Diff_2_1_2]"] }
       ]
     }
   ]

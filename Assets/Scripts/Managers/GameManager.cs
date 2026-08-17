@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
 
     private GameState gameState = GameState.MAIN_MENU;
     [SerializeField] private bool useCasualMode = true;
+
+    public bool IsCasualMode => useCasualMode;
+
     [SerializeField] private LevelData currentLevel;
     [SerializeField] private List<LevelData> _gameLevelConfigurations;
 
@@ -79,35 +82,46 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator InitializeGame()
     {
-        if (useCasualMode && CasualLevelGenerator.Instance != null)
+        if (useCasualMode)
         {
-            LevelManager.Instance.currentLevel = null;
-            bool done = false;
-            yield return CasualLevelGenerator.Instance.GenerateLevelAsync(
-                levelData =>
-                {
-                    LevelManager.Instance.currentLevel = levelData;
-                    done = true;
-                },
-                error =>
-                {
-                    Debug.LogError(error);
-                    done = true;
-                });
-            if (!done || LevelManager.Instance.currentLevel == null)
+            if (CasualLevelGenerator.Instance == null)
+            {
+                Debug.LogError("Play mode richiesta ma non c'e' nessun CasualLevelGenerator in scena.");
+                AbortToMainMenu();
                 yield break;
+            }
+
+            LevelManager.Instance.currentLevel = null;
+            UIManager.Instance.SetLoading(true);
+            yield return CasualLevelGenerator.Instance.GenerateLevelAsync(
+                levelData => LevelManager.Instance.currentLevel = levelData,
+                error => Debug.LogError(error));
+
+            if (LevelManager.Instance.currentLevel == null)
+            {
+                AbortToMainMenu();
+                yield break;
+            }
         }
-        else if (!useCasualMode && currentLevel != null)
+        else if (currentLevel != null)
         {
             LevelManager.Instance.currentLevel = currentLevel;
         }
         else
         {
             Debug.LogError("No Level configured. Set CurrentLevel Or Active useCasualMode.");
+            AbortToMainMenu();
             yield break;
         }
 
+        UIManager.Instance.EnterGameUI();
         LevelManager.Instance.PrepareLevel();
+    }
+
+    private void AbortToMainMenu()
+    {
+        SetState(GameState.MAIN_MENU);
+        UIManager.Instance.OnclickReturnToTitle();
     }
 
     public void StartLevel()
@@ -156,6 +170,18 @@ public class GameManager : MonoBehaviour
         return _gameData.Levels[index];
     }
 
+    public LevelData GetLevelConfiguration(int levelId)
+    {
+        for (int i = 0; i < _gameLevelConfigurations.Count; i++)
+        {
+            if (_gameLevelConfigurations[i] != null && _gameLevelConfigurations[i].levelId == levelId)
+            {
+                return _gameLevelConfigurations[i];
+            }
+        }
+        return null;
+    }
+
     public void SetPauseState(bool isPaused)
     {
         SetState(isPaused ? GameState.PAUSED: GameState.PLAYING);
@@ -166,6 +192,10 @@ public class GameManager : MonoBehaviour
     {
         SetState(GameState.MAIN_MENU);
         LevelManager.Instance.StopLevel();
+        if (CasualLevelGenerator.Instance != null)
+        {
+            CasualLevelGenerator.Instance.ReleaseLoadedSprites();
+        }
     }
 
     private void SetState(GameState state) {

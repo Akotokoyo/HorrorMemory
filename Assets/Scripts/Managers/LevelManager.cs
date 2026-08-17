@@ -277,11 +277,12 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         int starNumber = GeneralFunctions.CalculateStarRating(currentLevel, currentTimer);
-        if (levelSuccess)
+        bool isStoryMode = !GameManager.Instance.IsCasualMode;
+        if (levelSuccess && isStoryMode)
         {
             GameManager.Instance.UpdateGameData(currentLevel.LevelId, starNumber, currentTimer);
         }
-        bool isFinalLevel = levelSuccess && currentLevel.LevelId == Constants.LAST_LEVEL_INDEX;
+        bool isFinalLevel = levelSuccess && isStoryMode && currentLevel.LevelId == Constants.LAST_LEVEL_INDEX;
         UIManager.Instance.ShowEndPopup(levelSuccess, currentTimer, starNumber, isFinalLevel);
     }
 
