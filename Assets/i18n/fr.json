@@ -1,5 +1,7 @@
 {
     "CLOSE_TITLE_TEXT_ID": "Fermer",
+    "CREDITS_DEVELOPER_LIST_TEXT_ID":"Mirage Games Group \nGame Developer: Giorgia Tedde, QA: Federico Briano",
+    "CREDITS_QA_LIST_TEXT_ID":"Closed Beta Testers: \nRoseleen, Alskyuu, Silor78",
     "DIFFERENCE_TEXT_ID": "Differences: ",
     "DIFFICULTY_LEVEL_EASY_TEXT_ID":"Difficulté: Facile",
     "DIFFICULTY_LEVEL_MEDIUM_TEXT_ID":"Difficulté: Moyen",

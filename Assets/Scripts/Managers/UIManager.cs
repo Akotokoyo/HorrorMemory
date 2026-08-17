@@ -18,6 +18,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject endGamePopup;
     [SerializeField] private TextMeshProUGUI endGameText;
 
+    [Header("Credits")]
+    [SerializeField] private GameObject creditsPopup;
+
     [Header("Tutorial")]
     [SerializeField] private GameObject tutorialPopup;
     [SerializeField] private GameObject tutorialNextButton;
@@ -184,6 +187,11 @@ public class UIManager : MonoBehaviour
         pausePopup.SetActive(false);
         endGamePopup.SetActive(false);
         HideAllPopups();
+    }
+
+    public void OnClickShowCredits(bool showPopup)
+    {
+        creditsPopup.SetActive(showPopup);
     }
     public void OnclickRetryLevel()
     {
