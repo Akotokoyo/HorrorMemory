@@ -606,7 +606,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dac99e8295ca53a4e948f513d2111b7b
-    m_Address: Assets/Resources_moved/Sprites/StoryMode/Level019/Modified-019.png
+    m_Address: StoryMode/Modified-019
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

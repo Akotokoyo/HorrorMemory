@@ -103,7 +103,6 @@ public class CasualLevelGenerator : MonoBehaviour
 
             DifferenceInfo difference = level.differences[slot.slotIndex];
             difference.startedSprite = sprite;
-            difference.distortedSprite = sprite;
             difference.mustBeFound = true;
             enabledCount++;
         }
@@ -275,11 +274,9 @@ public class CasualLevelGenerator : MonoBehaviour
             level.differences.Add(new DifferenceInfo
             {
                 normalizedPosition = original.normalizedPosition,
-                deflectinRadious = original.deflectinRadious,
                 width = original.width,
                 height = original.height,
                 startedSprite = null,
-                distortedSprite = null,
                 mustBeFound = false
             });
         }
