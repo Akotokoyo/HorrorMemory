@@ -69,61 +69,61 @@ MonoBehaviour:
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.4885, y: 0.8119}
     deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.6989, y: 0.578}
     deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.576, y: 0.512}
     deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.214, y: 0.456}
     deflectinRadious: 10
     width: 20
     height: 20
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.0479, y: 0.202}
     deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.652, y: 0.438}
     deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.309, y: 0.202}
     deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   - normalizedPosition: {x: 0.693, y: 0.188}
     deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 0}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    mustBeFound: 1
   completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}

@@ -116,14 +116,14 @@ MonoBehaviour:
     deflectinRadious: 10
     width: 70
     height: 130
-    startedSprite: {fileID: 0}
-    distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    startedSprite: {fileID: 160277864, guid: 94a6c4f098f44f9409faa5fc037f0455, type: 3}
+    distortedSprite: {fileID: 160277864, guid: 94a6c4f098f44f9409faa5fc037f0455, type: 3}
+    mustBeFound: 1
   - normalizedPosition: {x: 0.465, y: 0.951}
     deflectinRadious: 10
     width: 60
     height: 60
-    startedSprite: {fileID: 0}
-    distortedSprite: {fileID: 0}
-    mustBeFound: 0
+    startedSprite: {fileID: -1495987717, guid: 6d66cc10d7413024f91d3bf89a7896bd, type: 3}
+    distortedSprite: {fileID: -1495987717, guid: 6d66cc10d7413024f91d3bf89a7896bd, type: 3}
+    mustBeFound: 1
   completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}
