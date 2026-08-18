@@ -23,12 +23,4 @@ public class LevelConfig
 {
     public int id;
     public bool enabled;
-    public List<CasualLevelDifferenceSlots> differenceSlots;
-}
-
-[Serializable]
-public class CasualLevelDifferenceSlots
-{
-    public int slotIndex;
-    public List<string> sprites;
 }
