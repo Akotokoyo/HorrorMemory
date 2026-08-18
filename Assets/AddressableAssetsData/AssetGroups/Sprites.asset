@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02bb2aa511dfe1d4f9859aaa01a3002b
+    m_Address: StoryMode/Distorted-006
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 072e8cf8f8c44784fbf4f0d09d5071d9
     m_Address: Diff_8_1
     m_ReadOnly: 0
@@ -45,6 +50,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14b5e84ee936ae24e845d73b57084020
+    m_Address: StoryMode/Distorted-005
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15af5a7ba6c9d564db2d11b5141795eb
+    m_Address: StoryMode/Original-008
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1710fedd700979347ad1a376568279f6
     m_Address: Diff_4_0
     m_ReadOnly: 0
@@ -55,8 +70,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18b885c3002eb614993c6c124c565067
+    m_Address: StoryMode/Distorted-016
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 18bfd39e0cc618f45ba3a317ed87a489
     m_Address: Sprites/Level_009/Distorded_9
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a7078424f1cd3f42b2bc98ffc9ad3df
+    m_Address: StoryMode/Modified-001
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -70,8 +95,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fff7e85b579a68458f4e26a00189f99
+    m_Address: StoryMode/Distorted-000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27cffb3bd37683946bb3fded63535f7b
     m_Address: Sprites/Level_015/Original_15
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 299d7efb1bd45fc4c8f6637af9f98515
+    m_Address: StoryMode/Modified-009
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -90,8 +125,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d5e98e057223f040ac38766dee54cca
+    m_Address: StoryMode/Modified-010
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2e93438ff9ae6d240b9f1f9a8bbc2146
     m_Address: Diff_2_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30037ad57162f904cb0319fa1a9bcaac
+    m_Address: StoryMode/Modified-018
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -110,6 +155,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b09e5fb6ab3b224484b29d39140d133
+    m_Address: StoryMode/Original-002
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d15bab1b0c586d4bb5c05db6c3dbb67
+    m_Address: StoryMode/Modified-006
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f5801d0ee2a81c4bbb8620e1ce45cd6
+    m_Address: StoryMode/Modified-003
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3f8e49fba1a6a6c488777e1a8c1d3185
     m_Address: Sprites/Level_017/Original_17
     m_ReadOnly: 0
@@ -117,6 +177,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41bd426e597eb8048abeb53c7784dac2
     m_Address: Diff_16_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42d14a2690fff65429a009ec647e5150
+    m_Address: StoryMode/Modified-005
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43a60f6d63101c840a790d45309c0d90
+    m_Address: StoryMode/Modified-016
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -130,6 +200,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b6a96929d0ef514481a55fd21af194b
+    m_Address: StoryMode/Distorted-011
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4c12c6d12f95de64cb3c7a6e9090c66e
     m_Address: Sprites/Level_006/Original_6
     m_ReadOnly: 0
@@ -137,6 +212,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4c60ff915338e7c4eb345900e1c27574
     m_Address: Diff_13_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ebe196737388224e9b4bf52e7a37bca
+    m_Address: StoryMode/Original-014
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -170,8 +250,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61d1645df16e8214ba3d4262b6bdd864
+    m_Address: StoryMode/Distorted-013
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 63c42b559e34b354c8574158f966f040
     m_Address: Sprites/Level_006/Distorted_6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6557cbabf3f5a89499cbe6c64ba6f198
+    m_Address: StoryMode/Original-019
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66258c8f240910647933e83655f3de35
+    m_Address: StoryMode/Modified-012
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6cd3ac8c836232a4daad21f554368c32
+    m_Address: StoryMode/Distorted-003
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -187,6 +287,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7173b6334fe54b84e914e18f04694151
     m_Address: Sprites/Level_005/Distorted_5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7187b6f9db4f45c4dae4d3dcbdf09379
+    m_Address: StoryMode/Modified-011
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -210,6 +315,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7637999e92f89794494e1367eb7f23c2
+    m_Address: StoryMode/Original-010
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 76fd3d047d555914aa14c50b6beabf9c
     m_Address: Sprites/Level_018/Original_18
     m_ReadOnly: 0
@@ -225,6 +335,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7aeeecea13aa3504ba860d6318f7a1b7
+    m_Address: StoryMode/Original-001
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7b1be58ce608e154da61d89a53c99fb2
     m_Address: Diff_18_1
     m_ReadOnly: 0
@@ -235,8 +350,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d821fa75b275dc4d8d02e6c5103d591
+    m_Address: StoryMode/Distorted-012
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7eaf2a129c81e5542a60dbb15f6c7482
     m_Address: Sprites/Level_004/Original_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fa2a41051b835e4c8b28f34217b5cc8
+    m_Address: StoryMode/Distorted-014
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 805c6fa58331c89469e3fe089694903f
+    m_Address: StoryMode/Original-017
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 813a28cab7cfa234eb44b8a128db3bba
+    m_Address: StoryMode/Original-015
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 836d2a616f7de104c940a8857c07da7b
+    m_Address: StoryMode/Distorted-008
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -245,13 +385,38 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 896300f71ffabcb48b414e59f67bd938
+    m_Address: StoryMode/Modified-000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8978c16a573abf745bcc241037a6cac6
+    m_Address: StoryMode/Distorted-001
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8a0761791e0d9a14ab3e37e6bd14d1ee
     m_Address: Sprites/Level_007/Original_7
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c1b4e0a9980f894196a0fc37fcf136a
+    m_Address: StoryMode/Distorted-004
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8f0fc2d858b17df4b9c33f69abdf10a7
     m_Address: Sprites/Level_011/Original_11
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9263302efe2285d44b04176df4bf7dd0
+    m_Address: StoryMode/Modified-014
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 937c990ee3501d24da8909893899aff0
+    m_Address: StoryMode/Modified-015
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -262,6 +427,21 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 966695f21f255af428bfbe620ffe20a5
     m_Address: Sprites/Level_014/Distorted_14
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 999efb7c09e10d743a6519a5760f4815
+    m_Address: StoryMode/Distorted-010
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99fa002d6f96cb04fb4823550baf2b73
+    m_Address: StoryMode/Modified-008
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ba79c57b590d894b9b28de6d5e8e6f5
+    m_Address: StoryMode/Original-006
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -290,8 +470,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a087b200f7dc1f340bd7a845e3134e22
+    m_Address: StoryMode/Distorted-018
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a108fe5899146164cb7aa7b86ed16f8c
     m_Address: Diff_9_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1adc8cd6c335fb41af1851af204d3ba
+    m_Address: StoryMode/Modified-002
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a24361ed9e9d4214a970de9ddd130a26
+    m_Address: StoryMode/Original-005
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a32083f4ad283b34eb28ada799491e14
+    m_Address: StoryMode/Original-003
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a734f29af22dac441b57c1fc38cc3324
+    m_Address: StoryMode/Original-000
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -300,8 +505,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aab38b531dbbbc54a951a78ff77b5112
+    m_Address: StoryMode/Original-007
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad63d525be44f454eacb5fa6a7218a2e
     m_Address: Diff_18_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae8fe298b5559f444a6f81a84282da81
+    m_Address: StoryMode/Original-018
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -320,6 +535,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bedee98fe7004f24eb94cc0975a2955c
+    m_Address: StoryMode/Original-009
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1656184741c1cf47a4cdc2f76ae798f
+    m_Address: StoryMode/Distorted-002
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c18396c8cf7037d479e0346917d1d8f5
     m_Address: Diff_2_0
     m_ReadOnly: 0
@@ -327,6 +552,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c1a7dd934c9bca24992b8a061ff8c5a8
     m_Address: Diff_0_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6707abe2a5fc494986684dffef1d2f6
+    m_Address: StoryMode/Modified-017
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -350,6 +580,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d02cf36ac1b4b9243b240ef2a720d4d9
+    m_Address: StoryMode/Modified-007
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d0f25cc8c6497f14cb5ab35185889e0d
     m_Address: Sprites/Level_010/Distorted_10
     m_ReadOnly: 0
@@ -370,8 +605,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dac99e8295ca53a4e948f513d2111b7b
+    m_Address: Assets/Resources_moved/Sprites/StoryMode/Level019/Modified-019.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dd628601343c1f942aa3f3cfba5bb8db
     m_Address: Sprites/Level_001/Modified
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dffa50773e6e12540a97d84e908c7a54
+    m_Address: StoryMode/Original-016
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e33e71c438c08da4295b7c6aa55d61e9
+    m_Address: StoryMode/Original-004
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -380,13 +630,43 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5fbc6698f20e6d419ac08e1a427824d
+    m_Address: StoryMode/Distorted-007
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8bddc1d89ffad941a20b02f7564e23e
     m_Address: Diff_5_0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed97b0677652d8342a02bb2d29908f6c
+    m_Address: StoryMode/Original-011
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efb6116ffde13484a9f1848f11f797e6
+    m_Address: StoryMode/Modified-013
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f10bc01aa4405e04e8c6bbc45dd1f176
+    m_Address: StoryMode/Original-012
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f235e9c89633fe24e98d3d688429c503
     m_Address: Diff_1_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f62874bf8062c76438345847f79c5334
+    m_Address: StoryMode/Modified-004
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6bbe4f4aa356324ca85e2277e6be8fd
+    m_Address: StoryMode/Original-013
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

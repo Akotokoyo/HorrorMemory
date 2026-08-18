@@ -25,6 +25,7 @@ public class LevelData : ScriptableObject, ILevelData
     public string storyEndingText = string.Empty;
 
     public Sprite originalSprite;
+    public Sprite modifiedSprite;
     public Sprite distortedSprite;
 
     [Header("Differences")]

@@ -5793,7 +5793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.28, y: 0.7066146}
   m_AnchorMax: {x: 0.71000004, y: 0.84648603}
-  m_AnchoredPosition: {x: -0.019897461, y: 0.72802734}
+  m_AnchoredPosition: {x: -0.01977539, y: 0.72802734}
   m_SizeDelta: {x: 0.6512146, y: -1.4566994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461968745
@@ -8620,8 +8620,29 @@ MonoBehaviour:
   - {fileID: 4900000, guid: fcb1ab9c6e67f26498b3b4c862f7f6ae, type: 3}
   audioManager: {fileID: 2019742965}
   useCasualMode: 0
-  currentLevel: {fileID: 11400000, guid: ca32367863f131e4faaf164b21ebcfb9, type: 2}
-  _gameLevelConfigurations:
+  currentLevel: {fileID: 11400000, guid: 271d24a2e2cf2994eb6dffa683159261, type: 2}
+  _storyLevelConfigurations:
+  - {fileID: 11400000, guid: 271d24a2e2cf2994eb6dffa683159261, type: 2}
+  - {fileID: 11400000, guid: afb6120c1619c724f90627d3026f6086, type: 2}
+  - {fileID: 11400000, guid: 8de35106476b6234da572c0eb23c907d, type: 2}
+  - {fileID: 11400000, guid: eecdd1a0da2ad5e4ab51cea839357f01, type: 2}
+  - {fileID: 11400000, guid: 968790201e56cc944b03310279e6159a, type: 2}
+  - {fileID: 11400000, guid: a2f06b576691d3c449777aa2bdbd888d, type: 2}
+  - {fileID: 11400000, guid: ddfe7b6d568ef1749935219359b36d5f, type: 2}
+  - {fileID: 11400000, guid: f058ba5e225aeea478fc3ee21c03df1a, type: 2}
+  - {fileID: 11400000, guid: 2dd037b214dd9a946adc6d734d75ebde, type: 2}
+  - {fileID: 11400000, guid: 0e8916867553c67489c8edcca859c734, type: 2}
+  - {fileID: 11400000, guid: 1e6cf3839b6993e4184bcec01fd42c8a, type: 2}
+  - {fileID: 11400000, guid: 2ee536723d2de53418bd4d25fade87fe, type: 2}
+  - {fileID: 11400000, guid: c1b82976cef9ff44b9f84b168810658c, type: 2}
+  - {fileID: 11400000, guid: fb2d2573073323e4fabb8857e54a070f, type: 2}
+  - {fileID: 11400000, guid: 068df7745b9ef2847a8da37ff2970850, type: 2}
+  - {fileID: 11400000, guid: fea6bbafeefd1084286a8ae7d25ac694, type: 2}
+  - {fileID: 11400000, guid: e06048fefc64c5043b940c1c0d158947, type: 2}
+  - {fileID: 11400000, guid: a2c0afd8bfbc2d74d902073aab21662a, type: 2}
+  - {fileID: 11400000, guid: 024edb93d3c318447acff8ce18f4bcab, type: 2}
+  - {fileID: 11400000, guid: 47e84710efc961f418a8417d7810c32c, type: 2}
+  _casualLevelConfigurations:
   - {fileID: 11400000, guid: ca32367863f131e4faaf164b21ebcfb9, type: 2}
   - {fileID: 11400000, guid: 9f4e58b8504490e4998616b882a9da45, type: 2}
   - {fileID: 11400000, guid: 2228efa011819d64e9ebcb850c7acdf0, type: 2}

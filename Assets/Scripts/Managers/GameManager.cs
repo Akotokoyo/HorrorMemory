@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
     public bool IsCasualMode => useCasualMode;
 
     [SerializeField] private LevelData currentLevel;
-    [SerializeField] private List<LevelData> _gameLevelConfigurations;
+    [SerializeField] private List<LevelData> _storyLevelConfigurations;
+    [SerializeField] private List<LevelData> _casualLevelConfigurations;
+
 
     private SaveData _saveData;
 
@@ -136,7 +138,7 @@ public class GameManager : MonoBehaviour
         useCasualMode = isCasualMode;
         if (!useCasualMode)
         {
-            currentLevel = _gameLevelConfigurations[levelId];
+            currentLevel = _storyLevelConfigurations[levelId];
         }
         StartCoroutine(InitializeGame());
     }
@@ -172,11 +174,11 @@ public class GameManager : MonoBehaviour
 
     public LevelData GetLevelConfiguration(int levelId)
     {
-        for (int i = 0; i < _gameLevelConfigurations.Count; i++)
+        for (int i = 0; i < _casualLevelConfigurations.Count; i++)
         {
-            if (_gameLevelConfigurations[i] != null && _gameLevelConfigurations[i].levelId == levelId)
+            if (_casualLevelConfigurations[i] != null && _casualLevelConfigurations[i].levelId == levelId)
             {
-                return _gameLevelConfigurations[i];
+                return _casualLevelConfigurations[i];
             }
         }
         return null;
