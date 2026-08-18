@@ -11,6 +11,7 @@ public class LevelData : ScriptableObject, ILevelData
     string ILevelData.storyIntroText => storyIntroText;
     string ILevelData.storyEndingText => storyEndingText;
     Sprite ILevelData.originalSprite => originalSprite;
+    Sprite ILevelData.modifiedSprite => modifiedSprite;
     Sprite ILevelData.distortedSprite => distortedSprite;
     AudioClip ILevelData.completionSound => completionSound;
     List<DifferenceInfo> ILevelData.differences => differences;

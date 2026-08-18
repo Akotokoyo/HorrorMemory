@@ -10,6 +10,7 @@ public interface ILevelData
     string storyIntroText { get; }
     string storyEndingText { get; }
     Sprite originalSprite { get; }
+    Sprite modifiedSprite { get; }
     Sprite distortedSprite { get; }
     AudioClip completionSound { get; }
     List<DifferenceInfo> differences { get; }

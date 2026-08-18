@@ -35,11 +35,25 @@ public class LevelManager : MonoBehaviour
     private float currentAlpha;
     private static LevelManager _instance;
     private Transform comparisonRoot;
+    private StoryLevelManager storyLevelManager;
 
     public static LevelManager Instance
     {
         get { return _instance; }
     }
+
+    internal Image DistortedImage => distortedImage;
+    internal Image OriginalImage => originalImage;
+    internal Image ModifiedImage => modifiedImage;
+    internal RectTransform OriginalRect => originalRect;
+    internal RectTransform ModifiedRect => modifiedRect;
+    internal List<GameObject> OriginalDifferences => originalDifferences;
+    internal List<GameObject> DifferencesToFind => differencesToFind;
+
+    internal int TotalDifferenceCount { get => totalDifferenceCount; set => totalDifferenceCount = value; }
+    internal int CurrentDifferenceCount { get => currentDifferenceCount; set => currentDifferenceCount = value; }
+    internal float BreakTime { get => breakTime; set => breakTime = value; }
+    internal float CurrentAlpha { get => currentAlpha; set => currentAlpha = value; }
 
     private void Awake()
     {
@@ -52,6 +66,7 @@ public class LevelManager : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
         comparisonRoot = distortedImage != null ? distortedImage.transform.parent : null;
+        storyLevelManager = new StoryLevelManager(this);
         GenerateDiffsTemplate();
     }
 
@@ -117,80 +132,21 @@ public class LevelManager : MonoBehaviour
         }
 
         currentTimer = currentLevel.timeLimit;
-        distortedImage.sprite = currentLevel.distortedSprite;
-        originalImage.sprite = currentLevel.originalSprite;
-        currentAlpha = 1f;
         totalDifferenceCount = 0;
         currentDifferenceCount = 0;
-
-        modifiedImage.sprite = currentLevel.originalSprite;
+        breakTime = 0f;
+        currentAlpha = 1f;
 
         InitializeZoomPanController();
         zoomPanController?.ResetView();
 
-        for(int i = 0; i < currentLevel.differences.Count; i++)
+        if (GameManager.Instance.IsCasualMode)
         {
-            GameObject originalDiff = originalDifferences[i];
-            if (!currentLevel.differences[i].mustBeFound)
-            {
-                originalDiff.SetActive(false);
-                continue;
-            }
-            else
-            {
-                originalDiff.SetActive(true);
-                originalDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
-                originalDiff.transform.GetChild(0).gameObject.SetActive(false);
-                originalDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
-                originalDiff.GetComponent<Difference>().diffIndex = i;
-                originalDiff.GetComponent<Difference>().isClickable = true;
-                originalDiff.GetComponent<Difference>().isFound = false;
-            }
-
-            RectTransform diffRect = originalDiff.GetComponent<RectTransform>();
-            diffRect.sizeDelta = new Vector2
-                (currentLevel.differences[i].width, currentLevel.differences[i].height);
-
-            float width = originalRect.rect.width;
-            float height = originalRect.rect.height;
-            Vector2 normalized = currentLevel.differences[i].normalizedPosition;
-            float x = (normalized.x - 0.5f) * width;
-            float y = (normalized.y - 0.5f) * height;
-            diffRect.anchoredPosition = new Vector2(x, y);
+            InitPlayLevel();
         }
-
-        for (int i = 0; i < currentLevel.differences.Count; i++)
+        else
         {
-            GameObject modDiff = differencesToFind[i];
-            if (!currentLevel.differences[i].mustBeFound)
-            {
-                modDiff.SetActive(false);
-                continue;
-            }
-            else
-            {
-                totalDifferenceCount++;
-                modDiff.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-                modDiff.SetActive(true);
-            }
-
-            modDiff.GetComponent<Image>().sprite = currentLevel.differences[i].startedSprite;
-            modDiff.GetComponent<Difference>().diffInfo = currentLevel.differences[i];
-            modDiff.transform.GetChild(0).gameObject.SetActive(false);
-            modDiff.GetComponent<Difference>().diffIndex = i;
-            modDiff.GetComponent<Difference>().isClickable = true;
-            modDiff.GetComponent<Difference>().isFound = false;
-
-            RectTransform diffRect = modDiff.GetComponent<RectTransform>();
-            diffRect.sizeDelta = new Vector2
-                (currentLevel.differences[i].width, currentLevel.differences[i].height);
-
-            float width = modifiedRect.rect.width;
-            float height = modifiedRect.rect.height;
-            Vector2 normalized = currentLevel.differences[i].normalizedPosition;
-            float x = (normalized.x - 0.5f) * width;
-            float y = (normalized.y - 0.5f) * height;
-            diffRect.anchoredPosition = new Vector2(x, y);
+            storyLevelManager.InitLevel();
         }
 
         UpdateUI();
@@ -199,21 +155,128 @@ public class LevelManager : MonoBehaviour
 
     public void OnDifferenceClicked(int diffIndex)
     {
-        originalDifferences[diffIndex].GetComponent<Image>().sprite = originalDifferences[diffIndex].GetComponent<Difference>().diffInfo.distortedSprite;
+        if (GameManager.Instance.IsCasualMode)
+        {
+            OnPlayDifferenceClicked(diffIndex);
+        }
+        else
+        {
+            storyLevelManager.OnDifferenceClicked(diffIndex);
+        }
+    }
+
+    internal void NotifyDifferenceProgress()
+    {
+        UpdateUI();
+    }
+
+    internal void PlayCompletionSound()
+    {
+        audioManager.StartEffectSound(currentLevel.completionSound);
+    }
+
+    internal void CompleteLevel(bool success)
+    {
+        OnLevelEnded?.Invoke(success);
+        StopAllCoroutines();
+        StartCoroutine(ShowEndPopup(success));
+    }
+
+    internal static void PlaceDifference(GameObject differenceObject, DifferenceInfo info, RectTransform parentRect)
+    {
+        RectTransform diffRect = differenceObject.GetComponent<RectTransform>();
+        diffRect.sizeDelta = new Vector2(info.width, info.height);
+
+        float width = parentRect.rect.width;
+        float height = parentRect.rect.height;
+        Vector2 normalized = info.normalizedPosition;
+        diffRect.anchoredPosition = new Vector2(
+            (normalized.x - 0.5f) * width,
+            (normalized.y - 0.5f) * height);
+    }
+
+    private void InitPlayLevel()
+    {
+        storyLevelManager.HideCleanOverlay();
+
+        distortedImage.sprite = currentLevel.originalSprite;
+        originalImage.enabled = true;
+        originalImage.sprite = currentLevel.originalSprite;
+        originalImage.color = Color.white;
+        originalImage.raycastTarget = true;
+        modifiedImage.sprite = currentLevel.originalSprite;
+
+        for (int i = 0; i < currentLevel.differences.Count; i++)
+        {
+            SetupPlayDifference(
+                originalDifferences[i],
+                currentLevel.differences[i],
+                i,
+                originalRect,
+                visible: true,
+                countTowardsTotal: false);
+        }
+
+        for (int i = 0; i < currentLevel.differences.Count; i++)
+        {
+            SetupPlayDifference(
+                differencesToFind[i],
+                currentLevel.differences[i],
+                i,
+                modifiedRect,
+                visible: false,
+                countTowardsTotal: true);
+        }
+    }
+
+    private void SetupPlayDifference(
+        GameObject differenceObject,
+        DifferenceInfo info,
+        int index,
+        RectTransform parentRect,
+        bool visible,
+        bool countTowardsTotal)
+    {
+        if (!info.mustBeFound)
+        {
+            differenceObject.SetActive(false);
+            return;
+        }
+
+        if (countTowardsTotal)
+        {
+            totalDifferenceCount++;
+        }
+
+        differenceObject.SetActive(true);
+        Image image = differenceObject.GetComponent<Image>();
+        image.sprite = info.startedSprite;
+        image.color = visible ? Color.white : new Color(1f, 1f, 1f, 0f);
+        image.raycastTarget = true;
+
+        Difference difference = differenceObject.GetComponent<Difference>();
+        difference.diffInfo = info;
+        difference.diffIndex = index;
+        difference.isClickable = true;
+        difference.isFound = false;
+        differenceObject.transform.GetChild(0).gameObject.SetActive(false);
+
+        PlaceDifference(differenceObject, info, parentRect);
+    }
+
+    private void OnPlayDifferenceClicked(int diffIndex)
+    {
         originalDifferences[diffIndex].GetComponent<Difference>().isFound = true;
         originalDifferences[diffIndex].transform.GetChild(0).gameObject.SetActive(true);
-        differencesToFind[diffIndex].GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+        differencesToFind[diffIndex].GetComponent<Image>().color = Color.white;
         differencesToFind[diffIndex].GetComponent<Difference>().isFound = true;
         differencesToFind[diffIndex].transform.GetChild(0).gameObject.SetActive(true);
         currentDifferenceCount++;
-        breakTime = 3f;
         UpdateUI();
         audioManager.StartEffectSound(currentLevel.completionSound);
         if (currentDifferenceCount == totalDifferenceCount)
         {
-            OnLevelEnded?.Invoke(true);
-            StopAllCoroutines();
-            StartCoroutine(ShowEndPopup(true));
+            CompleteLevel(true);
         }
     }
 
@@ -246,6 +309,8 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator UpdateTimer()
     {
+        bool isPlayMode = GameManager.Instance.IsCasualMode;
+
         while (currentTimer > 0)
         {
             currentTimer -= 1f;
@@ -257,11 +322,10 @@ public class LevelManager : MonoBehaviour
             var timePlaying = TimeSpan.FromSeconds(currentTimer);
             OnTimerUpdate?.Invoke(timePlaying, currentTimer <= 5f);
 
-            if(breakTime == 0)
+            if (!isPlayMode)
             {
-                currentAlpha = Mathf.Clamp01(currentTimer / currentLevel.timeLimit);
+                storyLevelManager.UpdateFade(currentTimer, currentLevel.timeLimit, breakTime);
             }
-            originalImage.color = new Color(1f, 1f, 1f, currentAlpha);
 
             yield return new WaitForSeconds(1f);
         }

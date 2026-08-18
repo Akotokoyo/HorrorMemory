@@ -13,6 +13,7 @@ public class RuntimeLevelData : ILevelData
     public string storyEndingText = string.Empty;
 
     public Sprite originalSprite;
+    public Sprite modifiedSprite;
     public Sprite distortedSprite;
     public AudioClip ambientSound;
     public AudioClip completionSound;
@@ -27,6 +28,7 @@ public class RuntimeLevelData : ILevelData
     string ILevelData.storyIntroText => storyIntroText;
     string ILevelData.storyEndingText => storyEndingText;
     Sprite ILevelData.originalSprite => originalSprite;
+    Sprite ILevelData.modifiedSprite => modifiedSprite;
     Sprite ILevelData.distortedSprite => distortedSprite;
     AudioClip ILevelData.completionSound => completionSound;
     List<DifferenceInfo> ILevelData.differences => differences;
