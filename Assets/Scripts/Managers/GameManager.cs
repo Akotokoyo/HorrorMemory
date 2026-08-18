@@ -42,6 +42,11 @@ public class GameManager : MonoBehaviour
         audioManager.Initialize();
 
         _saveData = new();
+        if (PlayerPrefs.GetInt("TutorialSeen", 0) == 0)
+        {
+            _saveData.DeleteSaveFile();
+        }
+
         var savedData = _saveData.ReadSaveFile();
         if (savedData == null)
         {

@@ -113,4 +113,24 @@ public class SaveData
         return null;
 #endif
     }
+    public void DeleteSaveFile()
+    {
+#if UNITY_EDITOR
+        gamePath = $"Assets/Data/GameData.sav";
+        if (File.Exists(gamePath))
+        {
+            File.Delete(gamePath);
+            Debug.Log("File deleted successfully.");
+        }
+#else
+        gamePath = $"{Application.persistentDataPath}/GameData.sav";
+        // Does the file exist?
+        if (File.Exists(gamePath))
+        {
+            File.Delete(gamePath);
+            Debug.Log("File deleted successfully.");
+        }
+#endif
+    }
+
 }
