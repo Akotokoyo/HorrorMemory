@@ -67,7 +67,7 @@ MonoBehaviour:
     height: 80
     startedSprite: {fileID: 2041460981, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 0.069, y: 0.919}
+  - normalizedPosition: {x: 0.073, y: 0.932}
     width: 70
     height: 70
     startedSprite: {fileID: -926751718, guid: 316c0b3c0f31cf34e880cc723c233100, type: 3}
