@@ -16,9 +16,6 @@ MonoBehaviour:
   levelId: 15
   difficulty: 2
   timeLimit: 40
-  scoreAddTime: 0
-  waitingtime: 5
-  wrongClickPenalty: 5
   storyIntroText: STORY_LEVEL_015_INTRO_TEXT_ID
   storyEndingText: STORY_LEVEL_015_OUTRO_TEXT_ID
   originalSprite: {fileID: 21300000, guid: 27cffb3bd37683946bb3fded63535f7b, type: 3}
@@ -108,27 +105,25 @@ MonoBehaviour:
     startedSprite: {fileID: 277682749, guid: 555d3227ecb7cea42b2eb4e7ace7be59, type: 3}
     distortedSprite: {fileID: 277682749, guid: 555d3227ecb7cea42b2eb4e7ace7be59, type: 3}
     mustBeFound: 1
-  - normalizedPosition: {x: 0.49, y: 0.42}
+  - normalizedPosition: {x: 0.557, y: 0.922}
     deflectinRadious: 10
-    width: 0
-    height: 0
-    startedSprite: {fileID: 0}
+    width: 50
+    height: 50
+    startedSprite: {fileID: 2049687698, guid: 2e93438ff9ae6d240b9f1f9a8bbc2146, type: 3}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
-  - normalizedPosition: {x: 0.49, y: 0.42}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.851, y: 0.42}
     deflectinRadious: 10
-    width: 0
-    height: 0
-    startedSprite: {fileID: 0}
+    width: 80
+    height: 80
+    startedSprite: {fileID: 1876009267, guid: fb2cfc7ff2c108649b393308193a7871, type: 3}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
-  - normalizedPosition: {x: 0.49, y: 0.42}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.129, y: 0.864}
     deflectinRadious: 10
-    width: 0
-    height: 0
-    startedSprite: {fileID: 0}
+    width: 100
+    height: 100
+    startedSprite: {fileID: -731325441, guid: 316c0b3c0f31cf34e880cc723c233100, type: 3}
     distortedSprite: {fileID: 0}
-    mustBeFound: 0
-  ambientSound: {fileID: 8300000, guid: 4094ab7d53e223e48ae36a1a3c80c505, type: 3}
+    mustBeFound: 1
   completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}
-  gameoverSound: {fileID: 0}
