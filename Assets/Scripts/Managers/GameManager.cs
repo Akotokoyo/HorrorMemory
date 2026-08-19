@@ -100,10 +100,10 @@ public class GameManager : MonoBehaviour
 
             LevelManager.Instance.currentLevel = null;
             UIManager.Instance.SetLoading(true);
-            yield return CasualLevelGenerator.Instance.GenerateLevelAsync(
+            /*yield return CasualLevelGenerator.Instance.GenerateLevelAsync(
                 levelData => LevelManager.Instance.currentLevel = levelData,
                 error => Debug.LogError(error));
-
+            */
             if (LevelManager.Instance.currentLevel == null)
             {
                 AbortToMainMenu();
@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.StopLevel();
         if (CasualLevelGenerator.Instance != null)
         {
-            CasualLevelGenerator.Instance.ReleaseLoadedSprites();
+            //CasualLevelGenerator.Instance.ReleaseLoadedSprites();
         }
     }
 
