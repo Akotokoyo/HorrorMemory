@@ -238,12 +238,27 @@ public class LevelManager : MonoBehaviour
     {
         storyLevelManager.HideCleanOverlay();
 
+        // Background images must not steal clicks from DangerZone / difference hitboxes.
         distortedImage.sprite = currentLevel.originalSprite;
+        distortedImage.raycastTarget = false;
+
         originalImage.enabled = true;
         originalImage.sprite = currentLevel.originalSprite;
         originalImage.color = Color.white;
-        originalImage.raycastTarget = true;
+        originalImage.raycastTarget = false;
+
         modifiedImage.sprite = currentLevel.originalSprite;
+        modifiedImage.raycastTarget = false;
+
+        for (int i = 0; i < originalDifferences.Count; i++)
+        {
+            originalDifferences[i].SetActive(false);
+        }
+
+        for (int i = 0; i < differencesToFind.Count; i++)
+        {
+            differencesToFind[i].SetActive(false);
+        }
 
         for (int i = 0; i < currentLevel.differences.Count; i++)
         {

@@ -209,7 +209,8 @@ public class CasualLevelGenerator : MonoBehaviour
             originalSprite = source.originalSprite,
             modifiedSprite = source.modifiedSprite,
             distortedSprite = source.distortedSprite,
-            completionSound = source.completionSound
+            completionSound = source.completionSound,
+            wrongSound = source.wrongSound
         };
 
         // Si clonano tutti gli slot dello ScriptableObject, spenti: scrivere sui

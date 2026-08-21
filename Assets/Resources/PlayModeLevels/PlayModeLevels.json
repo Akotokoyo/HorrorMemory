@@ -1,8 +1,8 @@
 {
   "difficulties": [
     { "level": "Easy",   "differencesToFind": 6,  "timeLimit": 30, "pickWeight": 1 },
-    { "level": "Medium", "differencesToFind": 9,  "timeLimit": 30, "pickWeight": 1 },
-    { "level": "Hard",   "differencesToFind": 12, "timeLimit": 30, "pickWeight": 1 }
+    { "level": "Medium", "differencesToFind": 9,  "timeLimit": 35, "pickWeight": 1 },
+    { "level": "Hard",   "differencesToFind": 12, "timeLimit": 45, "pickWeight": 1 }
   ],
   "levels": [
     { "id": 0, "enabled": true},
