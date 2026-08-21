@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public static event Action<bool> OnLevelEnded;
     public static event Action<TimeSpan, bool> OnTimerUpdate;
     public static event Action<int, int> OnDifferenceProgress;
+    public static event Action<int> OnMissClicked;
 
     [SerializeField] private AudioManager audioManager;
 
@@ -54,6 +55,9 @@ public class LevelManager : MonoBehaviour
     internal int CurrentDifferenceCount { get => currentDifferenceCount; set => currentDifferenceCount = value; }
     internal float BreakTime { get => breakTime; set => breakTime = value; }
     internal float CurrentAlpha { get => currentAlpha; set => currentAlpha = value; }
+
+    private int heartsCounter;
+    private bool hasLevelEnded;
 
     private void Awake()
     {
@@ -101,6 +105,7 @@ public class LevelManager : MonoBehaviour
 
     public void PrepareLevel()
     {
+        heartsCounter = Constants.HEART_LIFE_COUNTER;
         UIManager.Instance.HideAllPopups();
         UIManager.Instance.ShowPreGamePopup(currentLevel);
     }
@@ -136,6 +141,7 @@ public class LevelManager : MonoBehaviour
         currentDifferenceCount = 0;
         breakTime = 0f;
         currentAlpha = 1f;
+        hasLevelEnded = false;
 
         InitializeZoomPanController();
         zoomPanController?.ResetView();
@@ -155,6 +161,11 @@ public class LevelManager : MonoBehaviour
 
     public void OnDifferenceClicked(int diffIndex)
     {
+        if (hasLevelEnded)
+        {
+            return;
+        }
+
         if (GameManager.Instance.IsCasualMode)
         {
             OnPlayDifferenceClicked(diffIndex);
@@ -164,6 +175,23 @@ public class LevelManager : MonoBehaviour
             storyLevelManager.OnDifferenceClicked(diffIndex);
         }
     }
+
+    public void OnClickWrongPosition()
+    {
+        PlayWrongSound();
+        if (hasLevelEnded)
+        {
+            return;
+        }
+
+        heartsCounter--;
+        OnMissClicked?.Invoke(heartsCounter);
+        if (heartsCounter <= 0)
+        {
+            CompleteLevel(false);
+        }
+    }
+
 
     internal void NotifyDifferenceProgress()
     {
@@ -175,8 +203,19 @@ public class LevelManager : MonoBehaviour
         audioManager.StartEffectSound(currentLevel.completionSound);
     }
 
+    internal void PlayWrongSound()
+    {
+        audioManager.StartEffectSound(currentLevel.wrongSound);
+    }
+
     internal void CompleteLevel(bool success)
     {
+        if (hasLevelEnded)
+        {
+            return;
+        }
+
+        hasLevelEnded = true;
         OnLevelEnded?.Invoke(success);
         StopAllCoroutines();
         StartCoroutine(ShowEndPopup(success));
@@ -332,15 +371,14 @@ public class LevelManager : MonoBehaviour
 
         if (currentTimer == 0)
         {
-            OnLevelEnded?.Invoke(false);
-            StartCoroutine(ShowEndPopup(false));
+            CompleteLevel(false);
         }
     }
 
     private IEnumerator ShowEndPopup(bool levelSuccess)
     {
         yield return new WaitForSeconds(1f);
-        int starNumber = GeneralFunctions.CalculateStarRating(currentLevel, currentTimer);
+        int starNumber = levelSuccess? GeneralFunctions.CalculateStarRating(currentLevel, currentTimer) : 0;
         bool isStoryMode = !GameManager.Instance.IsCasualMode;
         if (levelSuccess && isStoryMode)
         {

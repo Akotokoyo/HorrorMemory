@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     [Header("Game UI")]
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI differenceFoundText;
+    [SerializeField] private TextMeshProUGUI heartsCounterText;
 
 
     private int currentLevel;
@@ -69,11 +70,13 @@ public class UIManager : MonoBehaviour
     {
         LevelManager.OnTimerUpdate += HandleTimer;
         LevelManager.OnDifferenceProgress += HandleDifferenceUI;
+        LevelManager.OnMissClicked += HandleErrorUI;
     }
     private void OnDisable()
     {
         LevelManager.OnTimerUpdate -= HandleTimer;
         LevelManager.OnDifferenceProgress -= HandleDifferenceUI;
+        LevelManager.OnMissClicked -= HandleErrorUI;
     }
 
     void Awake()
@@ -177,6 +180,7 @@ public class UIManager : MonoBehaviour
     // Chiamata dal GameManager solo quando il livello e' pronto, cosi' la gameUI non compare mai su immagini non ancora assegnate.
     public void EnterGameUI()
     {
+        heartsCounterText.text = Constants.HEART_LIFE_COUNTER.ToString();
         SetLoading(false);
         levelSelection.SetActive(false);
         introUI.SetActive(false);
@@ -339,9 +343,14 @@ public class UIManager : MonoBehaviour
         differenceFoundText.text = $"{currentDifferenceCount}/{totalDifferenceCount}";
     }
 
+    private void HandleErrorUI(int currentHearts)
+    {
+        heartsCounterText.text = currentHearts.ToString();
+    }
+
 #endregion
 
-#region Tutorial
+    #region Tutorial
     private void SetTutorialStep0()
     {
         tutorialStepIndex = 0;

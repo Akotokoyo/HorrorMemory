@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: STORY_LEVEL_011_TITLE_TEXT_ID
   levelId: 11
   difficulty: 1
-  timeLimit: 35
+  timeLimit: 45
   storyIntroText: STORY_LEVEL_011_INTRO_TEXT_ID
   storyEndingText: STORY_LEVEL_011_OUTRO_TEXT_ID
   originalSprite: {fileID: 21300000, guid: ed97b0677652d8342a02bb2d29908f6c, type: 3}
@@ -97,4 +97,5 @@ MonoBehaviour:
     height: 0
     startedSprite: {fileID: 0}
     mustBeFound: 0
-  completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}
+  completionSound: {fileID: 8300000, guid: fc091faf4692e7e45816b5c27504fd0d, type: 3}
+  wrongSound: {fileID: 8300000, guid: 706a3b6e84dca2b46a6429097e4bdf67, type: 3}

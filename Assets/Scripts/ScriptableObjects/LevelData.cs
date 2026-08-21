@@ -14,6 +14,7 @@ public class LevelData : ScriptableObject, ILevelData
     Sprite ILevelData.modifiedSprite => modifiedSprite;
     Sprite ILevelData.distortedSprite => distortedSprite;
     AudioClip ILevelData.completionSound => completionSound;
+    AudioClip ILevelData.wrongSound => wrongSound;
     List<DifferenceInfo> ILevelData.differences => differences;
 
     public string levelName = "Untitled Level";
@@ -35,6 +36,7 @@ public class LevelData : ScriptableObject, ILevelData
 
     [Header("Sounds")]
     public AudioClip completionSound;
+    public AudioClip wrongSound;
 
 
     public bool IsLevelValid()

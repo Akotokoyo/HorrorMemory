@@ -17,6 +17,7 @@ public class RuntimeLevelData : ILevelData
     public Sprite distortedSprite;
     public AudioClip ambientSound;
     public AudioClip completionSound;
+    public AudioClip wrongSound;
     public AudioClip gameoverSound;
 
     public List<DifferenceInfo> differences = new List<DifferenceInfo>();
@@ -31,5 +32,6 @@ public class RuntimeLevelData : ILevelData
     Sprite ILevelData.modifiedSprite => modifiedSprite;
     Sprite ILevelData.distortedSprite => distortedSprite;
     AudioClip ILevelData.completionSound => completionSound;
+    AudioClip ILevelData.wrongSound => wrongSound;
     List<DifferenceInfo> ILevelData.differences => differences;
 }

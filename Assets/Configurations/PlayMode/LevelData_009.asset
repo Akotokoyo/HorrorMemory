@@ -19,111 +19,83 @@ MonoBehaviour:
   storyIntroText: STORY_LEVEL_009_INTRO_TEXT_ID
   storyEndingText: STORY_LEVEL_009_OUTRO_TEXT_ID
   originalSprite: {fileID: 21300000, guid: 1e62e89024e38ac4eb0f563fa8a34b3a, type: 3}
+  modifiedSprite: {fileID: 0}
   distortedSprite: {fileID: 21300000, guid: 18bfd39e0cc618f45ba3a317ed87a489, type: 3}
   differences:
   - normalizedPosition: {x: 0.66, y: 0.047}
-    deflectinRadious: 10
     width: 75
     height: 75
     startedSprite: {fileID: 1300290551, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: -1219091476, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.983, y: 0.274}
-    deflectinRadious: 10
     width: 120
     height: 120
     startedSprite: {fileID: -2134438291, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: -1404478367, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.351, y: 0.113}
-    deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: -41539993, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: -15574622, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.458, y: 0.237}
-    deflectinRadious: 10
     width: 80
     height: 80
     startedSprite: {fileID: 875502827, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: -340084038, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.54, y: 0.906}
-    deflectinRadious: 10
     width: 70
     height: 150
     startedSprite: {fileID: 721769749, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: 218672553, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.544, y: 0.325}
-    deflectinRadious: 10
     width: 50
     height: 50
     startedSprite: {fileID: 1625233569, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: 2125053584, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.505, y: -0.006}
-    deflectinRadious: 10
     width: 100
     height: 100
     startedSprite: {fileID: -1981624907, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: -652357548, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.821, y: 0.016}
-    deflectinRadious: 10
     width: 80
     height: 80
     startedSprite: {fileID: 2041460981, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: -654474701, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.217, y: 0.88}
-    deflectinRadious: 10
     width: 80
     height: 80
     startedSprite: {fileID: 713114963, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: -182732596, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.62, y: 0.262}
-    deflectinRadious: 10
     width: 120
     height: 120
     startedSprite: {fileID: 1628058883, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: 1490993036, guid: a738d819773bb9d46bee72ee97241856, type: 3}
     mustBeFound: 1
   - normalizedPosition: {x: 0.53, y: 0.14}
-    deflectinRadious: 10
     width: 70
     height: 70
     startedSprite: {fileID: 236671196, guid: ca12b47d616ec864f95ff8326e665b3f, type: 3}
-    distortedSprite: {fileID: 0}
     mustBeFound: 1
   - normalizedPosition: {x: 0.403, y: 0.351}
-    deflectinRadious: 10
     width: 40
     height: 40
     startedSprite: {fileID: 713114963, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: 0}
     mustBeFound: 1
   - normalizedPosition: {x: 0.62, y: 0.363}
-    deflectinRadious: 10
     width: 30
     height: 30
     startedSprite: {fileID: 1628058883, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: 0}
     mustBeFound: 1
   - normalizedPosition: {x: 0.542, y: 0.732}
-    deflectinRadious: 10
     width: 30
     height: 70
     startedSprite: {fileID: 721769749, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: 0}
     mustBeFound: 1
   - normalizedPosition: {x: 0.837, y: 0.262}
-    deflectinRadious: 10
     width: 80
     height: 80
     startedSprite: {fileID: 713114963, guid: a108fe5899146164cb7aa7b86ed16f8c, type: 3}
-    distortedSprite: {fileID: 0}
     mustBeFound: 1
-  completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}
+  completionSound: {fileID: 8300000, guid: fc091faf4692e7e45816b5c27504fd0d, type: 3}
+  wrongSound: {fileID: 8300000, guid: 706a3b6e84dca2b46a6429097e4bdf67, type: 3}

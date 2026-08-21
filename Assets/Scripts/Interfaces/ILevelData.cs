@@ -13,5 +13,6 @@ public interface ILevelData
     Sprite modifiedSprite { get; }
     Sprite distortedSprite { get; }
     AudioClip completionSound { get; }
+    AudioClip wrongSound { get; }
     List<DifferenceInfo> differences { get; }
 }

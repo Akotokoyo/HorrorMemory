@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: STORY_LEVEL_018_TITLE_TEXT_ID
   levelId: 18
   difficulty: 2
-  timeLimit: 40
+  timeLimit: 50
   storyIntroText: STORY_LEVEL_018_INTRO_TEXT_ID
   storyEndingText: STORY_LEVEL_018_OUTRO_TEXT_ID
   originalSprite: {fileID: 21300000, guid: ae8fe298b5559f444a6f81a84282da81, type: 3}
@@ -97,4 +97,5 @@ MonoBehaviour:
     height: 50
     startedSprite: {fileID: 0}
     mustBeFound: 0
-  completionSound: {fileID: 8300000, guid: 226b9611346fef744a79acf11ba0d36a, type: 3}
+  completionSound: {fileID: 8300000, guid: fc091faf4692e7e45816b5c27504fd0d, type: 3}
+  wrongSound: {fileID: 8300000, guid: 706a3b6e84dca2b46a6429097e4bdf67, type: 3}
