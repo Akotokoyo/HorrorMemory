@@ -1,0 +1,164 @@
+{
+  "Levels": [
+    {
+      "Id": 0,
+      "LevelName": "STORY_LEVEL_000_TITLE_TEXT_ID",
+      "IsAvailable": true,
+      "AddrImage":"StoryMode/Original-000",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 1,
+      "LevelName": "STORY_LEVEL_001_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-001",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 2,
+      "LevelName": "STORY_LEVEL_002_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-002",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 3,
+      "LevelName": "STORY_LEVEL_003_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-003",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 4,
+      "LevelName": "STORY_LEVEL_004_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-004",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 5,
+      "LevelName": "STORY_LEVEL_005_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-005",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 6,
+      "LevelName": "STORY_LEVEL_006_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-006",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 7,
+      "LevelName": "STORY_LEVEL_007_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-007",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 8,
+      "LevelName": "STORY_LEVEL_008_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-008",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 9,
+      "LevelName": "STORY_LEVEL_009_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-009",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 10,
+      "LevelName": "STORY_LEVEL_010_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-010",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 11,
+      "LevelName": "STORY_LEVEL_011_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-011",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 12,
+      "LevelName": "STORY_LEVEL_012_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-012",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 13,
+      "LevelName": "STORY_LEVEL_013_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-013",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 14,
+      "LevelName": "STORY_LEVEL_014_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-014",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 15,
+      "LevelName": "STORY_LEVEL_015_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-015",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 16,
+      "LevelName": "STORY_LEVEL_016_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-016",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 17,
+      "LevelName": "STORY_LEVEL_017_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-017",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 18,
+      "LevelName": "STORY_LEVEL_018_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-018",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    },
+    {
+      "Id": 19,
+      "LevelName": "STORY_LEVEL_019_TITLE_TEXT_ID",
+      "IsAvailable": false,
+      "AddrImage":"StoryMode/Original-019",
+      "StarRating": 0,
+      "BestTime": "--:--:--"
+    }
+  ]
+}

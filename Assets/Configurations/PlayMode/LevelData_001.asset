@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff24e04cd4b6e848a2a57000f45e963, type: 3}
+  m_Name: LevelData_001
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelName: STORY_LEVEL_001_TITLE_TEXT_ID
+  levelId: 1
+  difficulty: 0
+  timeLimit: 30
+  storyIntroText: STORY_LEVEL_001_INTRO_TEXT_ID
+  storyEndingText: STORY_LEVEL_001_OUTRO_TEXT_ID
+  originalSprite: {fileID: 21300000, guid: d8df47ec720134d45999a86fd5cab29c, type: 3}
+  modifiedSprite: {fileID: 0}
+  distortedSprite: {fileID: 21300000, guid: dd628601343c1f942aa3f3cfba5bb8db, type: 3}
+  differences:
+  - normalizedPosition: {x: 0.778, y: 0.869}
+    width: 100
+    height: 150
+    startedSprite: {fileID: 807782604, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.407, y: 0.586}
+    width: 20
+    height: 20
+    startedSprite: {fileID: -1960291783, guid: f235e9c89633fe24e98d3d688429c503, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.0729, y: 0.0706}
+    width: 150
+    height: 180
+    startedSprite: {fileID: -1788790349, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.8552, y: 0.237}
+    width: 100
+    height: 100
+    startedSprite: {fileID: -1495320030, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.353, y: 0.45}
+    width: 50
+    height: 50
+    startedSprite: {fileID: -1179529701, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.786, y: 0.454}
+    width: 70
+    height: 50
+    startedSprite: {fileID: -1690910136, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.214, y: 0.869}
+    width: 100
+    height: 200
+    startedSprite: {fileID: 638744010, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.489, y: 0.812}
+    width: 50
+    height: 50
+    startedSprite: {fileID: 1242373075, guid: 94a6c4f098f44f9409faa5fc037f0455, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.699, y: 0.578}
+    width: 70
+    height: 70
+    startedSprite: {fileID: -254994179, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.566, y: 0.588}
+    width: 30
+    height: 30
+    startedSprite: {fileID: 1814734080, guid: f235e9c89633fe24e98d3d688429c503, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.161, y: 0.468}
+    width: 60
+    height: 90
+    startedSprite: {fileID: -901132844, guid: b212c6fee34803f45b53e2e08b23cc01, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.026, y: 0.195}
+    width: 50
+    height: 50
+    startedSprite: {fileID: -1729789138, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.654, y: 0.475}
+    width: 50
+    height: 90
+    startedSprite: {fileID: -891429581, guid: 4fd4ec3d7909ccf4088b2f5ea1f76c74, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.906, y: 0.071}
+    width: 120
+    height: 120
+    startedSprite: {fileID: 189181945, guid: 0eda541822c27c3438b8bdfafb5f475f, type: 3}
+    mustBeFound: 1
+  - normalizedPosition: {x: 0.705, y: 0.148}
+    width: 100
+    height: 100
+    startedSprite: {fileID: -1039488934, guid: 316c0b3c0f31cf34e880cc723c233100, type: 3}
+    mustBeFound: 1
+  completionSound: {fileID: 8300000, guid: fc091faf4692e7e45816b5c27504fd0d, type: 3}
+  wrongSound: {fileID: 8300000, guid: 706a3b6e84dca2b46a6429097e4bdf67, type: 3}
