@@ -95,7 +95,7 @@ MonoBehaviour:
   - normalizedPosition: {x: 0.754, y: 0.062}
     width: 130
     height: 90
-    startedSprite: {fileID: 0}
+    startedSprite: {fileID: 1835919779, guid: 4c60ff915338e7c4eb345900e1c27574, type: 3}
     mustBeFound: 0
   completionSound: {fileID: 8300000, guid: fc091faf4692e7e45816b5c27504fd0d, type: 3}
   wrongSound: {fileID: 8300000, guid: 706a3b6e84dca2b46a6429097e4bdf67, type: 3}
