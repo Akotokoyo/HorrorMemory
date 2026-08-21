@@ -73,6 +73,39 @@ public class CenterFocusScroll : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         ComputeSnapTarget();
     }
 
+    public void FocusChild(int index, bool instant = true)
+    {
+        if (content == null || index < 0 || index >= content.childCount)
+        {
+            return;
+        }
+
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(content);
+
+        RectTransform card = content.GetChild(index) as RectTransform;
+        if (card == null)
+        {
+            return;
+        }
+
+        float signed = SignedDistanceToCenter(card);
+        Vector2 pos = content.anchoredPosition;
+        float targetX = pos.x - signed;
+
+        if (instant)
+        {
+            content.anchoredPosition = new Vector2(targetX, pos.y);
+            hasSnapTarget = false;
+            scrollRect.velocity = Vector2.zero;
+        }
+        else
+        {
+            snapTargetX = targetX;
+            hasSnapTarget = true;
+        }
+    }
+
     private void UpdateScales()
     {
         float smoothing = 1f - Mathf.Exp(-smoothSpeed * Time.deltaTime);

@@ -143,9 +143,7 @@ public class UIManager : MonoBehaviour
         switch (action)
         {
             case "Story":
-                contentMenu.SetActive(false);
                 StartCoroutine(PrepareLevelsFromGameData());
-                levelSelection.SetActive(true);
                 break;
             case "Tutorial":
                 contentMenu.SetActive(false);
@@ -322,6 +320,45 @@ public class UIManager : MonoBehaviour
                 starsRoot.GetChild(j).GetChild(0).gameObject.SetActive(j < level.StarRating);
             }
         }
+
+        levelSelection.SetActive(true);
+        FocusStoryLevelList();
+        contentMenu.SetActive(false);
+        yield return null;
+    }
+
+    private void FocusStoryLevelList()
+    {
+        CenterFocusScroll focusScroll = scrollViewContent != null
+            ? scrollViewContent.GetComponentInParent<CenterFocusScroll>()
+            : null;
+        if (focusScroll == null)
+        {
+            return;
+        }
+
+        focusScroll.FocusChild(GetStoryFocusLevelIndex());
+    }
+
+    private int GetStoryFocusLevelIndex()
+    {
+        Level lastLevel = GameManager.Instance.GetLevelById(Constants.LAST_LEVEL_INDEX);
+        if (lastLevel != null && lastLevel.IsAvailable && (lastLevel.StarRating > 0 || lastLevel.BestTimer > 0))
+        {
+            return 0;
+        }
+
+        int focusIndex = 0;
+        for (int i = 0; i < levelPrefabs.Count; i++)
+        {
+            Level level = GameManager.Instance.GetLevelFromGameData(i);
+            if (level != null && level.IsAvailable)
+            {
+                focusIndex = i;
+            }
+        }
+
+        return focusIndex;
     }
 
 #region Game UI
